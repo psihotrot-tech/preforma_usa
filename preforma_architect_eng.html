@@ -719,6 +719,77 @@ body {
 .footer-copy   { font-size: 11px; color: rgba(255,255,255,0.2); }
 .footer-author { font-size: 11px; color: rgba(255,255,255,0.2); text-align: right; line-height: 1.5; }
 
+/* ── TESTIMONIAL ── */
+.testimonial-wrap {
+  background: var(--white);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 48px;
+}
+
+.testimonial-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.testimonial-quote-mark {
+  font-family: 'DM Serif Display', serif;
+  font-size: 72px;
+  color: var(--gold);
+  line-height: 0.7;
+  flex-shrink: 0;
+  opacity: 0.4;
+  margin-top: 8px;
+}
+
+.testimonial-body {}
+
+.testimonial-text {
+  font-family: 'DM Serif Display', serif;
+  font-size: 21px;
+  font-style: italic;
+  color: var(--dark);
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.testimonial-mini {
+  max-width: 640px;
+  margin: 0 auto 32px;
+  text-align: center;
+  padding: 24px 32px;
+  border-left: 3px solid var(--gold);
+  background: rgba(184,146,42,0.04);
+}
+
+.testimonial-mini-text {
+  font-family: 'DM Serif Display', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--dark);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.testimonial-mini-author {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
 /* ── REVEAL ── */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -766,7 +837,7 @@ body {
 
 <header class="header">
   <div class="logo"><span>Pre</span>Forma</div>
-  <a href="#registration" class="header-cta">Prepare for your next client →</a>
+  <a href="#registration" class="header-cta">Try it free →</a>
 </header>
 
 <!-- HERO -->
@@ -783,10 +854,10 @@ body {
     </p>
     <div class="hero-actions">
       <a href="#registration" class="btn-primary">
-        Prepare for your next client
+        Get your first report free
         <span class="btn-arrow">→</span>
       </a>
-      <span class="hero-note">Try your first client report free</span>
+      <span class="hero-note">No credit card required</span>
     </div>
     <a href="#section-problem" class="scroll-hint">
       Learn more
@@ -810,6 +881,17 @@ body {
     <div class="stat-item">
       <div class="stat-num">40%</div>
       <div class="stat-label">of fees disappear in<br>unpaid overtime hours</div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIAL -->
+<div class="testimonial-wrap">
+  <div class="testimonial-inner">
+    <div class="testimonial-quote-mark">&ldquo;</div>
+    <div class="testimonial-body">
+      <p class="testimonial-text">Such an excellent concept. I'm certainly recommending this to my next client. I was very positively surprised by how precisely everything is structured, especially the step-by-step insight on how to approach the client and manage the project. It feels extremely practical and immediately applicable.</p>
+      <div class="testimonial-author">Interior Designer &middot; mr.leohodzic</div>
     </div>
   </div>
 </div>
@@ -1035,10 +1117,14 @@ body {
 
 <!-- BUY CTA -->
 <div class="buy-wrap reveal">
+  <div class="testimonial-mini">
+    <p class="testimonial-mini-text">&ldquo;I was very positively surprised by how precisely everything is structured.&rdquo;</p>
+    <div class="testimonial-mini-author">Interior Designer &middot; mr.leohodzic</div>
+  </div>
   <a href="https://preforma.lemonsqueezy.com/checkout/buy/acae2b31-9fbc-4295-a2bb-08e48de8724e" class="buy-btn">
     Access Your Protection Pack &nbsp;→
   </a>
-  <p class="buy-sub">$39 · 3 client reports included · Launch Offer: Get 60% off during our beta testing phase (Regular price $99)</p>
+  <p class="buy-sub">$39 · 3 client reports included · Founding Member Price — 60% off regular price</p>
   <p class="buy-pay">Pay with card, PayPal, Apple Pay or Google Pay</p>
 </div>
 
@@ -1123,12 +1209,12 @@ body {
   <div class="reg-inner reveal">
     <div class="reg-label">Free access</div>
     <h2 class="reg-title">Take back<br><em>control.</em></h2>
-    <p class="reg-sub">Enter your email and receive your personalized link instantly. Analyze your next client before the first meeting — or complete the questionnaire yourself from the client's perspective. Your first report is completely free.</p>
+    <p class="reg-sub">Enter your email and receive your personalized questionnaire link in under 60 seconds. Analyze your next client before the first meeting — your first report is completely free.</p>
 
     <div id="regForm">
       <div class="reg-form">
         <input type="email" class="reg-input" id="regEmail" placeholder="your@email.com">
-        <button class="reg-btn" id="regBtn">PREPARE FOR YOUR NEXT CLIENT→</button>
+        <button class="reg-btn" id="regBtn">Get your first report free →</button>
       </div>
       <p class="reg-note">No credit card &middot; No commitment &middot; Unsubscribe anytime</p>
     </div>
