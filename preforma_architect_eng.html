@@ -505,6 +505,103 @@ body {
 .roi-title { font-size: 19px; font-weight: 600; color: var(--dark); margin-bottom: 6px; }
 .roi-desc  { font-size: 14px; font-weight: 300; color: var(--soft); line-height: 1.7; }
 
+/* ── FAQ ── */
+.faq-wrap {
+  background: var(--white);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 120px 48px;
+}
+
+.faq-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-item:last-child { border-bottom: none; }
+
+.faq-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 0;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.4;
+  list-style: none;
+  user-select: none;
+}
+
+.faq-q:hover { color: var(--gold); }
+
+.faq-icon {
+  font-size: 20px;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: transform 0.3s;
+  font-weight: 300;
+}
+
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+
+.faq-a {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.8;
+  padding-bottom: 24px;
+  display: none;
+}
+
+.faq-item.open .faq-a { display: block; }
+
+/* ── BUY CTA ── */
+.buy-wrap {
+  background: var(--bg);
+  padding: 80px 48px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.buy-btn {
+  display: inline-block;
+  background: var(--dark);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 18px 48px;
+  border-left: 4px solid var(--gold);
+  transition: all 0.3s;
+}
+
+.buy-btn:hover { background: var(--gold); border-left-color: var(--gold-light); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(184,146,42,0.3); }
+
+.buy-sub {
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.6;
+}
+
+.buy-pay {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--soft);
+  letter-spacing: 0.3px;
+}
+
 /* ── AUTHOR ── */
 .author-wrap {
   background: var(--white);
@@ -549,7 +646,6 @@ body {
 }
 
 .reg-inner { max-width: 580px; margin: 0 auto; position: relative; }
-
 .reg-label { font-size: 9px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
 
 .reg-title {
@@ -562,9 +658,7 @@ body {
 }
 
 .reg-title em { font-style: italic; color: var(--gold); }
-
 .reg-sub { font-size: 19px; font-weight: 300; color: rgba(255,255,255,0.4); line-height: 1.75; margin-bottom: 52px; }
-
 .reg-form { display: flex; gap: 0; margin-bottom: 16px; }
 
 .reg-input {
@@ -597,7 +691,6 @@ body {
 }
 
 .reg-btn:hover { background: var(--gold-light); }
-
 .reg-note { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.25); }
 
 .reg-success {
@@ -608,7 +701,6 @@ body {
 }
 
 .reg-success-icon { font-size: 40px; color: var(--gold); margin-bottom: 16px; }
-
 .reg-success-title { font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--white); letter-spacing: -1px; margin-bottom: 10px; }
 .reg-success-text  { font-size: 19px; font-weight: 300; color: rgba(255,255,255,0.4); line-height: 1.7; }
 
@@ -659,6 +751,8 @@ body {
   .documents { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
   .roi-grid { grid-template-columns: 1fr; }
+  .faq-wrap { padding: 72px 24px; }
+  .buy-wrap { padding: 60px 24px; }
   .author-wrap { padding: 60px 24px; }
   .author-inner { flex-direction: column; gap: 24px; }
   .reg-wrap { padding: 80px 24px; }
@@ -939,6 +1033,79 @@ body {
   </div>
 </section>
 
+<!-- BUY CTA -->
+<div class="buy-wrap reveal">
+  <a href="https://preforma.lemonsqueezy.com/checkout/buy/acae2b31-9fbc-4295-a2bb-08e48de8724e" class="buy-btn">
+    Access Your Protection Pack &nbsp;→
+  </a>
+  <p class="buy-sub">5 client reports included · First one is free</p>
+  <p class="buy-pay">Pay with card, PayPal, Apple Pay or Google Pay</p>
+</div>
+
+<!-- FAQ -->
+<div class="faq-wrap reveal">
+  <div class="faq-inner">
+    <div class="section-label">Questions</div>
+    <h2 class="section-title" style="margin-bottom:48px">Not a personality test.<br><em>A project tool.</em></h2>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Is this just another personality test?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">No. PreForma is not a psychological assessment. It analyzes collaboration patterns, communication styles, and decision-making behaviors that directly affect how a project runs — how many revisions a client tends to request, how quickly they make decisions, how much oversight they need. The output is operational, not clinical.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Does my client know they're being analyzed?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">The questionnaire is framed as a standard project intake — questions about how your client approaches decisions, what matters most to them in a project, and how they prefer to communicate. The system identifies collaboration and communication patterns relevant to the project. There is no deception involved, and the questions are entirely appropriate for any professional onboarding process.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How long does the questionnaire take?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">3 to 4 minutes. It's designed to feel effortless for your client — no psychological jargon, no complex scales. Just straightforward questions about their project preferences and working style.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What do I actually receive?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">Four PDF documents delivered to your inbox automatically: a Client Dynamics Profile with an operational risk map, an Expert Interpretation with concrete guidance for leading this specific client, an Adaptive Project Scope tailored to the project type, and a Profile-Tailored Contract with clauses built around the risks identified for this client.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How accurate is it?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">The system includes a confidence indicator based on how clearly defined the client's profile is. When responses point strongly in one direction, confidence is high. When patterns are more mixed, the report flags this explicitly and recommends verifying assumptions in conversation. PreForma is a decision-support tool — it gives you a significant head start, not a guarantee.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What's included in the Protection Pack?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">The Protection Pack includes 5 complete client analyses. Each analysis generates all four documents — profile, interpretation, scope, and contract — for one client. Your first report is always free, so you can evaluate the system before committing.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Can I use it for different project types?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">Yes. PreForma adapts to 10 project types — from residential interiors to hospitality, commercial spaces, design &amp; build, and luxury projects. The scope document, risk assessment, and contract clauses all adjust based on the project type and scale your client selects during the questionnaire.</div>
+    </div>
+  </div>
+</div>
+
 <!-- AUTHOR -->
 <div class="author-wrap reveal">
   <div class="author-inner">
@@ -982,7 +1149,6 @@ body {
 </footer>
 
 <script>
-// ── IMPORTANT: Update this URL to your English registration web app deployment ──
 var WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwTiTQu4IgLyjqSkn09spy_twXa8TuZ3KzVea3mXKmngg80cevWqBqyRpyEQnLo3G5mJw/exec';
 
 document.getElementById('regBtn').addEventListener('click', function() {
@@ -1012,6 +1178,13 @@ document.getElementById('regBtn').addEventListener('click', function() {
 document.getElementById('regEmail').addEventListener('keydown', function(e) {
   if (e.key === 'Enter') document.getElementById('regBtn').click();
 });
+
+function toggleFaq(el) {
+  var item = el.parentElement;
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+  if (!isOpen) item.classList.add('open');
+}
 
 var observer = new IntersectionObserver(function(entries) {
   entries.forEach(function(entry) {
