@@ -647,6 +647,107 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
   .benefits-grid { grid-template-columns: 1fr; }
 }
 
+
+.doc-item-highlight {
+  color: rgba(184,146,42,0.7) !important;
+  font-weight: 500 !important;
+}
+
+.doc-item-highlight .doc-arrow {
+  color: var(--gold) !important;
+}
+
+
+/* ── BUY MID ── */
+.buy-mid {
+  background: var(--dark);
+  padding: 48px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.buy-mid-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.buy-mid-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.buy-mid-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.buy-mid-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.buy-mid-btn {
+  display: inline-flex;
+  align-items: center;
+  background: var(--gold);
+  color: var(--white);
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  transition: all 0.25s;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.buy-mid-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gold-light);
+  transform: translateX(-101%);
+  transition: transform 0.3s;
+}
+
+.buy-mid-btn span { position: relative; z-index: 1; }
+.buy-mid-btn:hover::after { transform: translateX(0); }
+.buy-mid-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(184,146,42,0.35); }
+
+.buy-mid-note {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.3);
+  text-align: right;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .buy-mid { padding: 40px 24px; }
+  .buy-mid-inner { flex-direction: column; align-items: flex-start; gap: 28px; }
+  .buy-mid-right { align-items: flex-start; }
+  .buy-mid-note { text-align: left; }
+}
+
 /* ── REVEAL ── */
 .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -806,7 +907,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
         <div class="benefit-check">✓</div>
         <div class="benefit-content">
           <div class="benefit-title">A communication plan for this specific client</div>
-          <div class="benefit-desc">Step-by-step guidance on how to present, when to push back, and which moments in the project require the most care.</div>
+          <div class="benefit-desc">Step-by-step guidance on how to present, when to push back, and which moments require most care — including three things you should never do with this client, and what to do if something goes wrong.</div>
         </div>
       </div>
     </div>
@@ -853,9 +954,10 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
           <div class="doc-desc">An operational profile revealing how your client actually functions in a project — decision-making style, tolerance for uncertainty, need for control.</div>
           <div class="doc-list">
             <div class="doc-item"><span class="doc-arrow">→</span>Decision-making style and response speed</div>
-            <div class="doc-item"><span class="doc-arrow">→</span>Level of need for process control</div>
             <div class="doc-item"><span class="doc-arrow">→</span>Tolerance for change and delays</div>
             <div class="doc-item"><span class="doc-arrow">→</span>Risk map by project phase</div>
+            <div class="doc-item doc-item-highlight"><span class="doc-arrow">→</span>Three things you should never do with this client</div>
+            <div class="doc-item doc-item-highlight"><span class="doc-arrow">→</span>Conflict resolution protocol if something goes wrong</div>
           </div>
         </div>
       </div>
@@ -959,7 +1061,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 <!-- CASE STUDIES -->
 <section class="section reveal" id="real-outcomes">
   <div class="section-tag">What PreForma prevents in real projects</div>
-  <h2 class="section-title">Problems this system<br>prevents <em>before they happen.</em></h2>
+  <h2 class="section-title">Problems this system<br>catches <em>before they happen.</em></h2>
   <p class="section-sub">Three client profiles. Three patterns detected before the first meeting. Three projects that went differently — because the architect wasn't surprised.</p>
 
   <div class="case-intro">
@@ -1098,6 +1200,23 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 
 </section>
 
+
+<!-- BUY CTA MID -->
+<div class="buy-mid reveal">
+  <div class="buy-mid-inner">
+    <div class="buy-mid-left">
+      <p class="buy-mid-label">The patterns above are detectable.</p>
+      <p class="buy-mid-title">Know your next client<br>before the first meeting.</p>
+    </div>
+    <div class="buy-mid-right">
+      <a href="https://preforma.lemonsqueezy.com/checkout/buy/acae2b31-9fbc-4295-a2bb-08e48de8724e" class="buy-mid-btn">
+        <span>Access Your Protection Pack — $39 →</span>
+      </a>
+      <p class="buy-mid-note">3 complete client analyses · Founding Member Price</p>
+    </div>
+  </div>
+</div>
+
 <!-- ROI -->
 <section class="section reveal" style="padding-top:0">
   <div class="section-tag">Why designers use PreForma</div>
@@ -1166,7 +1285,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">What do I actually receive?<span class="faq-icon">+</span></div>
-      <div class="faq-a">Four PDF documents delivered to your inbox automatically: a Client Dynamics Profile with an operational risk map, a Client Communication Strategy with concrete guidance, an Adaptive Project Scope tailored to the project type, and a Risk-Adjusted Contract with clauses built around the risks identified for this client.</div>
+      <div class="faq-a">Four PDF documents delivered to your inbox automatically: a Risk-Adjusted Contract with clauses built specifically around this client's risk profile, an Adaptive Project Scope tailored to the project type, a Client Communication Strategy with phase-by-phase guidance on how to lead this client, and a Client Dynamics Profile with a full behavioral risk map — including three things you should never do with this client, and a conflict resolution protocol if something goes wrong.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">How accurate is it?<span class="faq-icon">+</span></div>
