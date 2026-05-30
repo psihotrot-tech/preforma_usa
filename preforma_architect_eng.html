@@ -301,6 +301,352 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 .hero-title .char.lit { color: var(--dark); }
 .hero-title em .char.lit { color: var(--gold); }
 
+
+
+/* ── CASE INTRO ── */
+.case-intro {
+  background: var(--white);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 12px 12px 0;
+  padding: 24px 28px;
+  margin-bottom: 40px;
+}
+
+.case-intro-text {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.case-intro-text em {
+  font-style: italic;
+  color: var(--dark);
+  font-weight: 500;
+}
+
+/* ── CASE IMPACT ── */
+.case-impact {
+  grid-column: 1 / -1;
+  background: var(--dark);
+  border-radius: 8px;
+  padding: 18px 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.case-impact-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  flex-shrink: 0;
+  padding-top: 2px;
+  min-width: 52px;
+}
+
+.case-impact-text {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.75;
+}
+
+/* ── CASE IMPACT BADGE ── */
+.case-impact-badge {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--gold);
+  background: rgba(184,146,42,0.1);
+  border: 1px solid rgba(184,146,42,0.25);
+  padding: 5px 12px;
+  border-radius: 100px;
+  white-space: nowrap;
+  align-self: center;
+}
+
+/* ── CASE META ── */
+.case-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+@media (max-width: 768px) {
+  .case-impact-badge { display: none; }
+  .case-impact { flex-direction: column; gap: 8px; }
+}
+
+/* ── CASE STUDIES ── */
+.case-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 56px;
+}
+
+.case-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-top-color 0.3s, box-shadow 0.3s;
+}
+
+.case-card:hover {
+  border-top-color: var(--gold);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+}
+
+.case-header {
+  padding: 24px 32px 20px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--bg);
+}
+
+.case-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: rgba(184,146,42,0.2);
+  line-height: 1;
+  letter-spacing: -1px;
+  flex-shrink: 0;
+}
+
+.case-type {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--soft);
+}
+
+.case-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark);
+  letter-spacing: -0.3px;
+  margin-left: auto;
+}
+
+.case-body {
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 24px 32px;
+}
+
+.case-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.case-col-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.case-col-label.detected {
+  background: rgba(216,90,48,0.08);
+  color: #D85A30;
+}
+
+.case-col-label.action {
+  background: rgba(184,146,42,0.1);
+  color: var(--gold);
+}
+
+.case-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.case-list li {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.6;
+  padding-left: 14px;
+  position: relative;
+}
+
+.case-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--soft);
+  font-weight: 700;
+}
+
+.case-outcome {
+  grid-column: 1 / -1;
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 18px 20px;
+  border-left: 3px solid var(--gold);
+}
+
+.case-outcome-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.case-outcome-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.case-outcome-item {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dark);
+  line-height: 1.5;
+  display: flex;
+  gap: 10px;
+}
+
+.outcome-arrow {
+  color: var(--gold);
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.case-why {
+  margin-top: 40px;
+  padding: 28px 36px;
+  background: var(--dark);
+  border-radius: 12px;
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.case-why-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  flex-shrink: 0;
+  padding-top: 3px;
+  min-width: 120px;
+}
+
+.case-why-text {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Case studies mobile */
+@media (max-width: 768px) {
+  .case-header { flex-wrap: wrap; gap: 8px; }
+  .case-title { margin-left: 0; width: 100%; }
+  .case-body { grid-template-columns: 1fr; }
+  .case-outcome { grid-column: 1; }
+  .case-why { flex-direction: column; gap: 12px; padding: 20px 24px; }
+}
+
+
+/* ── BENEFITS GRID ── */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 24px 22px;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.benefit-item:hover {
+  border-color: rgba(184,146,42,0.3);
+  background: rgba(184,146,42,0.04);
+}
+
+.benefit-check {
+  font-size: 18px;
+  color: var(--gold);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.benefit-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+  letter-spacing: -0.2px;
+}
+
+.benefit-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.75;
+}
+
+.how-delivered {
+  margin-bottom: 64px;
+}
+
+.how-delivered-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+@media (max-width: 768px) {
+  .benefits-grid { grid-template-columns: 1fr; }
+}
+
 /* ── REVEAL ── */
 .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -430,53 +776,87 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 <!-- SOLUTION -->
 <div class="dark-wrap">
   <div class="dark-inner reveal">
-    <div class="section-tag" style="color:var(--gold)">Solution</div>
-    <h2 class="section-title on-dark">Four documents.<br><em>Complete strategy.</em></h2>
-    <p class="section-sub on-dark">Your client fills out a short questionnaire. You automatically receive everything you need to run the project from the first meeting to final handover — tailored to the project type and your client's operational profile.</p>
+    <div class="section-tag" style="color:var(--gold)">What you actually get</div>
+    <h2 class="section-title on-dark">You're not buying<br><em>four documents.</em></h2>
+    <p class="section-sub on-dark">You're buying the outcome those documents create — before the project starts.</p>
 
-    <div class="documents">
-      <div class="document featured">
-        <div class="doc-num">01</div>
-        <div class="doc-title">Risk-Adjusted Contract</div>
-        <div class="doc-desc">A contract with clauses that protect against the specific risks of this client — not a generic template, but a document built for this type of working relationship.</div>
-        <div class="doc-list">
-          <div class="doc-item"><span class="doc-arrow">→</span>Clauses protecting against endless change orders</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>Phase-lock system adapted to the profile</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>Communication protocol and accountability</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>Milestone payments by project phase</div>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-check">✓</div>
+        <div class="benefit-content">
+          <div class="benefit-title">Protection against endless revisions</div>
+          <div class="benefit-desc">Your contract defines exactly how many revisions this client gets — based on their behavioral profile, not a generic template.</div>
         </div>
       </div>
-      <div class="document">
-        <div class="doc-num">02</div>
-        <div class="doc-title">Adaptive Project Scope</div>
-        <div class="doc-desc">A tailored scope of work aligned to the project type and client profile — with phases, deliverables, and clauses that protect against the specific risks identified.</div>
-        <div class="doc-list">
-          <div class="doc-item"><span class="doc-arrow">→</span>Phases and timelines adapted to project type</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>Clear inclusions and exclusions</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>Revision allowances matched to risk profile</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>Client obligations and response deadlines</div>
+      <div class="benefit-item">
+        <div class="benefit-check">✓</div>
+        <div class="benefit-content">
+          <div class="benefit-title">Scope boundaries clients understand</div>
+          <div class="benefit-desc">A scope document written for how this specific client thinks — not legal boilerplate they'll ignore or misinterpret.</div>
         </div>
       </div>
-      <div class="document">
-        <div class="doc-num">03</div>
-        <div class="doc-title">Client Communication Strategy</div>
-        <div class="doc-desc">Concrete guidance on how to lead this client through each phase — how to set boundaries, how to present options, where the critical moments are.</div>
-        <div class="doc-list">
-          <div class="doc-item"><span class="doc-arrow">→</span>How to set boundaries without conflict</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>How to present options to this profile</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>Where the critical project moments fall</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>The aesthetic language this client responds to</div>
+      <div class="benefit-item">
+        <div class="benefit-check">✓</div>
+        <div class="benefit-content">
+          <div class="benefit-title">Contract clauses matched to client risk</div>
+          <div class="benefit-desc">If this client tends to restart projects, there's a clause for that. If they delay decisions, there's a clause for that too.</div>
         </div>
       </div>
-      <div class="document">
-        <div class="doc-num">04</div>
-        <div class="doc-title">Client Dynamics Profile</div>
-        <div class="doc-desc">An operational profile revealing how your client actually functions in a project — decision-making style, tolerance for uncertainty, need for control.</div>
-        <div class="doc-list">
-          <div class="doc-item"><span class="doc-arrow">→</span>Decision-making style and response speed</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>Level of need for process control</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>Tolerance for change and delays</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>Risk map by project phase</div>
+      <div class="benefit-item">
+        <div class="benefit-check">✓</div>
+        <div class="benefit-content">
+          <div class="benefit-title">A communication plan for this specific client</div>
+          <div class="benefit-desc">Step-by-step guidance on how to present, when to push back, and which moments in the project require the most care.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="how-delivered">
+      <div class="how-delivered-label">How it's delivered — four documents, automatically</div>
+      <div class="documents">
+        <div class="document">
+          <div class="doc-num">01</div>
+          <div class="doc-title">Risk-Adjusted Contract</div>
+          <div class="doc-desc">A contract with clauses that protect against the specific risks of this client — not a generic template, but a document built for this type of working relationship.</div>
+          <div class="doc-list">
+            <div class="doc-item"><span class="doc-arrow">→</span>Clauses protecting against endless change orders</div>
+            <div class="doc-item"><span class="doc-arrow">→</span>Phase-lock system adapted to the profile</div>
+            <div class="doc-item"><span class="doc-arrow">→</span>Communication protocol and accountability</div>
+            <div class="doc-item"><span class="doc-arrow">→</span>Milestone payments by project phase</div>
+          </div>
+        </div>
+        <div class="document featured">
+          <div class="doc-num">02</div>
+          <div class="doc-title">Adaptive Project Scope</div>
+          <div class="doc-desc">A tailored scope of work aligned to the project type and client profile — with phases, deliverables, and clauses that protect against the specific risks identified.</div>
+          <div class="doc-list">
+            <div class="doc-item"><span class="doc-arrow">→</span>Phases and timelines adapted to project type</div>
+            <div class="doc-item"><span class="doc-arrow">→</span>Clear inclusions and exclusions</div>
+            <div class="doc-item"><span class="doc-arrow">→</span>Revision allowances matched to risk profile</div>
+            <div class="doc-item"><span class="doc-arrow">→</span>Client obligations and response deadlines</div>
+          </div>
+        </div>
+        <div class="document">
+          <div class="doc-num">03</div>
+          <div class="doc-title">Client Communication Strategy</div>
+          <div class="doc-desc">Concrete guidance on how to lead this client through each phase — how to set boundaries, how to present options, where the critical moments are.</div>
+          <div class="doc-list">
+            <div class="doc-item"><span class="doc-arrow">→</span>How to set boundaries without conflict</div>
+            <div class="doc-item"><span class="doc-arrow">→</span>How to present options to this profile</div>
+            <div class="doc-item"><span class="doc-arrow">→</span>Where the critical project moments fall</div>
+            <div class="doc-item"><span class="doc-arrow">→</span>The aesthetic language this client responds to</div>
+          </div>
+        </div>
+        <div class="document">
+          <div class="doc-num">04</div>
+          <div class="doc-title">Client Dynamics Profile</div>
+          <div class="doc-desc">An operational profile revealing how your client actually functions in a project — decision-making style, tolerance for uncertainty, need for control.</div>
+          <div class="doc-list">
+            <div class="doc-item"><span class="doc-arrow">→</span>Decision-making style and response speed</div>
+            <div class="doc-item"><span class="doc-arrow">→</span>Level of need for process control</div>
+            <div class="doc-item"><span class="doc-arrow">→</span>Tolerance for change and delays</div>
+            <div class="doc-item"><span class="doc-arrow">→</span>Risk map by project phase</div>
+          </div>
         </div>
       </div>
     </div>
@@ -573,6 +953,149 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
       <div class="step-desc">Automatically, within minutes, delivered directly to your inbox. You walk into the first meeting with a complete strategy — profile, interpretation, scope, and a contract tailored to that client.</div>
     </div>
   </div>
+</section>
+
+
+<!-- CASE STUDIES -->
+<section class="section reveal" id="real-outcomes">
+  <div class="section-tag">What PreForma prevents in real projects</div>
+  <h2 class="section-title">Problems this system<br>prevents <em>before they happen.</em></h2>
+  <p class="section-sub">Three client profiles. Three patterns detected before the first meeting. Three projects that went differently — because the architect wasn't surprised.</p>
+
+  <div class="case-intro">
+    <p class="case-intro-text">An architect in Belgrade sent PreForma to a residential client before their first meeting. The report flagged high scope creep risk, slow decision-making, and third-party influence. She adjusted the contract before entering the room. The project closed without a single unplanned revision. She said: <em>"I've had this client before. I just didn't know it until now."</em></p>
+  </div>
+
+  <div class="case-grid">
+
+    <div class="case-card">
+      <div class="case-header">
+        <div class="case-num">01</div>
+        <div class="case-meta">
+          <div class="case-type">Residential · Interior Design</div>
+          <div class="case-title">High Revision Risk Client</div>
+        </div>
+        <div class="case-impact-badge">−5 revision cycles avoided</div>
+      </div>
+      <div class="case-body">
+        <div class="case-col">
+          <div class="case-col-label detected">Detected before first meeting</div>
+          <ul class="case-list">
+            <li>High likelihood of design direction changes mid-project</li>
+            <li>Delayed decision-making pattern</li>
+            <li>Multiple conflicting stakeholders</li>
+          </ul>
+        </div>
+        <div class="case-col">
+          <div class="case-col-label action">What the architect adjusted</div>
+          <ul class="case-list">
+            <li>Limited initial concept variations to two options</li>
+            <li>Defined strict revision boundaries in contract</li>
+            <li>Structured approval checkpoints before each phase</li>
+          </ul>
+        </div>
+        <div class="case-outcome">
+          <div class="case-outcome-label">Outcome</div>
+          <div class="case-outcome-items">
+            <div class="case-outcome-item"><span class="outcome-arrow">→</span>No major scope changes after concept approval</div>
+            <div class="case-outcome-item"><span class="outcome-arrow">→</span>Faster decision cycles than previous comparable projects</div>
+            <div class="case-outcome-item"><span class="outcome-arrow">→</span>Significantly fewer revision rounds than the contract allowed</div>
+          </div>
+        </div>
+        <div class="case-impact">
+          <div class="case-impact-label">Impact</div>
+          <div class="case-impact-text">Prevented an estimated 5 additional revision cycles and removed 3 weeks of delay risk. Without PreForma, this was a predictable overrun — and it was visible before the first conversation.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-header">
+        <div class="case-num">02</div>
+        <div class="case-meta">
+          <div class="case-type">Residential · Interior Design</div>
+          <div class="case-title">Unclear Preferences Client</div>
+        </div>
+        <div class="case-impact-badge">Late redesign eliminated</div>
+      </div>
+      <div class="case-body">
+        <div class="case-col">
+          <div class="case-col-label detected">Detected before first meeting</div>
+          <ul class="case-list">
+            <li>Inconsistent feedback signals across questionnaire</li>
+            <li>High probability of "I'll know it when I see it" behavior</li>
+            <li>Weak decision authority — likely third-party influence</li>
+          </ul>
+        </div>
+        <div class="case-col">
+          <div class="case-col-label action">What the architect adjusted</div>
+          <ul class="case-list">
+            <li>Forced early preference mapping before concept phase</li>
+            <li>Reduced open-ended design options in first presentation</li>
+            <li>Early sign-off structure introduced from day one</li>
+          </ul>
+        </div>
+        <div class="case-outcome">
+          <div class="case-outcome-label">Outcome</div>
+          <div class="case-outcome-items">
+            <div class="case-outcome-item"><span class="outcome-arrow">→</span>Eliminated late-stage redesign loops entirely</div>
+            <div class="case-outcome-item"><span class="outcome-arrow">→</span>Clear decision structure from the first meeting</div>
+          </div>
+        </div>
+        <div class="case-impact">
+          <div class="case-impact-label">Impact</div>
+          <div class="case-impact-text">Decision clarity moved from low to structured within the first phase. The late-redesign scenario — which typically costs 20–40% of total project time — was removed before it had a chance to form.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="case-header">
+        <div class="case-num">03</div>
+        <div class="case-meta">
+          <div class="case-type">Commercial · Design &amp; Build</div>
+          <div class="case-title">Scope Creep Risk Client</div>
+        </div>
+        <div class="case-impact-badge">Scope held through execution</div>
+      </div>
+      <div class="case-body">
+        <div class="case-col">
+          <div class="case-col-label detected">Detected before first meeting</div>
+          <ul class="case-list">
+            <li>Expansion tendency after initial agreement</li>
+            <li>Budget flexibility mismatch with stated scope</li>
+            <li>Feature inflation risk across decision points</li>
+          </ul>
+        </div>
+        <div class="case-col">
+          <div class="case-col-label action">What the architect adjusted</div>
+          <ul class="case-list">
+            <li>Fixed scope documentation locked before concept phase</li>
+            <li>Change-request protocol defined and signed upfront</li>
+            <li>Communication boundaries and escalation path clarified</li>
+          </ul>
+        </div>
+        <div class="case-outcome">
+          <div class="case-outcome-label">Outcome</div>
+          <div class="case-outcome-items">
+            <div class="case-outcome-item"><span class="outcome-arrow">→</span>Project scope remained stable through full execution</div>
+            <div class="case-outcome-item"><span class="outcome-arrow">→</span>No unplanned additions without contract updates</div>
+          </div>
+        </div>
+        <div class="case-impact">
+          <div class="case-impact-label">Impact</div>
+          <div class="case-impact-text">Scope creep probability reduced from high to controlled before a single line was drawn. Every addition that came up was handled through the change-request protocol — billed, documented, approved.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="case-why">
+    <div class="case-why-label">Why this matters</div>
+    <p class="case-why-text">Most project issues are not caused during execution. They are already visible in early client behavior. PreForma simply makes them explicit — before commitments are made, before the contract is signed, before the first meeting ends.</p>
+  </div>
+
 </section>
 
 <!-- ROI -->
