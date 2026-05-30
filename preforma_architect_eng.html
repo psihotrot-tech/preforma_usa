@@ -288,6 +288,19 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 .footer-copy { font-size: 12px; color: rgba(255,255,255,0.2); }
 .footer-author { font-size: 12px; color: rgba(255,255,255,0.2); text-align: right; line-height: 1.5; }
 
+
+/* ── CHAR REVEAL ── */
+.hero-title .char {
+  display: inline;
+  color: rgba(13,13,13,0.12);
+  transition: color 0.4s ease;
+}
+.hero-title em .char {
+  color: rgba(184,146,42,0.2);
+}
+.hero-title .char.lit { color: var(--dark); }
+.hero-title em .char.lit { color: var(--gold); }
+
 /* ── REVEAL ── */
 .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -422,30 +435,19 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
     <p class="section-sub on-dark">Your client fills out a short questionnaire. You automatically receive everything you need to run the project from the first meeting to final handover — tailored to the project type and your client's operational profile.</p>
 
     <div class="documents">
-      <div class="document">
+      <div class="document featured">
         <div class="doc-num">01</div>
-        <div class="doc-title">Client Dynamics Profile</div>
-        <div class="doc-desc">An operational profile revealing how your client actually functions in a project — decision-making style, tolerance for uncertainty, need for control.</div>
+        <div class="doc-title">Risk-Adjusted Contract</div>
+        <div class="doc-desc">A contract with clauses that protect against the specific risks of this client — not a generic template, but a document built for this type of working relationship.</div>
         <div class="doc-list">
-          <div class="doc-item"><span class="doc-arrow">→</span>Decision-making style and response speed</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>Level of need for process control</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>Tolerance for change and delays</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>Risk map by project phase</div>
+          <div class="doc-item"><span class="doc-arrow">→</span>Clauses protecting against endless change orders</div>
+          <div class="doc-item"><span class="doc-arrow">→</span>Phase-lock system adapted to the profile</div>
+          <div class="doc-item"><span class="doc-arrow">→</span>Communication protocol and accountability</div>
+          <div class="doc-item"><span class="doc-arrow">→</span>Milestone payments by project phase</div>
         </div>
       </div>
       <div class="document">
         <div class="doc-num">02</div>
-        <div class="doc-title">Client Communication Strategy</div>
-        <div class="doc-desc">Concrete guidance on how to lead this client through each phase — how to set boundaries, how to present options, where the critical moments are.</div>
-        <div class="doc-list">
-          <div class="doc-item"><span class="doc-arrow">→</span>How to set boundaries without conflict</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>How to present options to this profile</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>Where the critical project moments fall</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>The aesthetic language this client responds to</div>
-        </div>
-      </div>
-      <div class="document featured">
-        <div class="doc-num">03</div>
         <div class="doc-title">Adaptive Project Scope</div>
         <div class="doc-desc">A tailored scope of work aligned to the project type and client profile — with phases, deliverables, and clauses that protect against the specific risks identified.</div>
         <div class="doc-list">
@@ -456,14 +458,25 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
         </div>
       </div>
       <div class="document">
-        <div class="doc-num">04</div>
-        <div class="doc-title">Risk-Adjusted Contract</div>
-        <div class="doc-desc">A contract with clauses that protect against the specific risks of this client — not a generic template, but a document built for this type of working relationship.</div>
+        <div class="doc-num">03</div>
+        <div class="doc-title">Client Communication Strategy</div>
+        <div class="doc-desc">Concrete guidance on how to lead this client through each phase — how to set boundaries, how to present options, where the critical moments are.</div>
         <div class="doc-list">
-          <div class="doc-item"><span class="doc-arrow">→</span>Clauses protecting against endless change orders</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>Phase-lock system adapted to the profile</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>Communication protocol and accountability</div>
-          <div class="doc-item"><span class="doc-arrow">→</span>Milestone payments by project phase</div>
+          <div class="doc-item"><span class="doc-arrow">→</span>How to set boundaries without conflict</div>
+          <div class="doc-item"><span class="doc-arrow">→</span>How to present options to this profile</div>
+          <div class="doc-item"><span class="doc-arrow">→</span>Where the critical project moments fall</div>
+          <div class="doc-item"><span class="doc-arrow">→</span>The aesthetic language this client responds to</div>
+        </div>
+      </div>
+      <div class="document">
+        <div class="doc-num">04</div>
+        <div class="doc-title">Client Dynamics Profile</div>
+        <div class="doc-desc">An operational profile revealing how your client actually functions in a project — decision-making style, tolerance for uncertainty, need for control.</div>
+        <div class="doc-list">
+          <div class="doc-item"><span class="doc-arrow">→</span>Decision-making style and response speed</div>
+          <div class="doc-item"><span class="doc-arrow">→</span>Level of need for process control</div>
+          <div class="doc-item"><span class="doc-arrow">→</span>Tolerance for change and delays</div>
+          <div class="doc-item"><span class="doc-arrow">→</span>Risk map by project phase</div>
         </div>
       </div>
     </div>
@@ -773,6 +786,37 @@ function toggleFaq(el) {
     entries.forEach(function(e) { if (e.isIntersecting) { countUp(e.target); obs.unobserve(e.target); } });
   }, { threshold: 0.5 });
   document.querySelectorAll('.stat-num[data-target]').forEach(function(el) { obs.observe(el); });
+})();
+
+
+// ── CHAR REVEAL NA HERO NASLOVU ──
+(function() {
+  var titleEl = document.querySelector('.hero-title');
+  if (!titleEl) return;
+
+  function wrapChars(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      var frag = document.createDocumentFragment();
+      node.textContent.split('').forEach(function(ch) {
+        var s = document.createElement('span');
+        s.className = 'char';
+        s.textContent = ch;
+        frag.appendChild(s);
+      });
+      node.parentNode.replaceChild(frag, node);
+    } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName !== 'BR') {
+      Array.from(node.childNodes).forEach(wrapChars);
+    }
+  }
+
+  Array.from(titleEl.childNodes).forEach(wrapChars);
+
+  var chars = Array.from(titleEl.querySelectorAll('.char'));
+  setTimeout(function() {
+    chars.forEach(function(ch, i) {
+      setTimeout(function() { ch.classList.add('lit'); }, i * 40);
+    });
+  }, 300);
 })();
 
 // ── REVEAL ──
