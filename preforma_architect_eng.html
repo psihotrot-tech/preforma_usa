@@ -9,8 +9,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --gold: #B8922A;
-  --gold-light: #D4A93C;
+  --gold: #0D5C3A;
+  --gold-light: #1A7A4A;
   --dark: #0D0D0D;
   --dark2: #141414;
   --mid: #5A5A5A;
@@ -53,14 +53,14 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 .hero-bg-circle {
   position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
   width: 900px; height: 900px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(184,146,42,0.07) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(13,92,58,0.07) 0%, transparent 65%);
   pointer-events: none;
 }
 .badge {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
-  color: var(--gold); border: 1px solid rgba(184,146,42,0.25);
-  background: rgba(184,146,42,0.06); padding: 6px 16px; border-radius: 100px;
+  color: var(--gold); border: 1px solid rgba(13,92,58,0.25);
+  background: rgba(13,92,58,0.06); padding: 6px 16px; border-radius: 100px;
   margin-bottom: 36px; opacity: 0; animation: fadeUp 0.7s ease 0.1s forwards;
 }
 .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
@@ -95,14 +95,14 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 }
 .btn-primary span { position: relative; z-index: 1; }
 .btn-primary:hover::after { transform: translateX(0); }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(184,146,42,0.25); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(13,92,58,0.25); }
 .hero-note { margin-top: 20px; font-size: 12px; color: var(--soft); opacity: 0; animation: fadeUp 0.7s ease 0.7s forwards; }
 
 /* ── STAT BAR ── */
 .stat-bar { background: var(--dark); padding: 0 48px; position: relative; overflow: hidden; }
 .stat-bar::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(184,146,42,0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(13,92,58,0.4), transparent);
 }
 .stat-inner { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); padding: 48px 0; }
 .stat-item { text-align: center; padding: 0 40px; border-right: 1px solid var(--line-dark); }
@@ -153,17 +153,17 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 
 /* ── DARK SECTION ── */
 .dark-wrap { background: var(--dark); padding: 120px 48px; position: relative; overflow: hidden; }
-.dark-wrap::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 1200px; height: 1200px; border-radius: 50%; background: radial-gradient(circle, rgba(184,146,42,0.05) 0%, transparent 60%); pointer-events: none; }
+.dark-wrap::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 1200px; height: 1200px; border-radius: 50%; background: radial-gradient(circle, rgba(13,92,58,0.05) 0%, transparent 60%); pointer-events: none; }
 .dark-inner { max-width: 1160px; margin: 0 auto; position: relative; }
 
 /* ── DOCUMENTS ── */
 .documents { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .document { background: rgba(255,255,255,0.03); border: 1px solid var(--line-dark); border-radius: 12px; padding: 44px 40px; transition: border-color 0.3s, background 0.3s, transform 0.25s; position: relative; }
-.document.featured { border-color: rgba(184,146,42,0.3); background: rgba(184,146,42,0.04); }
-.document.featured::before { content: 'Most requested'; position: absolute; top: 20px; right: 20px; font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(184,146,42,0.3); padding: 4px 10px; border-radius: 100px; }
-.document:hover { border-color: rgba(184,146,42,0.3); background: rgba(184,146,42,0.03); transform: translateY(-3px); }
+.document.featured { border-color: rgba(13,92,58,0.3); background: rgba(13,92,58,0.04); }
+.document.featured::before { content: 'Most requested'; position: absolute; top: 20px; right: 20px; font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(13,92,58,0.3); padding: 4px 10px; border-radius: 100px; }
+.document:hover { border-color: rgba(13,92,58,0.3); background: rgba(13,92,58,0.03); transform: translateY(-3px); }
 .doc-num { font-family: 'Syne', sans-serif; font-size: 64px; font-weight: 800; color: rgba(255,255,255,0.04); line-height: 1; letter-spacing: -3px; margin-bottom: 16px; transition: color 0.3s; }
-.document:hover .doc-num, .document.featured .doc-num { color: rgba(184,146,42,0.1); }
+.document:hover .doc-num, .document.featured .doc-num { color: rgba(13,92,58,0.1); }
 .doc-title { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 12px; letter-spacing: -0.3px; }
 .doc-desc { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.35); line-height: 1.8; margin-bottom: 28px; }
 .doc-list { display: flex; flex-direction: column; gap: 10px; }
@@ -201,7 +201,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 .mockup-text-line { height: 6px; background: var(--line); border-radius: 3px; margin-bottom: 5px; }
 .mockup-text-line:last-child { margin-bottom: 0; width: 70%; }
 .mockup-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.mockup-tag { font-size: 9px; background: rgba(184,146,42,0.08); color: var(--gold); padding: 4px 10px; border: 1px solid rgba(184,146,42,0.2); border-radius: 100px; font-weight: 600; }
+.mockup-tag { font-size: 9px; background: rgba(13,92,58,0.08); color: var(--gold); padding: 4px 10px; border: 1px solid rgba(13,92,58,0.2); border-radius: 100px; font-weight: 600; }
 .mockup-footer { background: #111; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.06); }
 .mockup-footer-logo { font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 2px; color: var(--gold); }
 .mockup-footer-copy { font-size: 8px; color: rgba(255,255,255,0.18); }
@@ -211,7 +211,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 .step { background: var(--white); border-radius: 12px; padding: 44px 36px; border: 1px solid var(--line); border-top: 3px solid var(--line); transition: border-top-color 0.3s, transform 0.25s, box-shadow 0.25s; }
 .step:hover { border-top-color: var(--gold); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.05); }
 .step-num { font-family: 'Syne', sans-serif; font-size: 64px; font-weight: 800; color: var(--line); line-height: 1; letter-spacing: -3px; margin-bottom: 24px; transition: color 0.3s; }
-.step:hover .step-num { color: rgba(184,146,42,0.15); }
+.step:hover .step-num { color: rgba(13,92,58,0.15); }
 .step-title { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 12px; }
 .step-desc { font-size: 14px; font-weight: 300; color: var(--soft); line-height: 1.8; }
 
@@ -238,7 +238,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 .buy-btn::after { content: ''; position: absolute; inset: 0; background: var(--gold); transform: translateX(-101%); transition: transform 0.3s; }
 .buy-btn span { position: relative; z-index: 1; }
 .buy-btn:hover::after { transform: translateX(0); }
-.buy-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(184,146,42,0.3); }
+.buy-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(13,92,58,0.3); }
 .buy-sub { margin-top: 18px; font-size: 15px; font-weight: 300; color: var(--mid); }
 .buy-pay { margin-top: 8px; font-size: 12px; color: var(--soft); }
 
@@ -257,7 +257,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 /* ── AUTHOR ── */
 .author-wrap { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 80px 48px; }
 .author-inner { max-width: 800px; margin: 0 auto; display: flex; gap: 48px; align-items: flex-start; }
-.author-accent { width: 4px; background: linear-gradient(to bottom, var(--gold), rgba(184,146,42,0.1)); border-radius: 4px; flex-shrink: 0; align-self: stretch; min-height: 120px; }
+.author-accent { width: 4px; background: linear-gradient(to bottom, var(--gold), rgba(13,92,58,0.1)); border-radius: 4px; flex-shrink: 0; align-self: stretch; min-height: 120px; }
 .author-name { font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 800; color: var(--dark); letter-spacing: -1px; margin-bottom: 6px; }
 .author-title { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
 .author-text { font-size: 17px; font-weight: 300; color: var(--mid); line-height: 1.85; }
@@ -266,7 +266,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 .reg-wrap { background: var(--dark); padding: 140px 48px; text-align: center; position: relative; overflow: hidden; }
 .reg-bg-text { position: absolute; font-family: 'Syne', sans-serif; font-size: 280px; font-weight: 800; color: rgba(255,255,255,0.012); top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap; pointer-events: none; letter-spacing: -12px; }
 .reg-inner { max-width: 580px; margin: 0 auto; position: relative; }
-.reg-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(184,146,42,0.2); padding: 6px 16px; border-radius: 100px; margin-bottom: 28px; }
+.reg-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(13,92,58,0.2); padding: 6px 16px; border-radius: 100px; margin-bottom: 28px; }
 .reg-title { font-family: 'Syne', sans-serif; font-size: clamp(40px, 5.5vw, 72px); font-weight: 800; color: var(--white); letter-spacing: -3px; line-height: 1.0; margin-bottom: 20px; }
 .reg-title em { font-style: italic; color: var(--gold); }
 .reg-sub { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.35); line-height: 1.75; margin-bottom: 52px; }
@@ -276,7 +276,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 .reg-btn { padding: 18px 32px; background: var(--gold); color: var(--white); font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; border: none; cursor: pointer; transition: background 0.25s; white-space: nowrap; }
 .reg-btn:hover { background: var(--gold-light); }
 .reg-note { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.2); }
-.reg-success { display: none; padding: 48px; border: 1px solid rgba(184,146,42,0.25); background: rgba(184,146,42,0.04); border-radius: 12px; }
+.reg-success { display: none; padding: 48px; border: 1px solid rgba(13,92,58,0.25); background: rgba(13,92,58,0.04); border-radius: 12px; }
 .reg-success-icon { font-size: 40px; color: var(--gold); margin-bottom: 16px; }
 .reg-success-title { font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 800; color: var(--white); letter-spacing: -1px; margin-bottom: 10px; }
 .reg-success-text { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.4); line-height: 1.7; }
@@ -296,7 +296,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
   transition: color 0.4s ease;
 }
 .hero-title em .char {
-  color: rgba(184,146,42,0.2);
+  color: rgba(13,92,58,0.2);
 }
 .hero-title .char.lit { color: var(--dark); }
 .hero-title em .char.lit { color: var(--gold); }
@@ -362,8 +362,8 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
   font-weight: 700;
   letter-spacing: 0.5px;
   color: var(--gold);
-  background: rgba(184,146,42,0.1);
-  border: 1px solid rgba(184,146,42,0.25);
+  background: rgba(13,92,58,0.1);
+  border: 1px solid rgba(13,92,58,0.25);
   padding: 5px 12px;
   border-radius: 100px;
   white-space: nowrap;
@@ -417,7 +417,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
   font-family: 'Syne', sans-serif;
   font-size: 32px;
   font-weight: 800;
-  color: rgba(184,146,42,0.2);
+  color: rgba(13,92,58,0.2);
   line-height: 1;
   letter-spacing: -1px;
   flex-shrink: 0;
@@ -471,7 +471,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 }
 
 .case-col-label.action {
-  background: rgba(184,146,42,0.1);
+  background: rgba(13,92,58,0.1);
   color: var(--gold);
 }
 
@@ -599,8 +599,8 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 }
 
 .benefit-item:hover {
-  border-color: rgba(184,146,42,0.3);
-  background: rgba(184,146,42,0.04);
+  border-color: rgba(13,92,58,0.3);
+  background: rgba(13,92,58,0.04);
 }
 
 .benefit-check {
@@ -649,7 +649,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 
 
 .doc-item-highlight {
-  color: rgba(184,146,42,0.7) !important;
+  color: rgba(13,92,58,0.7) !important;
   font-weight: 500 !important;
 }
 
@@ -731,7 +731,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 
 .buy-mid-btn span { position: relative; z-index: 1; }
 .buy-mid-btn:hover::after { transform: translateX(0); }
-.buy-mid-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(184,146,42,0.35); }
+.buy-mid-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(13,92,58,0.35); }
 
 .buy-mid-note {
   font-size: 12px;
@@ -746,6 +746,54 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
   .buy-mid-inner { flex-direction: column; align-items: flex-start; gap: 28px; }
   .buy-mid-right { align-items: flex-start; }
   .buy-mid-note { text-align: left; }
+}
+
+
+/* ── PDF PREVIEW ── */
+.pdf-preview-container {
+  max-width: 560px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.pdf-preview-img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  transform: rotate(-1deg);
+  box-shadow:
+    0 4px 6px rgba(0,0,0,0.05),
+    0 12px 40px rgba(0,0,0,0.3),
+    0 40px 80px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.pdf-preview-img:hover {
+  transform: rotate(0deg) scale(1.01);
+  box-shadow:
+    0 4px 6px rgba(0,0,0,0.05),
+    0 20px 60px rgba(0,0,0,0.4),
+    0 60px 100px rgba(0,0,0,0.3);
+}
+
+.pdf-preview-badge {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(13,13,13,0.85);
+  color: var(--gold);
+  font-family: 'Syne', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 4px;
+  backdrop-filter: blur(8px);
+}
+
+@media (max-width: 768px) {
+  .pdf-preview-img { transform: rotate(0deg); }
 }
 
 /* ── REVEAL ── */
@@ -964,71 +1012,15 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
     </div>
 
     <div class="preview-wrap">
-      <div class="preview-label">Sample generated report</div>
-      <div class="mockup-shell">
-        <div class="mockup-header">
-          <div class="mockup-logo">PreForma · Client Intelligence</div>
-          <div class="mockup-title">Client Dynamics Profile</div>
-          <div class="mockup-meta">
-            <div><div class="mockup-meta-label">Client</div><div class="mockup-meta-val">Alexandra Monroe</div></div>
-            <div><div class="mockup-meta-label">Profile</div><div class="mockup-meta-val gold">VISIONARY / CREATIVE</div></div>
-            <div><div class="mockup-meta-label">Project type</div><div class="mockup-meta-val">Interior Design · Medium</div></div>
-            <div><div class="mockup-meta-label">Overall risk</div><div class="mockup-meta-val gold">Moderate · Monitor scope</div></div>
-          </div>
-        </div>
-        <div class="mockup-body">
-          <div class="mockup-sec">
-            <div class="mockup-sec-hdr">
-              <div class="mockup-sec-num">02</div>
-              <div class="mockup-sec-title">Operational risk map</div>
-            </div>
-            <div class="mockup-risk-row">
-              <div class="mockup-risk-label">Scope creep risk</div>
-              <div class="mockup-risk-bar"><div class="mockup-risk-fill fill-high" data-width="82"></div></div>
-              <div class="mockup-risk-val val-high risk-counter" data-target="82">0%</div>
-            </div>
-            <div class="mockup-risk-row">
-              <div class="mockup-risk-label">Frequent change risk</div>
-              <div class="mockup-risk-bar"><div class="mockup-risk-fill fill-high" data-width="74"></div></div>
-              <div class="mockup-risk-val val-high risk-counter" data-target="74">0%</div>
-            </div>
-            <div class="mockup-risk-row">
-              <div class="mockup-risk-label">Slow decision-making</div>
-              <div class="mockup-risk-bar"><div class="mockup-risk-fill fill-med" data-width="51"></div></div>
-              <div class="mockup-risk-val val-med risk-counter" data-target="51">0%</div>
-            </div>
-            <div class="mockup-risk-row">
-              <div class="mockup-risk-label">Handover risk</div>
-              <div class="mockup-risk-bar"><div class="mockup-risk-fill fill-med" data-width="44"></div></div>
-              <div class="mockup-risk-val val-med risk-counter" data-target="44">0%</div>
-            </div>
-            <div class="mockup-risk-row">
-              <div class="mockup-risk-label">Communication conflict</div>
-              <div class="mockup-risk-bar"><div class="mockup-risk-fill fill-low" data-width="21"></div></div>
-              <div class="mockup-risk-val val-low risk-counter" data-target="21">0%</div>
-            </div>
-          </div>
-          <div class="mockup-sec">
-            <div class="mockup-sec-hdr">
-              <div class="mockup-sec-num">05</div>
-              <div class="mockup-sec-title">Communication protocol</div>
-            </div>
-            <div class="mockup-text-block">
-              <div class="mockup-text-line"></div>
-              <div class="mockup-text-line" style="width:80%"></div>
-              <div class="mockup-text-line" style="width:60%"></div>
-            </div>
-          </div>
-          <div class="mockup-tags">
-            <div class="mockup-tag">Revision Protection</div>
-            <div class="mockup-tag">Scope Lock</div>
-            <div class="mockup-tag">Phase-Lock Required</div>
-          </div>
-        </div>
-        <div class="mockup-footer">
-          <div class="mockup-footer-logo">PREFORMA</div>
-          <div class="mockup-footer-copy">Sava Pivnički · psihotrot@gmail.com</div>
-        </div>
+      <div class="preview-label">Sample generated report — Executive Summary</div>
+      <div class="pdf-preview-container">
+        <img
+          src="preforma_summary_preview_web.png"
+          alt="PreForma Executive Summary — sample report"
+          class="pdf-preview-img"
+          loading="lazy"
+        />
+        <div class="pdf-preview-badge">Executive Summary · Page 1 of 1</div>
       </div>
     </div>
   </div>
