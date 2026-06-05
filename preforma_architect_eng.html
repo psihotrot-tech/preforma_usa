@@ -796,6 +796,35 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
   .pdf-preview-img { transform: rotate(0deg); }
 }
 
+
+/* ── BIJELI TEKST NA TAMNIM POZADINAMA ── */
+.dark-wrap .section-sub,
+.dark-wrap p,
+.dark-wrap .doc-desc { color: rgba(255,255,255,0.65) !important; }
+
+.dark-wrap .doc-title { color: #FFFFFF !important; }
+
+.dark-wrap .doc-item { color: rgba(255,255,255,0.6) !important; }
+
+.stat-label { color: rgba(255,255,255,0.7) !important; }
+
+.reg-sub { color: rgba(255,255,255,0.65) !important; }
+
+.reg-note { color: rgba(255,255,255,0.5) !important; }
+
+.reg-success-text { color: rgba(255,255,255,0.65) !important; }
+
+.footer-copy,
+.footer-author { color: rgba(255,255,255,0.5) !important; }
+
+.preview-label { color: rgba(255,255,255,0.55) !important; }
+
+.buy-sub { color: var(--mid) !important; }
+
+.buy-pay { color: var(--soft) !important; }
+
+.section-label.on-dark { color: rgba(255,255,255,0.85) !important; }
+
 /* ── REVEAL ── */
 .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -926,7 +955,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
 <div class="dark-wrap">
   <div class="dark-inner reveal">
     <div class="section-tag" style="color:var(--gold)">What you actually get</div>
-    <h2 class="section-title on-dark">You're not buying<br><em>four documents.</em></h2>
+    <h2 class="section-title on-dark">You're not buying<br><em>five documents.</em></h2>
     <p class="section-sub on-dark">You're buying the outcome those documents create — before the project starts.</p>
 
     <div class="benefits-grid">
@@ -961,8 +990,19 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
     </div>
 
     <div class="how-delivered">
-      <div class="how-delivered-label">How it's delivered — four documents, automatically</div>
+      <div class="how-delivered-label">How it's delivered — five documents, automatically</div>
       <div class="documents">
+        <div class="document featured">
+          <div class="doc-num">00</div>
+          <div class="doc-title">Executive Summary</div>
+          <div class="doc-desc">A one-page overview of the most critical insights — read this before the first meeting. Covers the client profile, top risk signals, three things you should never do, and the conflict protocol.</div>
+          <div class="doc-list">
+            <div class="doc-item"><span class="doc-arrow">→</span>Client profile in one sentence</div>
+            <div class="doc-item"><span class="doc-arrow">→</span>Top 3 risk signals with percentages</div>
+            <div class="doc-item"><span class="doc-arrow">→</span>Three things you never do with this client</div>
+            <div class="doc-item"><span class="doc-arrow">→</span>Conflict resolution protocol</div>
+          </div>
+        </div>
         <div class="document">
           <div class="doc-num">01</div>
           <div class="doc-title">Risk-Adjusted Contract</div>
@@ -1043,7 +1083,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
     </div>
     <div class="step">
       <div class="step-num">03</div>
-      <div class="step-title">You receive 4 documents</div>
+      <div class="step-title">You receive 5 documents</div>
       <div class="step-desc">Automatically, within minutes, delivered directly to your inbox. You walk into the first meeting with a complete strategy — profile, interpretation, scope, and a contract tailored to that client.</div>
     </div>
   </div>
@@ -1277,7 +1317,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">What do I actually receive?<span class="faq-icon">+</span></div>
-      <div class="faq-a">Four PDF documents delivered to your inbox automatically: a Risk-Adjusted Contract with clauses built specifically around this client's risk profile, an Adaptive Project Scope tailored to the project type, a Client Communication Strategy with phase-by-phase guidance on how to lead this client, and a Client Dynamics Profile with a full behavioral risk map — including three things you should never do with this client, and a conflict resolution protocol if something goes wrong.</div>
+      <div class="faq-a">Five PDF documents delivered to your inbox automatically: an Executive Summary with key insights, a Risk-Adjusted Contract with clauses built specifically around this client's risk profile, an Adaptive Project Scope tailored to the project type, a Client Communication Strategy with phase-by-phase guidance on how to lead this client, and a Client Dynamics Profile with a full behavioral risk map — including three things you should never do with this client, and a conflict resolution protocol if something goes wrong.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">How accurate is it?<span class="faq-icon">+</span></div>
@@ -1285,7 +1325,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">What's included in the Protection Pack?<span class="faq-icon">+</span></div>
-      <div class="faq-a">The Protection Pack includes 3 complete client analyses. Each analysis generates all four documents — profile, interpretation, scope, and contract — for one client. Your first report is always free, so you can evaluate the system before committing.</div>
+      <div class="faq-a">The Protection Pack includes 3 complete client analyses. Each analysis generates all five documents — executive summary, profile, interpretation, scope, and contract — for one client. Your first report is always free, so you can evaluate the system before committing.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Can I use it for different project types?<span class="faq-icon">+</span></div>
