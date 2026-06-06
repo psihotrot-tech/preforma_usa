@@ -4,6 +4,52 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PreForma — Project Intelligence. Before the First Meeting.</title>
+
+  <!-- SEO -->
+  <meta name="description" content="PreForma analyzes your client's behavioral profile before the first meeting and automatically generates 5 documents — profile, interpretation, contract, scope, and executive summary tailored to that specific client.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://psihotrot-tech.github.io/preforma_usa/preforma_landing_eng.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PreForma — Client Intelligence Before the First Meeting">
+  <meta property="og:description" content="Know who's sitting across from you before the project starts. PreForma generates 5 operational documents tailored to your client's profile — automatically.">
+  <meta property="og:url" content="https://psihotrot-tech.github.io/preforma_usa/preforma_landing_eng.html">
+  <meta property="og:image" content="https://psihotrot-tech.github.io/preforma_usa/preforma_summary_preview_web.png">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="PreForma">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PreForma — Client Intelligence Before the First Meeting">
+  <meta name="twitter:description" content="Know who's sitting across from you before the project starts. 5 documents tailored to your client's profile — automatically.">
+  <meta name="twitter:image" content="https://psihotrot-tech.github.io/preforma_usa/preforma_summary_preview_web.png">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PreForma",
+    "description": "Client intelligence system for architects and interior designers. Analyzes client behavioral profile and automatically generates operational documents.",
+    "url": "https://psihotrot-tech.github.io/preforma_usa/preforma_landing_eng.html",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "First report free"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Sava Pivnički",
+      "jobTitle": "Licensed Psychologist",
+      "email": "psihotrot@gmail.com"
+    }
+  }
+  </script>
+
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -856,6 +902,42 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--d
   .footer-author { text-align: center; }
   .testi-inner { flex-direction: column; gap: 16px; }
 }
+
+/* ── COPYRIGHT BAR ── */
+.copyright-bar {
+  background: #0A0A0A;
+  padding: 12px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.copyright-text {
+  font-size: 10px;
+  color: rgba(255,255,255,0.2);
+  letter-spacing: 0.3px;
+}
+
+.powered-by {
+  font-size: 10px;
+  color: rgba(255,255,255,0.2);
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: color 0.2s;
+}
+
+.powered-by:hover { color: var(--gold); }
+
+@media (max-width: 640px) {
+  .copyright-bar {
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px 24px;
+    text-align: center;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1501,5 +1583,12 @@ var revealObs = new IntersectionObserver(function(entries) {
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(function(el) { revealObs.observe(el); });
 </script>
+
+<!-- COPYRIGHT -->
+<div class="copyright-bar">
+  <span class="copyright-text">© 2026 PreForma · All rights reserved</span>
+  <a href="https://psihotrot-tech.github.io/Adversa" class="powered-by" target="_blank" rel="noopener">Powered by Adversa</a>
+</div>
+
 </body>
 </html>
