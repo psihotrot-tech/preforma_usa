@@ -4,7 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
 <title>PreForma — Stop Bleeding Margins on Difficult Clients</title>
-<meta name="description" content="PreForma is a psychological screening platform built exclusively for Architects. Turn a 3-minute client intake into a tactical dossier that eliminates scope creep before your first meeting.">
+<meta name="description" content="PreForma is a psychological screening platform built exclusively for Architects. Turn a 3-minute client intake into a tactical dossier with 5 automated files that eliminate scope creep before your first meeting.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://psihotrot-tech.github.io/preforma_usa/preforma_architect_eng.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PreForma — Stop Bleeding Margins on Difficult Clients">
+<meta property="og:description" content="Psychological client screening for architects. Turn a 3-minute intake into a tactical dossier with 5 automated files. Eliminate scope creep before your first meeting.">
+<meta property="og:url" content="https://psihotrot-tech.github.io/preforma_usa/preforma_architect_eng.html">
+<meta property="og:site_name" content="PreForma">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PreForma — Stop Bleeding Margins on Difficult Clients">
+<meta name="twitter:description" content="Psychological client screening for architects. 5 automated files. Eliminate scope creep before your first meeting.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PreForma",
+  "description": "Psychological client screening platform for architects. Analyzes client behavioral profile and auto-generates 5 operational documents.",
+  "url": "https://psihotrot-tech.github.io/preforma_usa/preforma_architect_eng.html",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "audience": { "@type": "Audience", "audienceType": "Architects and Interior Designers" },
+  "offers": { "@type": "Offer", "price": "39", "priceCurrency": "USD" },
+  "author": { "@type": "Person", "name": "Sava Pivnički", "email": "psihotrot@gmail.com" }
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -157,6 +182,13 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
 .cta-h2 em { font-style: normal; color: var(--gold); }
 
 
+
+/* ── COPYRIGHT BAR ── */
+.copyright-bar { background: #050505; padding: 12px 48px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.04); }
+.copyright-text { font-size: 10px; color: rgba(255,255,255,0.2); letter-spacing: 0.3px; }
+.powered-by { font-size: 10px; color: rgba(255,255,255,0.2); text-decoration: none; letter-spacing: 0.3px; transition: color 0.2s; }
+.powered-by:hover { color: var(--gold); }
+
 /* ── PRICING ── */
 .pricing { background: var(--off-black); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 100px 48px; }
 .pricing-inner { max-width: 1100px; margin: 0 auto; }
@@ -193,20 +225,49 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
 @media (max-width: 900px) {
   .hdr { padding: 0 20px; }
   .hdr-tag { display: none; }
-  .hero { padding: 100px 24px 60px; }
-  .hero-proof { grid-template-columns: 1fr; gap: 24px; }
-  .hero-stat, .hero-stat:last-child, .hero-stat:nth-child(2) { border: none; padding: 0; border-bottom: 1px solid var(--rule); padding-bottom: 24px; }
-  .hero-stat:last-child { border-bottom: none; padding-bottom: 0; }
-  .pain { padding: 60px 24px; }
+  .hdr-cta { padding: 8px 14px; font-size: 11px; }
+  .hero { padding: 90px 20px 56px; }
+  .hero-h1 { letter-spacing: -2px; }
+  .hero-proof { grid-template-columns: 1fr; gap: 0; margin-top: 48px; }
+  .hero-stat { border-right: none !important; padding: 0 !important; border-bottom: 1px solid var(--rule); padding-bottom: 20px !important; margin-bottom: 20px; }
+  .hero-stat:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0 !important; }
+  .pain { padding: 60px 20px; }
   .pain-grid { grid-template-columns: 1fr; }
-  .what, .how { padding: 72px 24px; }
+  .what { padding: 72px 20px; }
   .output-grid { grid-template-columns: 1fr; }
-  .demo-wrap { padding: 60px 24px; }
+  .demo-wrap { padding: 60px 20px; }
   .demo-inner { grid-template-columns: 1fr; gap: 40px; }
+  .how { padding: 72px 20px; }
   .step-grid { grid-template-columns: 1fr; }
-  .demo-cta { padding: 72px 24px; }
+  .pricing { padding: 72px 20px; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .plan.featured::before { left: 20px; }
+  .demo-cta { padding: 72px 20px; }
   .footer { padding: 24px 20px; flex-direction: column; gap: 12px; text-align: center; }
   .footer-auth { text-align: center; }
+}
+
+@media (max-width: 900px) {
+  .copyright-bar { padding: 12px 20px; flex-direction: column; gap: 6px; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .hero-h1 { letter-spacing: -1.5px; }
+  .hero-eyebrow { font-size: 9px; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .btn-main { justify-content: center; }
+  .btn-ghost { justify-content: center; }
+  .hero-sub { font-size: 16px; }
+  .pain-item { padding: 24px 20px; }
+  .output-item { padding: 28px 24px; }
+  .step-item { padding: 28px 24px; }
+  .plan { padding: 32px 24px; }
+  .plan-price { font-size: 44px; }
+  #regForm > div { flex-direction: column; }
+  #regBtn { padding: 16px 20px; }
+  .demo-inner { gap: 32px; }
+  .section-h2 { letter-spacing: -1.5px; }
+  .cta-h2 { letter-spacing: -1.5px; }
 }
 </style>
 </head>
@@ -237,15 +298,15 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
   </div>
   <div class="hero-proof">
     <div class="hero-stat">
-      <div class="stat-val">68%</div>
+      <div class="stat-val" data-target="68" data-suffix="%">68%</div>
       <div class="stat-desc">of projects run over schedule due to misaligned client communication</div>
     </div>
     <div class="hero-stat">
-      <div class="stat-val">3×</div>
+      <div class="stat-val" data-target="3" data-suffix="×">3×</div>
       <div class="stat-desc">more revision rounds than originally scoped — on average</div>
     </div>
     <div class="hero-stat">
-      <div class="stat-val">40%</div>
+      <div class="stat-val" data-target="40" data-suffix="%">40%</div>
       <div class="stat-desc">of your fee disappears into unpaid overtime on problem clients</div>
     </div>
   </div>
@@ -488,6 +549,11 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
   <div class="footer-auth">Sava Pivnički<br>psihotrot@gmail.com</div>
 </footer>
 
+<div class="copyright-bar">
+  <span class="copyright-text">&copy; 2026 PreForma &middot; All rights reserved</span>
+  <a href="https://psihotrot-tech.github.io/Adversa" class="powered-by" target="_blank" rel="noopener">Powered by Adversa</a>
+</div>
+
 <script>
 function getArchitectEmail() {
   try {
@@ -569,6 +635,29 @@ var obs = new IntersectionObserver(function(entries) {
   });
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
+
+// CountUp animacija
+(function() {
+  function countUp(el) {
+    var target = parseFloat(el.dataset.target);
+    var suffix = el.dataset.suffix || '';
+    var start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / 1400, 1);
+      var ease = 1 - Math.pow(1 - p, 4);
+      el.textContent = Math.round(ease * target) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { countUp(e.target); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.stat-val[data-target]').forEach(function(el) { obs.observe(el); });
+})();
 </script>
 </body>
 </html>
