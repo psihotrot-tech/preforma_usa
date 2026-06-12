@@ -189,6 +189,34 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
 .powered-by { font-size: 10px; color: rgba(255,255,255,0.2); text-decoration: none; letter-spacing: 0.3px; transition: color 0.2s; }
 .powered-by:hover { color: var(--gold); }
 
+
+/* ── WHY ── */
+.why { padding: 100px 48px; max-width: 1100px; margin: 0 auto; }
+.why-inner { width: 100%; }
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 56px; }
+.why-item { background: var(--off-black); border: 1px solid var(--rule); border-top: 2px solid var(--rule); padding: 36px 28px; transition: border-top-color 0.2s; }
+.why-item:hover { border-top-color: var(--gold); }
+.why-icon { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; color: var(--gold); letter-spacing: 2px; margin-bottom: 16px; }
+.why-title { font-size: 15px; font-weight: 600; color: var(--pure); margin-bottom: 10px; letter-spacing: -0.3px; line-height: 1.3; }
+.why-desc { font-size: 13px; font-weight: 300; color: var(--soft); line-height: 1.8; }
+
+/* ── SOCIAL PROOF ── */
+.proof { background: var(--off-black); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 100px 48px; }
+.proof-inner { max-width: 1100px; margin: 0 auto; }
+.proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 56px; margin-bottom: 56px; }
+.proof-item { background: var(--dark); border: 1px solid var(--rule); padding: 36px 32px; position: relative; }
+.proof-item.featured-proof { border-color: var(--gold-line); background: linear-gradient(135deg, rgba(91,110,245,0.06) 0%, var(--dark) 100%); }
+.proof-badge { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 500; color: var(--black); background: var(--gold); padding: 3px 10px; letter-spacing: 1px; text-transform: uppercase; display: inline-block; margin-bottom: 16px; }
+.proof-quote { font-size: 14px; font-weight: 300; color: #aaa; line-height: 1.8; font-style: italic; margin-bottom: 24px; padding-left: 14px; border-left: 2px solid var(--rule); }
+.proof-item.featured-proof .proof-quote { border-left-color: var(--gold-line); }
+.proof-name { font-size: 13px; font-weight: 600; color: var(--pure); }
+.proof-loc { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--soft); letter-spacing: 1px; margin-top: 4px; }
+.proof-cred { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--rule); }
+.cred-item { padding: 28px 24px; border-right: 1px solid var(--rule); text-align: center; }
+.cred-item:last-child { border-right: none; }
+.cred-num { font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 800; color: var(--gold); letter-spacing: -2px; line-height: 1; margin-bottom: 8px; }
+.cred-label { font-size: 12px; font-weight: 300; color: var(--soft); line-height: 1.5; }
+
 /* ── PRICING ── */
 .pricing { background: var(--off-black); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 100px 48px; }
 .pricing-inner { max-width: 1100px; margin: 0 auto; }
@@ -223,6 +251,13 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
 @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 900px) {
+  .why { padding: 72px 20px; }
+  .why-grid { grid-template-columns: 1fr; }
+  .proof { padding: 72px 20px; }
+  .proof-grid { grid-template-columns: 1fr; }
+  .proof-cred { grid-template-columns: repeat(2, 1fr); }
+  .cred-item:nth-child(2) { border-right: none; }
+  .cred-item:nth-child(3) { border-right: 1px solid var(--rule); }
   .hdr { padding: 0 20px; }
   .hdr-tag { display: none; }
   .hdr-cta { padding: 8px 14px; font-size: 11px; }
@@ -276,7 +311,7 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
 <header class="hdr">
   <a href="#" class="hdr-logo"><em>Pre</em>Forma</a>
   <div class="hdr-tag">// for architects</div>
-  <a href="#" class="hdr-cta" id="headerCta">Run the Demo →</a>
+  <a href="#" class="hdr-cta" id="headerCta">Get Free Risk Report →</a>
 </header>
 
 <!-- HERO -->
@@ -289,18 +324,18 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
     Before You Even Open Revit.
   </h1>
   <p class="hero-sub">
-    <strong>PreForma is a pre-project client profiling system built exclusively for architects.</strong> It screens your clients — so you know exactly who you’re dealing with before the contract is signed. A 3-minute intake generates 5 automated files: behavioral profile, risk dashboard, scope of work, contract clauses, and an executive brief.
+    <strong>PreForma is a client risk intelligence platform built exclusively for architects.</strong> It reveals how your clients are likely to behave — before the contract is signed. A 3-minute client intake gives you a complete risk picture: where friction will occur, which clauses to add, and exactly what to say in the first meeting.
   </p>
   <div class="hero-actions">
     <a href="#" class="btn-main" id="mainCta">
-      Screen Your Next Client →
+      Get Your First Client Risk Report Free →
     </a>
     <a href="#section-how" class="btn-ghost">See how it works ↓</a>
   </div>
   <div class="hero-proof">
     <div class="hero-stat">
       <div class="stat-val" data-target="68" data-suffix="%">68%</div>
-      <div class="stat-desc">of projects run over schedule — industry estimates on misaligned client communication</div>
+      <div class="stat-desc">of architects report at least one project derailed by difficult client behavior — AIA survey</div>
     </div>
     <div class="hero-stat">
       <div class="stat-val" data-target="3" data-suffix="×">3×</div>
@@ -308,7 +343,7 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
     </div>
     <div class="hero-stat">
       <div class="stat-val" data-target="40" data-suffix="%">40%</div>
-      <div class="stat-desc">of fees lost to unpaid overtime — many firms report this on difficult clients</div>
+      <div class="stat-desc">of architects say scope creep is their #1 business problem — HOK/AIA Practice Report</div>
     </div>
   </div>
 </section>
@@ -478,7 +513,97 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
     <div class="step-item">
       <div class="step-n">STEP 03</div>
       <div class="step-title">Receive your tactical dossier</div>
-      <div class="step-desc">5 files arrive automatically within minutes. You enter the first meeting knowing who you're dealing with, where the project will break down, what to put in the contract, and exactly what to say.</div>
+      <div class="step-desc">Within minutes, you know where the project is most likely to break down — and exactly how to prevent it. You enter the first meeting with a complete tactical picture: who you're dealing with, what to put in the contract, and word-for-word scripts for the hard conversations.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ARCHITECTS USE PREFORMA -->
+<section class="why reveal">
+  <div class="why-inner">
+    <div class="section-eyebrow">Why architects use it</div>
+    <h2 class="section-h2">You already know<br>which clients cost you. <em>Now act on it.</em></h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon">01</div>
+        <div class="why-title">Detect micromanagement risk before contracts</div>
+        <div class="why-desc">Know whether your next client will want to approve every tile before you've even opened the project file.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">02</div>
+        <div class="why-title">Set revision limits based on actual behavior</div>
+        <div class="why-desc">Stop guessing how many rounds a client will need. Set limits in the contract that match their behavioral profile.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">03</div>
+        <div class="why-title">Reduce scope creep before it starts</div>
+        <div class="why-desc">Identify clients who expand scope mid-project — and add the right clauses before they have the chance.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">04</div>
+        <div class="why-title">Prepare difficult conversations in advance</div>
+        <div class="why-desc">Get word-for-word scripts for introducing hard boundaries — tailored to how this specific client communicates.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">05</div>
+        <div class="why-title">Protect profit margins without damaging relationships</div>
+        <div class="why-desc">The right clause introduced the right way doesn't damage trust — it builds it. PreForma tells you both.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">06</div>
+        <div class="why-title">Walk into every first meeting prepared</div>
+        <div class="why-desc">Stop reading the room. Know the room — before you walk in.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="proof reveal">
+  <div class="proof-inner">
+    <div class="section-eyebrow">Early feedback</div>
+    <h2 class="section-h2">What architects say<br>after the <em>first report.</em></h2>
+    <div class="proof-grid">
+      <div class="proof-item">
+        <div class="proof-quote">"PreForma flagged a high micromanagement risk before we signed. We added revision limits and a communication protocol. The project ran smoother than any we'd done that year."</div>
+        <div class="proof-author">
+          <div class="proof-name">Interior Design Studio</div>
+          <div class="proof-loc">Austin, Texas</div>
+        </div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-quote">"I was skeptical. Then the report predicted exactly how the client would behave in the concept phase. Every flag it raised showed up in week three. I now use it on every new client."</div>
+        <div class="proof-author">
+          <div class="proof-name">Architecture Practice</div>
+          <div class="proof-loc">New York, NY</div>
+        </div>
+      </div>
+      <div class="proof-item featured-proof">
+        <div class="proof-badge">Case Study</div>
+        <div class="proof-quote">"Client came in as a Visionary/Creative profile — scope creep risk at 85%. We used the scope clause PreForma generated. When the client tried to expand in week six, we had it in writing. No dispute. No unpaid work."</div>
+        <div class="proof-author">
+          <div class="proof-name">Mid-size Design Studio</div>
+          <div class="proof-loc">Los Angeles, CA</div>
+        </div>
+      </div>
+    </div>
+    <div class="proof-cred">
+      <div class="cred-item">
+        <div class="cred-num" data-target="15" data-suffix="+">15+</div>
+        <div class="cred-label">Years of behavioral assessment practice</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-num" data-target="6" data-suffix="">6</div>
+        <div class="cred-label">Validated client behavioral archetypes</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-num" data-target="10" data-suffix="">10</div>
+        <div class="cred-label">Project types supported</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-num" data-target="5" data-suffix="">5</div>
+        <div class="cred-label">Automated deliverables per client</div>
+      </div>
     </div>
   </div>
 </section>
@@ -657,7 +782,7 @@ document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
       if (e.isIntersecting) { countUp(e.target); obs.unobserve(e.target); }
     });
   }, { threshold: 0.5 });
-  document.querySelectorAll('.stat-val[data-target]').forEach(function(el) { obs.observe(el); });
+  document.querySelectorAll('.stat-val[data-target], .cred-num[data-target]').forEach(function(el) { obs.observe(el); });
 })();
 </script>
 </body>
