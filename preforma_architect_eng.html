@@ -1,4 +1,4 @@
-O<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -44,9 +44,9 @@ O<!DOCTYPE html>
   --muted: #444444;
   --white: #F2F0EB;
   --pure: #FFFFFF;
-  --gold: #C9A84C;
-  --gold-dim: rgba(201,168,76,0.15);
-  --gold-line: rgba(201,168,76,0.3);
+  --gold: #5B6EF5;
+  --gold-dim: rgba(91,110,245,0.15);
+  --gold-line: rgba(91,110,245,0.3);
   --red: #C84B4B;
   --red-dim: rgba(200,75,75,0.1);
   --green: #4B8A5A;
@@ -62,7 +62,7 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
 .hdr-logo em { color: var(--gold); font-style: normal; }
 .hdr-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 400; color: var(--soft); letter-spacing: 1px; text-transform: uppercase; }
 .hdr-cta { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--black); background: var(--gold); text-decoration: none; padding: 9px 20px; transition: background 0.2s; }
-.hdr-cta:hover { background: #D4B86A; }
+.hdr-cta:hover { background: #7B8EF7; }
 
 /* ── HERO ── */
 .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 120px 48px 80px; max-width: 1100px; margin: 0 auto; position: relative; }
@@ -74,7 +74,7 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
 .hero-sub strong { color: var(--white); font-weight: 500; }
 .hero-actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.7s ease 0.55s forwards; }
 .btn-main { display: inline-flex; align-items: center; gap: 10px; background: var(--gold); color: var(--black); font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; padding: 16px 36px; transition: all 0.2s; }
-.btn-main:hover { background: #D4B86A; transform: translateY(-1px); }
+.btn-main:hover { background: #7B8EF7; transform: translateY(-1px); }
 .btn-ghost { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--soft); text-decoration: none; border-bottom: 1px solid var(--muted); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
 .btn-ghost:hover { color: var(--white); border-color: var(--white); }
 .hero-proof { margin-top: 72px; padding-top: 40px; border-top: 1px solid var(--rule); display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; opacity: 0; animation: fadeUp 0.7s ease 0.7s forwards; }
@@ -104,10 +104,10 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
 .output-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
 .output-item { background: var(--off-black); border: 1px solid var(--rule); padding: 36px 32px; transition: border-color 0.2s; position: relative; }
 .output-item:hover { border-color: var(--gold-line); }
-.output-item.flag { border-color: var(--gold-line); background: linear-gradient(135deg, rgba(201,168,76,0.04) 0%, var(--off-black) 100%); }
+.output-item.flag { border-color: var(--gold-line); background: linear-gradient(135deg, rgba(91,110,245,0.04) 0%, var(--off-black) 100%); }
 .output-item.flag::before { content: 'Most used'; position: absolute; top: 16px; right: 16px; font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--gold); border: 1px solid var(--gold-line); padding: 3px 8px; letter-spacing: 1px; }
 .output-n { font-family: 'Syne', sans-serif; font-size: 52px; font-weight: 800; color: rgba(255,255,255,0.04); line-height: 1; letter-spacing: -3px; margin-bottom: 16px; transition: color 0.2s; }
-.output-item:hover .output-n, .output-item.flag .output-n { color: rgba(201,168,76,0.1); }
+.output-item:hover .output-n, .output-item.flag .output-n { color: rgba(91,110,245,0.1); }
 .output-title { font-size: 17px; font-weight: 600; color: var(--pure); margin-bottom: 8px; letter-spacing: -0.3px; }
 .output-desc { font-size: 13px; font-weight: 300; color: var(--soft); line-height: 1.75; margin-bottom: 20px; }
 .output-list { display: flex; flex-direction: column; gap: 7px; }
@@ -131,7 +131,7 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
 .dash { background: #F8F7F4; border: 1px solid #E0DDD6; font-family: 'Inter', sans-serif; }
 .dash-hdr { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #E0DDD6; background: #111; }
 .dash-logo { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 800; color: #F2F0EB; letter-spacing: -0.3px; }
-.dash-logo em { color: #C9A84C; font-style: normal; }
+.dash-logo em { color: #5B6EF5; font-style: normal; }
 .dash-badge { font-size: 9px; font-weight: 600; color: #888; background: #1C1C1C; border: 1px solid #2A2A2A; padding: 3px 8px; letter-spacing: 0.5px; }
 .dash-body { padding: 16px; }
 .dash-lbl { font-size: 8px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: #999; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
@@ -149,7 +149,7 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
 .dm-c:nth-child(3), .dm-c:nth-child(4) { border-bottom: none; }
 .dm-l { font-size: 7px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #999; margin-bottom: 4px; }
 .dm-v { font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700; color: #111; }
-.dm-v.g { color: #C9A84C; }
+.dm-v.g { color: #5B6EF5; }
 .dash-score { display: flex; align-items: center; justify-content: space-between; padding: 9px 11px; border: 1px solid #E0DDD6; border-top: 2px solid #7C1F1F; margin-bottom: 12px; }
 .ds-l { font-size: 7px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #999; }
 .ds-v { font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #7C1F1F; }
@@ -195,7 +195,7 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
 .pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-top: 56px; }
 .plan { background: var(--dark); border: 1px solid var(--rule); padding: 44px 40px; position: relative; transition: border-color 0.2s; }
 .plan:hover { border-color: var(--gold-line); }
-.plan.featured { border-color: var(--gold-line); background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, var(--dark) 100%); }
+.plan.featured { border-color: var(--gold-line); background: linear-gradient(135deg, rgba(91,110,245,0.06) 0%, var(--dark) 100%); }
 .plan.featured::before { content: 'Most Popular'; position: absolute; top: -1px; left: 40px; font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 500; color: var(--black); background: var(--gold); padding: 4px 12px; letter-spacing: 1px; text-transform: uppercase; }
 .plan-name { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; }
 .plan-price { font-family: 'Syne', sans-serif; font-size: 52px; font-weight: 800; color: var(--pure); letter-spacing: -3px; line-height: 1; margin-bottom: 6px; }
@@ -205,7 +205,7 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
 .plan-feat { display: flex; align-items: flex-start; gap: 12px; font-size: 13px; color: #aaa; line-height: 1.5; }
 .plan-feat::before { content: '✓'; color: var(--gold); flex-shrink: 0; font-size: 12px; margin-top: 1px; }
 .plan-btn { display: block; width: 100%; padding: 16px 20px; background: var(--gold); color: var(--black); font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; text-align: center; transition: background 0.2s; }
-.plan-btn:hover { background: #D4B86A; }
+.plan-btn:hover { background: #7B8EF7; }
 .plan-btn.ghost { background: transparent; color: var(--gold); border: 1px solid var(--gold-line); }
 .plan-btn.ghost:hover { background: var(--gold-dim); }
 .pricing-note { text-align: center; margin-top: 28px; font-size: 12px; color: var(--muted); letter-spacing: 0.3px; }
@@ -282,13 +282,14 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
 <!-- HERO -->
 <section class="hero">
   <div class="hero-eyebrow">For Architects &amp; Designers &mdash; Scope Risk &middot; Client Screening</div>
+  <p style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#666;margin-bottom:24px;opacity:0;animation:fadeUp 0.7s ease 0.15s forwards;font-style:italic;">The project isn't exhausting you. The client is.</p>
   <h1 class="hero-h1">
     Stop Bleeding Margins on<br>
     <em>Difficult Clients</em><br>
     Before You Even Open Revit.
   </h1>
   <p class="hero-sub">
-    <strong>PreForma is a client intelligence tool built exclusively for Architects -</strong> Turn a 3-minute client intake into a tactical dossier with 5 automated files that eliminate scope creep and screen out toxic clients before your first meeting.
+    <strong>PreForma is a pre-project client profiling system built exclusively for architects.</strong> It screens your clients — so you know exactly who you’re dealing with before the contract is signed. A 3-minute intake generates 5 automated files: behavioral profile, risk dashboard, scope of work, contract clauses, and an executive brief.
   </p>
   <div class="hero-actions">
     <a href="#" class="btn-main" id="mainCta">
@@ -299,7 +300,7 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
   <div class="hero-proof">
     <div class="hero-stat">
       <div class="stat-val" data-target="68" data-suffix="%">68%</div>
-      <div class="stat-desc">of projects run over schedule due to misaligned client communication</div>
+      <div class="stat-desc">of projects run over schedule — industry estimates on misaligned client communication</div>
     </div>
     <div class="hero-stat">
       <div class="stat-val" data-target="3" data-suffix="×">3×</div>
@@ -307,7 +308,7 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
     </div>
     <div class="hero-stat">
       <div class="stat-val" data-target="40" data-suffix="%">40%</div>
-      <div class="stat-desc">of your fee disappears into unpaid overtime on problem clients</div>
+      <div class="stat-desc">of fees lost to unpaid overtime — many firms report this on difficult clients</div>
     </div>
   </div>
 </section>
@@ -346,7 +347,7 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
       <ul class="output-list">
         <li>Client profile in one sentence</li>
         <li>Top 3 risk signals with % scores</li>
-        <li>3 hard rules for this client type</li>
+        <li>Three mistakes to avoid with this client type</li>
         <li>Escalation script if things go wrong</li>
       </ul>
     </div>
@@ -471,7 +472,7 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
     </div>
     <div class="step-item">
       <div class="step-n">STEP 02</div>
-      <div class="step-title">System profiles the behavior</div>
+      <div class="step-title">The system maps the client's behavioral profile</div>
       <div class="step-desc">10 responses are mapped across 8 behavioral dimensions — micromanagement index, decision velocity, perfectionism, trust baseline, and more — and matched to one of 6 client archetypes.</div>
     </div>
     <div class="step-item">
@@ -486,7 +487,7 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
 <section class="pricing">
   <div class="pricing-inner reveal">
     <div class="section-eyebrow">Pricing</div>
-    <h2 class="section-h2">One bad client costs more<br>than a year of <em>PreForma.</em></h2>
+    <h2 class="section-h2">One bad client costs more than a year of <em>PreForma.</em></h2>
     <p class="section-lead">Start free. Upgrade when you're ready. Cancel anytime.</p>
     <div class="pricing-grid">
       <div class="plan">
@@ -526,7 +527,7 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
   <div class="cta-inner reveal">
     <div class="cta-eyebrow">// Free access &middot; No credit card</div>
     <h2 class="cta-h2">Screen your next client.<br><em>Free. Right now.</em></h2>
-    <p style="font-size:16px;font-weight:300;color:#888;margin-bottom:40px;line-height:1.7;max-width:480px;margin-left:auto;margin-right:auto;">Enter your email and get your personalized intake link immediately. Send it to your next client before the first meeting. First report is free.</p>
+    <p style="font-size:16px;font-weight:300;color:#888;margin-bottom:40px;line-height:1.7;max-width:480px;margin-left:auto;margin-right:auto;">Enter your email and get your intake link instantly. Send it to your next client before the first meeting. First report is free.</p>
     <div id="regForm">
       <div style="display:flex;gap:0;max-width:520px;margin:0 auto 16px;">
         <input type="email" id="regEmail" placeholder="your@email.com" style="flex:1;padding:18px 20px;font-size:16px;font-family:'Inter',sans-serif;color:#111;background:#F2F0EB;border:none;outline:none;min-width:0;transition:box-shadow 0.2s;">
@@ -545,7 +546,7 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
 <!-- FOOTER -->
 <footer class="footer">
   <a href="#" class="footer-logo"><em>Pre</em>Forma</a>
-  <div class="footer-copy">Psychological screening for architects · Built by architects</div>
+  <div class="footer-copy">Developed by a licensed psychologist &middot; Built for architects and designers</div>
   <div class="footer-auth">Sava Pivnički<br>psihotrot@gmail.com</div>
 </footer>
 
