@@ -30,7 +30,7 @@
     "@type": "Person",
     "name": "Sava Pivnički",
     "jobTitle": "Licensed Psychologist · Decision Research",
-    "email": "sava@preforma.io"
+    "email": "psihotrot@gmail.com"
   }
 }
 </script>
@@ -39,8 +39,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
   --black: #0A0A0A; --off: #111111; --dark: #181818; --card: #1C1C1C;
-  --rule: #252525; --muted: #444444; --soft: #777777; --body: #AAAAAA;
-  --sub: #CCCCCC; --head: #F0EEE9; --pure: #FFFFFF;
+  --rule: #252525; --muted: #666660; --soft: #8A8884; --body: #B8B6B0;
+  --sub: #D8D6D0; --head: #F0EEE9; --pure: #FFFFFF;
   --blue: #4F6BED; --blue-dim: rgba(79,107,237,0.1); --blue-line: rgba(79,107,237,0.25);
   --blue-light: #6B84F0; --red: #C84B4B; --green: #3A7A52;
 }
@@ -78,7 +78,7 @@ strong { color: var(--sub); font-weight: 600; }
 .hero-kicker { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; color: var(--blue); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
 .hero-kicker::before { content: ''; width: 24px; height: 1px; background: var(--blue); }
 .hero h1 { margin-bottom: 24px; }
-.hero-sub { font-size: 17px; font-weight: 300; color: var(--sub); line-height: 1.75; margin-bottom: 40px; max-width: 480px; }
+.hero-sub { font-size: 18px; font-weight: 300; color: var(--sub); line-height: 1.75; margin-bottom: 40px; max-width: 480px; }
 .hero-cta-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 48px; }
 .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--blue); color: var(--pure); font-size: 14px; font-weight: 600; letter-spacing: 0.3px; text-decoration: none; padding: 14px 28px; transition: all 0.2s; border: none; cursor: pointer; }
 .btn-primary:hover { background: var(--blue-light); transform: translateY(-1px); box-shadow: 0 6px 24px rgba(79,107,237,0.25); }
@@ -104,14 +104,14 @@ strong { color: var(--sub); font-weight: 600; }
 .sec-kicker { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--soft); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
 .sec-kicker::before { content: ''; width: 18px; height: 1px; background: var(--muted); }
 .sec h2 { margin-bottom: 14px; }
-.sec-lead { font-size: 16px; font-weight: 300; color: var(--sub); line-height: 1.78; max-width: 540px; margin-bottom: 52px; }
+.sec-lead { font-size: 17px; font-weight: 300; color: var(--sub); line-height: 1.78; max-width: 540px; margin-bottom: 52px; }
 
 /* PROBLEM */
 .problem { background: var(--off); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
 .problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); }
 .p-item { background: var(--dark); padding: 32px 26px; }
 .p-n { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: 2px; margin-bottom: 18px; }
-.p-quote { font-size: 14px; color: var(--sub); line-height: 1.78; margin-bottom: 18px; font-style: italic; padding-left: 14px; border-left: 2px solid var(--rule); }
+.p-quote { font-size: 15px; color: var(--sub); line-height: 1.78; margin-bottom: 18px; font-style: italic; padding-left: 14px; border-left: 2px solid var(--rule); }
 .p-outcome { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--red); letter-spacing: 0.3px; line-height: 1.5; }
 
 /* WHY TRUST */
@@ -133,7 +133,7 @@ strong { color: var(--sub); font-weight: 600; }
 .how-item:hover { border-top-color: var(--blue); }
 .how-n { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--blue); letter-spacing: 2px; margin-bottom: 18px; }
 .how-item h3 { margin-bottom: 10px; font-size: 16px; }
-.how-item p { font-size: 13px; color: var(--soft); line-height: 1.8; }
+.how-item p { font-size: 14px; color: var(--soft); line-height: 1.8; }
 
 /* WHAT YOU GET */
 .output { background: var(--black); }
@@ -142,17 +142,17 @@ strong { color: var(--sub); font-weight: 600; }
 .out-item.accent { background: rgba(79,107,237,0.05); border: 1px solid var(--blue-line); }
 .out-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--blue); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
 .out-item h3 { font-size: 15px; margin-bottom: 6px; }
-.out-item p { font-size: 13px; color: var(--soft); line-height: 1.7; }
+.out-item p { font-size: 14px; color: var(--soft); line-height: 1.7; }
 
 /* DASHBOARD PREVIEW */
 .preview { background: var(--off); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
 .preview-inner { display: grid; grid-template-columns: 1fr 400px; gap: 72px; align-items: start; }
 .preview-copy h2 { margin-bottom: 14px; }
-.preview-copy .lead { font-size: 15px; font-weight: 300; color: var(--sub); line-height: 1.78; margin-bottom: 32px; }
+.preview-copy .lead { font-size: 16px; font-weight: 300; color: var(--sub); line-height: 1.78; margin-bottom: 32px; }
 .preview-points { display: flex; flex-direction: column; gap: 14px; }
 .pp { display: flex; gap: 12px; align-items: flex-start; }
 .pp-dot { width: 20px; height: 20px; background: var(--blue-dim); border: 1px solid var(--blue-line); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--blue); margin-top: 1px; }
-.pp p { font-size: 13px; color: var(--body); line-height: 1.65; }
+.pp p { font-size: 14px; color: var(--body); line-height: 1.65; }
 
 /* DASHBOARD */
 .dash { background: #0D0D0D; border: 1px solid var(--rule); }
@@ -195,7 +195,7 @@ strong { color: var(--sub); font-weight: 600; }
 .founder-kicker { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--blue); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
 .founder-name { font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 800; color: var(--head); letter-spacing: -1px; margin-bottom: 4px; }
 .founder-title { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
-.founder-body { font-size: 15px; font-weight: 300; color: var(--sub); line-height: 1.85; }
+.founder-body { font-size: 16px; font-weight: 300; color: var(--sub); line-height: 1.85; }
 
 /* TRUST */
 .trust { background: var(--off); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 60px 0; }
@@ -213,7 +213,7 @@ strong { color: var(--sub); font-weight: 600; }
 .plan-tier { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--blue); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
 .plan-price { font-family: 'Syne', sans-serif; font-size: 40px; font-weight: 800; color: var(--head); letter-spacing: -2px; line-height: 1; margin-bottom: 4px; }
 .plan-price span { font-size: 15px; font-weight: 400; color: var(--muted); letter-spacing: 0; }
-.plan-desc { font-size: 13px; color: var(--soft); line-height: 1.65; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
+.plan-desc { font-size: 14px; color: var(--soft); line-height: 1.65; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
 .plan-feats { display: flex; flex-direction: column; gap: 9px; margin-bottom: 28px; }
 .pf { display: flex; align-items: flex-start; gap: 9px; font-size: 13px; color: var(--body); line-height: 1.5; }
 .pf::before { content: '✓'; color: var(--blue); flex-shrink: 0; font-size: 11px; margin-top: 1px; }
@@ -231,7 +231,7 @@ strong { color: var(--sub); font-weight: 600; }
 .faq-q:hover { color: var(--head); }
 .faq-icon { font-size: 16px; color: var(--blue); flex-shrink: 0; transition: transform 0.25s; }
 .faq-item.open .faq-icon { transform: rotate(45deg); }
-.faq-a { font-size: 13px; font-weight: 300; color: var(--soft); line-height: 1.8; padding-bottom: 20px; display: none; }
+.faq-a { font-size: 14px; font-weight: 300; color: var(--soft); line-height: 1.8; padding-bottom: 20px; display: none; }
 .faq-item.open .faq-a { display: block; }
 
 /* CTA */
@@ -320,12 +320,12 @@ strong { color: var(--sub); font-weight: 600; }
   <div class="hero-glow"></div>
   <div class="hero-inner">
     <div class="hero-left">
-      <div class="hero-kicker">Client Risk Intelligence · Architecture &amp; Interior Design Firms</div>
-      <h1>Some clients will cost you<br>more than they pay you.<br><em>Anticipate before you sign.</em></h1>
-      <p class="hero-sub">PreForma converts a 3-minute client intake into a complete project risk picture — scope protections, contract guidance, and a management brief — delivered before your first meeting.<br><br>Not a personality test. Project due diligence.</p>
+      <div class="hero-kicker">Built for Architecture and Interior Design Firms · Client Risk Assessment</div>
+      <h1>Some clients will cost your firm<br>more than they pay you.<br><em>Know the risk before you sign the contract.</em></h1>
+      <p class="hero-sub">PreForma converts a short client intake into a structured project risk summary — including scope guidance, contract language recommendations, and a project management brief — delivered before your first meeting.<br><br>Not a personality test. Structured project due diligence.</p>
       <div class="hero-cta-row">
-        <a href="#sample" class="btn-primary">See a Sample Report →</a>
-        <button class="btn-text" id="heroCta" style="background:none;border:none;cursor:pointer;font-size:13px;font-weight:500;color:var(--soft);border-bottom:1px solid var(--muted);padding-bottom:1px;">Get Free Assessment ↓</button>
+        <a href="#sample" class="btn-primary">View a Sample Report →</a>
+        <button class="btn-text" id="heroCta" style="background:none;border:none;cursor:pointer;font-size:13px;font-weight:500;color:var(--soft);border-bottom:1px solid var(--muted);padding-bottom:1px;">Request a Free Assessment ↓</button>
       </div>
       <div class="hero-founder">
         <div class="hf-avatar">SP</div>
@@ -337,7 +337,7 @@ strong { color: var(--sub); font-weight: 600; }
     </div>
     <div class="hero-right">
       <div class="hm-card accent">
-        <div class="hm-outcome">Detect scope creep risk<br>before the first meeting.</div>
+        <div class="hm-outcome">Identify early signals associated with scope creep<br>before the first meeting.</div>
       </div>
       <div class="hm-card">
         <div class="hm-outcome">Identify stakeholder complexity<br>before contracts are signed.</div>
@@ -359,9 +359,9 @@ strong { color: var(--sub); font-weight: 600; }
     <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;">
       <div style="font-size:13px;color:var(--soft);"><strong style="color:var(--sub);">Decision patterns</strong> — not personality traits — determine how projects fail</div>
       <div style="color:var(--rule);">·</div>
-      <div style="font-size:13px;color:var(--soft);">Those patterns are <strong style="color:var(--sub);">observable before the contract</strong> is signed</div>
+      <div style="font-size:13px;color:var(--soft);">Early indicators of those patterns are often <strong style="color:var(--sub);">present before the contract</strong> is signed</div>
       <div style="color:var(--rule);">·</div>
-      <div style="font-size:13px;color:var(--soft);">PreForma surfaces them from a <strong style="color:var(--sub);">standard 3-minute intake</strong></div>
+      <div style="font-size:13px;color:var(--soft);">PreForma identifies them from a <strong style="color:var(--sub);">structured client intake</strong></div>
     </div>
   </div>
 </div>
@@ -369,24 +369,24 @@ strong { color: var(--sub); font-weight: 600; }
 <!-- PROBLEM -->
 <section class="problem sec">
   <div class="wrap reveal">
-    <div class="sec-kicker">The pattern</div>
-    <h2>You've seen this before.<br><em>More than once.</em></h2>
-    <p class="sec-lead">You already know which projects felt wrong from the start. The clients who couldn't commit. The briefs that kept expanding. The stakeholders who appeared in week six. These aren't bad luck. They are patterns — and they were present before you signed.</p>
+    <div class="sec-kicker">The challenge</div>
+    <h2>You've likely seen this before.<br><em>More than once.</em></h2>
+    <p class="sec-lead">Many architects can identify, in retrospect, the early signals of their most difficult client relationships. The clients who struggled to commit. The briefs that kept expanding. The stakeholders who appeared mid-project. These situations are rarely random — and the early indicators are often present before the engagement begins.</p>
     <div class="problem-grid">
       <div class="p-item">
-        <div class="p-n">// FEE EROSION</div>
+        <div class="p-n">// FEE EROSION RISK</div>
         <div class="p-quote">"Can we revisit the concept? I've been looking at some references and I think we should explore a completely different direction."</div>
         <div class="p-outcome">Project month 8. Fee locked at month 3. Unbilled hours: 40+.</div>
       </div>
       <div class="p-item">
-        <div class="p-n">// REVISION SPIRAL</div>
-        <div class="p-quote">"I love where this is going. Before we finalize, let's just see one more option. I want to make sure we've explored everything."</div>
-        <div class="p-outcome">Design sign-off: month 5. Contracted for: month 2. You absorb the difference.</div>
+        <div class="p-n">// REVISION CYCLE RISK</div>
+        <div class="p-quote">"I love the direction. Before we finalize, can we see one more option? I just want to make sure we've explored everything."</div>
+        <div class="p-outcome">Design sign-off: month 5. Originally scoped for: month 2. The difference is rarely recovered.</div>
       </div>
       <div class="p-item">
-        <div class="p-n">// STAKEHOLDER RISK</div>
-        <div class="p-quote">"My wife would like to be more involved going forward. She has some thoughts on the concept that I think are worth discussing."</div>
-        <div class="p-outcome">New decision-maker. Week 6. No contract amendment. Project restarts.</div>
+        <div class="p-n">// STAKEHOLDER COMPLEXITY</div>
+        <div class="p-quote">"My wife would like to be more involved going forward. She has some thoughts on the concept worth discussing."</div>
+        <div class="p-outcome">New decision-maker introduced. Week 6. No contract amendment. Scope resets.</div>
       </div>
     </div>
   </div>
@@ -397,8 +397,8 @@ strong { color: var(--sub); font-weight: 600; }
   <div class="wrap reveal">
     <div class="case-inner">
       <div class="case-badge">Why trust the methodology</div>
-      <div class="case-title">Built by a licensed psychologist. Designed for architecture workflows. Not a test.</div>
-      <p class="case-body">PreForma is based on decision-behavior patterns — the observable ways people make choices, handle uncertainty, and respond to constraints in high-stakes creative projects. These patterns are consistent, measurable, and relevant to how architecture and design projects succeed or fail.<br><br>The system was designed specifically for the context of architecture and interior design practice: the revision cycles, the approval dependencies, the scope negotiations, the handover risks. It is not a personality test, not a hiring assessment, and not a psychological diagnosis. It is a project risk tool that uses behavioral inputs to surface the signals most relevant to your engagement.</p>
+      <div class="case-title">Developed by a licensed psychologist. Designed for architecture and design workflows. Not a test.</div>
+      <p class="case-body">PreForma is grounded in applied behavioral assessment — specifically, the study of how people approach decisions, manage uncertainty, and respond to constraints in complex, deadline-driven creative work. These patterns are well-documented in behavioral research and are meaningfully associated with how design projects tend to develop over time.<br><br>The platform was designed specifically for architecture and interior design practice: revision cycles, approval dependencies, scope management, and handover complexity. It is not a personality test, not a hiring assessment, and not a psychological diagnosis. It is a structured project due diligence tool that uses client intake data to surface risk indicators relevant to your specific engagement.</p>
       <div class="case-results">
         <div class="cr-item">
           <div class="cr-val" style="font-size:18px;letter-spacing:-0.5px;">Licensed</div>
@@ -410,7 +410,7 @@ strong { color: var(--sub); font-weight: 600; }
         </div>
         <div class="cr-item">
           <div class="cr-val" style="font-size:18px;letter-spacing:-0.5px;">Operational</div>
-          <div class="cr-label">Output is project guidance, not diagnosis or evaluation</div>
+          <div class="cr-label">Output is operational project guidance — not a diagnosis, not an evaluation</div>
         </div>
       </div>
     </div>
@@ -420,24 +420,24 @@ strong { color: var(--sub); font-weight: 600; }
 <!-- HOW IT WORKS -->
 <section class="how sec" id="how">
   <div class="wrap reveal">
-    <div class="sec-kicker">The process</div>
-    <h2>Three steps.<br><em>Before the first meeting.</em></h2>
-    <p class="sec-lead">Your client takes 3 minutes. You receive a complete risk picture before you shake hands.</p>
+    <div class="sec-kicker">How it works</div>
+    <h2>Three steps.<br><em>Completed before the first meeting.</em></h2>
+    <p class="sec-lead">Your client completes a short intake. You receive a structured risk summary before the first meeting.</p>
     <div class="how-grid">
       <div class="how-item">
         <div class="how-n">STEP 01</div>
         <h3>Send the intake link</h3>
-        <p>Your client completes a 10-statement project intake — framed as a standard onboarding questionnaire, not a test. No psychological language. Takes 3 minutes. Works on any device.</p>
+        <p>Your client completes a short project intake — framed as a standard onboarding questionnaire. No psychological language. Approximately 3 minutes. Works on any device.</p>
       </div>
       <div class="how-item">
         <div class="how-n">STEP 02</div>
-        <h3>Risk profile is generated</h3>
-        <p>PreForma maps the responses to a client risk profile — scoring scope creep likelihood, revision cycle risk, decision velocity, stakeholder complexity, and handover risk. Calibrated to your project type.</p>
+        <h3>Risk indicators are identified</h3>
+        <p>PreForma maps the responses to a structured risk summary — identifying signals associated with scope creep, revision cycles, decision-making patterns, stakeholder complexity, and handover risk. Outputs are calibrated to your project type.</p>
       </div>
       <div class="how-item">
         <div class="how-n">STEP 03</div>
-        <h3>Dossier arrives in minutes</h3>
-        <p>Six documents delivered to your inbox: an executive brief, risk profile, management guide, adaptive scope of work, contract clause set, and a mobile risk dashboard. Everything you need before the first meeting.</p>
+        <h3>Your summary is delivered</h3>
+        <p>Six documents delivered to your inbox: an executive brief, a risk indicator summary, a project management guide, an adaptive scope of work, a contract clause set, and a mobile risk dashboard. Each document is calibrated to your client's intake responses and project type.</p>
       </div>
     </div>
   </div>
@@ -446,55 +446,55 @@ strong { color: var(--sub); font-weight: 600; }
 <!-- CASE STUDIES -->
 <section style="background:var(--off);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);" class="sec">
   <div class="wrap reveal">
-    <div class="sec-kicker">In practice</div>
-    <h2>What the risk picture<br><em>looks like in use.</em></h2>
-    <p class="sec-lead">Three situations architects encounter. Three cases where knowing the risk profile before signing changed the outcome.</p>
+    <div class="sec-kicker">Illustrative scenarios</div>
+    <h2>How firms apply<br><em>the risk summary.</em></h2>
+    <p class="sec-lead">The following scenarios illustrate how architecture and interior design firms can use PreForma's output to anticipate project risk and strengthen their contracts before signing.</p>
     <div style="display:flex;flex-direction:column;gap:2px;">
 
       <div style="display:grid;grid-template-columns:2px 1fr;background:var(--rule);gap:1px;">
         <div style="background:var(--blue);"></div>
         <div style="background:var(--dark);padding:32px 36px;">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">Case 01 · Revision Spiral</div>
-          <h3 style="margin-bottom:10px;font-size:16px;">High-end residential renovation · 8-person interior design studio</h3>
-          <p style="font-size:14px;color:var(--soft);line-height:1.8;margin-bottom:20px;">PreForma flagged high visual inspiration dependency and low decision confidence. The risk picture showed a strong likelihood of concept-phase reopening and revision accumulation beyond the contracted scope.</p>
-          <p style="font-size:14px;color:var(--soft);line-height:1.8;margin-bottom:20px;"><strong>Guidance generated:</strong> Two-revision limit per phase, written sign-off required before concept advancement, stakeholder identification clause.</p>
-          <p style="font-size:14px;color:var(--sub);line-height:1.8;font-style:italic;">Client requested a third concept direction in week four. The studio referenced the phase-lock clause. Client signed off. Project proceeded on schedule.</p>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">Scenario 01 · Revision Frequency Risk</div>
+          <h3 style="margin-bottom:10px;font-size:16px;">Residential renovation · Interior design studio</h3>
+          <p style="font-size:15px;color:var(--soft);line-height:1.8;margin-bottom:20px;">The intake identified signals associated with high visual inspiration dependency and lower decision confidence — a pattern that can be associated with concept-phase reopening and revision accumulation beyond contracted scope.</p>
+          <p style="font-size:15px;color:var(--soft);line-height:1.8;margin-bottom:20px;"><strong>Guidance generated:</strong> Two-revision limit per phase, written sign-off required before concept advancement, stakeholder identification clause.</p>
+          <p style="font-size:15px;color:var(--sub);line-height:1.8;font-style:italic;">The client requested a third concept direction in week four. The studio referenced the phase sign-off clause. The client confirmed the existing direction. The project proceeded on schedule.</p>
         </div>
       </div>
 
       <div style="display:grid;grid-template-columns:2px 1fr;background:var(--rule);gap:1px;">
         <div style="background:var(--blue);"></div>
         <div style="background:var(--dark);padding:32px 36px;">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">Case 02 · Scope Expansion</div>
-          <h3 style="margin-bottom:10px;font-size:16px;">Commercial office fit-out · 12-person architecture firm</h3>
-          <p style="font-size:14px;color:var(--soft);line-height:1.8;margin-bottom:20px;">The risk profile flagged high autonomy need and low tolerance for process constraints. Pattern consistent with clients who expand scope incrementally and resist change-of-scope billing.</p>
-          <p style="font-size:14px;color:var(--soft);line-height:1.8;margin-bottom:20px;"><strong>Guidance generated:</strong> Explicit scope boundary language, change-of-scope billing clause, single point of contact requirement.</p>
-          <p style="font-size:14px;color:var(--sub);line-height:1.8;font-style:italic;">Client requested structural modifications in week seven. The change-of-scope clause was triggered. Additional work billed and accepted without dispute.</p>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">Scenario 02 · Scope Management</div>
+          <h3 style="margin-bottom:10px;font-size:16px;">Commercial fit-out · Architecture firm</h3>
+          <p style="font-size:15px;color:var(--soft);line-height:1.8;margin-bottom:20px;">The intake identified signals associated with high autonomy preference and lower tolerance for structured process — a pattern that can correlate with incremental scope expansion and resistance to change-of-scope billing.</p>
+          <p style="font-size:15px;color:var(--soft);line-height:1.8;margin-bottom:20px;"><strong>Guidance generated:</strong> Explicit scope boundary language, change-of-scope billing clause, single point of contact requirement.</p>
+          <p style="font-size:15px;color:var(--sub);line-height:1.8;font-style:italic;">The client requested structural modifications in week seven. The change-of-scope clause was referenced. Additional work was billed and accepted.</p>
         </div>
       </div>
 
       <div style="display:grid;grid-template-columns:2px 1fr;background:var(--rule);gap:1px;">
         <div style="background:var(--blue);"></div>
         <div style="background:var(--dark);padding:32px 36px;">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">Case 03 · Hidden Stakeholder</div>
-          <h3 style="margin-bottom:10px;font-size:16px;">Luxury new build · Solo architect</h3>
-          <p style="font-size:14px;color:var(--soft);line-height:1.8;margin-bottom:20px;">The intake flagged a decision-by-committee pattern and elevated partner involvement probability. Risk score indicated significant chance of new decision-maker introduction after concept phase.</p>
-          <p style="font-size:14px;color:var(--soft);line-height:1.8;margin-bottom:20px;"><strong>Guidance generated:</strong> Stakeholder identification requirement before concept phase, joint sign-off protocol for all phase completions.</p>
-          <p style="font-size:14px;color:var(--sub);line-height:1.8;font-style:italic;">Client's partner requested involvement at concept review. The joint sign-off protocol was already in the contract. No restart. No renegotiation.</p>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">Scenario 03 · Stakeholder Complexity</div>
+          <h3 style="margin-bottom:10px;font-size:16px;">New residential construction · Independent architect</h3>
+          <p style="font-size:15px;color:var(--soft);line-height:1.8;margin-bottom:20px;">The intake identified signals associated with group decision-making and elevated likelihood of partner involvement — a pattern that can be associated with new stakeholder introduction after the concept phase.</p>
+          <p style="font-size:15px;color:var(--soft);line-height:1.8;margin-bottom:20px;"><strong>Guidance generated:</strong> Stakeholder identification requirement before concept phase, joint sign-off protocol for all phase completions.</p>
+          <p style="font-size:15px;color:var(--sub);line-height:1.8;font-style:italic;">The client's partner requested involvement at the concept review. The joint sign-off protocol was already incorporated into the contract. The project continued without scope reset or renegotiation.</p>
         </div>
       </div>
 
     </div>
-    <p style="font-size:11px;color:var(--muted);margin-top:20px;font-style:italic;">These cases are illustrative examples based on the types of risk patterns PreForma identifies. They represent realistic scenarios, not documented client records.</p>
+    <p style="font-size:11px;color:var(--muted);margin-top:20px;font-style:italic;">These scenarios are illustrative examples based on the types of risk indicators PreForma identifies. They represent realistic project situations, not documented client records. Individual results will vary.</p>
   </div>
 </section>
 
 <!-- WHAT YOU GET -->
 <section class="output sec">
   <div class="wrap reveal">
-    <div class="sec-kicker">What you receive</div>
-    <h2>The information you need<br>to <em>protect your fee.</em></h2>
-    <p class="sec-lead">Six documents. Every client. Automatically. Each one serves a specific operational purpose — scope protection, revision control, or contract defense.</p>
+    <div class="sec-kicker">Deliverables</div>
+    <h2>The documentation you need<br>before <em>the contract is signed.</em></h2>
+    <p class="sec-lead">Six documents generated automatically for each client assessment. Each serves a specific operational purpose — scope documentation, revision management, or contract preparation.</p>
     <div class="output-row" style="margin-bottom:2px;">
       <div class="out-item accent">
         <div class="out-label">Document 01</div>
@@ -503,32 +503,32 @@ strong { color: var(--sub); font-weight: 600; }
       </div>
       <div class="out-item">
         <div class="out-label">Document 02</div>
-        <h3>Client Risk Profile</h3>
-        <p>Full risk breakdown across 8 dimensions — including micromanagement index, change tolerance, approval delay risk, and stakeholder complexity score.</p>
+        <h3>Client Risk Indicator Summary</h3>
+        <p>Structured breakdown across 8 dimensions — including control tendency, change tolerance, approval pattern risk, and stakeholder complexity — based on intake responses.</p>
       </div>
     </div>
     <div class="output-row" style="margin-bottom:2px;">
       <div class="out-item">
         <div class="out-label">Document 03</div>
         <h3>Project Management Guide</h3>
-        <p>Phase-by-phase instructions for managing this specific client — when to lock decisions, how to present options, and when to escalate. Written for how this client actually behaves.</p>
+        <p>Phase-by-phase guidance calibrated to this client's intake responses — when to document decisions, how to structure options, and how to manage escalation if needed.</p>
       </div>
       <div class="out-item accent">
         <div class="out-label">Document 04</div>
         <h3>Adaptive Scope of Work</h3>
-        <p>A scope document built for this client's risk profile — revision limits, phase-lock clauses, client obligations, and response deadlines calibrated to the risks PreForma identified.</p>
+        <p>A scope document calibrated to this client's risk indicators — revision limits, phase completion requirements, client obligations, and response timelines. Intended as a starting point for your legal review.</p>
       </div>
     </div>
     <div class="output-row">
       <div class="out-item">
         <div class="out-label">Document 05</div>
         <h3>Contract Clause Set</h3>
-        <p>Four contract clauses targeting the specific risks of this client type — with word-for-word scripts for introducing each one without triggering pushback. Legal text ready to paste into your draft.</p>
+        <p>Four targeted contract clauses aligned with this client's risk indicators — with suggested language for introducing each one professionally. Provided as draft language for review by your legal counsel.</p>
       </div>
       <div class="out-item">
         <div class="out-label">Document 06</div>
         <h3>Mobile Risk Dashboard</h3>
-        <p>Interactive dashboard for your phone. Animated risk visualization, behavioral rules, and accordion clause scripts — tap any clause to expand the full context and copy the legal text.</p>
+        <p>An interactive summary for your phone. Risk visualization, recommended practices, and expandable clause notes — tap any clause to view the context and copy the draft language.</p>
       </div>
     </div>
   </div>
@@ -538,8 +538,8 @@ strong { color: var(--sub); font-weight: 600; }
 <div style="background:var(--dark);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:40px 0;">
   <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
     <div>
-      <div style="font-size:17px;font-weight:600;color:var(--head);margin-bottom:6px;">See what your report looks like.</div>
-      <div style="font-size:14px;color:var(--soft);">Sample output for a Dominant/Controller profile — the most common high-risk archetype.</div>
+      <div style="font-size:17px;font-weight:600;color:var(--head);margin-bottom:6px;">See what a sample report looks like.</div>
+      <div style="font-size:14px;color:var(--soft);">Sample output for a high-risk client profile — showing risk indicators, scope guidance, and contract language.</div>
     </div>
     <a href="#sample" class="btn-primary" style="white-space:nowrap;">View Sample Report →</a>
   </div>
@@ -550,35 +550,35 @@ strong { color: var(--sub); font-weight: 600; }
   <div class="wrap">
     <div class="preview-inner reveal">
       <div class="preview-copy">
-        <div class="sec-kicker">Sample output</div>
-        <h2>What lands in<br>your inbox. <em>Every time.</em></h2>
-        <p class="lead">The mobile dashboard gives you the full risk picture before you walk into the room. Every score reflects your specific client's intake — not a generic template.</p>
+        <div class="sec-kicker">Sample deliverable</div>
+        <h2>What you receive<br><em>after each assessment.</em></h2>
+        <p class="lead">The mobile dashboard provides a structured summary of your client's risk indicators before the first meeting. Every output reflects that client's specific intake responses — not a generic template.</p>
         <div class="preview-points">
           <div class="pp">
             <div class="pp-dot">01</div>
-            <p><strong>Risk signals by category</strong> — scope creep, revision frequency, decision delay, handover risk, and communication conflict. Each scored from behavioral inputs.</p>
+            <p><strong>Risk indicators by category</strong> — scope management, revision frequency, decision-making patterns, handover risk, and communication complexity. Each derived from client intake responses.</p>
           </div>
           <div class="pp">
             <div class="pp-dot">02</div>
-            <p><strong>Three behavioral rules</strong> — the three things you must never do with this client type. Derived from the risk profile pattern.</p>
+            <p><strong>Three recommended practices</strong> — suggested boundaries and approaches for this client type, based on the identified risk indicators.</p>
           </div>
           <div class="pp">
             <div class="pp-dot">03</div>
-            <p><strong>Contract scripts on demand</strong> — tap any clause for the full context: why it protects you, when to raise it, and exactly what to say.</p>
+            <p><strong>Clause guidance on demand</strong> — tap any clause for context: the rationale behind it, when to introduce it, and suggested language for the conversation.</p>
           </div>
           <div class="pp">
             <div class="pp-dot">04</div>
-            <p><strong>One-tap legal text</strong> — copies the clause directly to clipboard, ready to paste into your contract.</p>
+            <p><strong>One-tap draft language</strong> — copies the clause text directly to clipboard, ready to paste into your contract draft for legal review.</p>
           </div>
         </div>
       </div>
       <div class="dash">
         <div class="dash-top">
           <div class="dash-brand"><em>Pre</em>Forma</div>
-          <div class="dash-tag">// Sample · Dominant/Controller</div>
+          <div class="dash-tag">// Sample · High-Risk Profile</div>
         </div>
         <div class="dash-body">
-          <div class="d-lbl">01 Risk Forecast</div>
+          <div class="d-lbl">01 Risk Summary</div>
           <div class="d-profile-n">01</div>
           <div class="d-profile-t">Dominant / Controller</div>
           <div class="d-profile-s">Client Profile · Jun 2026</div>
@@ -589,19 +589,19 @@ strong { color: var(--sub); font-weight: 600; }
             <div class="dm"><div class="dm-l">Confidence</div><div class="dm-v">High</div></div>
           </div>
           <div class="d-score">
-            <span class="ds-l">Overall Risk Score</span>
-            <span class="ds-v">HIGH</span>
+            <span class="ds-l">Indicator Summary</span>
+            <span class="ds-v">Elevated</span>
           </div>
-          <div class="d-lbl">02 Risk Signals</div>
+          <div class="d-lbl">02 Risk Indicators</div>
           <div class="d-risks">
-            <div class="dr"><div class="dr-top"><div class="dr-name"><span class="dr-dot"></span>Scope Creep Risk</div><div class="dr-pct hi">55%</div></div><div class="dr-bar"><div class="dr-fill db-fill" style="background:var(--blue)" data-w="55"></div></div></div>
-            <div class="dr"><div class="dr-top"><div class="dr-name">Revision Cycle Risk</div><div class="dr-pct">30%</div></div><div class="dr-bar"><div class="dr-fill db-fill" style="background:#2A2A2A" data-w="30"></div></div></div>
-            <div class="dr"><div class="dr-top"><div class="dr-name">Approval Delay Risk</div><div class="dr-pct">15%</div></div><div class="dr-bar"><div class="dr-fill db-fill" style="background:#2A2A2A" data-w="15"></div></div></div>
+            <div class="dr"><div class="dr-top"><div class="dr-name"><span class="dr-dot"></span>Scope Management Risk</div><div class="dr-pct hi">55%</div></div><div class="dr-bar"><div class="dr-fill db-fill" style="background:var(--blue)" data-w="55"></div></div></div>
+            <div class="dr"><div class="dr-top"><div class="dr-name">Revision Frequency Risk</div><div class="dr-pct">30%</div></div><div class="dr-bar"><div class="dr-fill db-fill" style="background:#2A2A2A" data-w="30"></div></div></div>
+            <div class="dr"><div class="dr-top"><div class="dr-name">Approval Pattern Risk</div><div class="dr-pct">15%</div></div><div class="dr-bar"><div class="dr-fill db-fill" style="background:#2A2A2A" data-w="15"></div></div></div>
             <div class="dr"><div class="dr-top"><div class="dr-name"><span class="dr-dot"></span>Handover Risk</div><div class="dr-pct hi">70%</div></div><div class="dr-bar"><div class="dr-fill db-fill" style="background:var(--blue)" data-w="70"></div></div></div>
-            <div class="dr"><div class="dr-top"><div class="dr-name"><span class="dr-dot"></span>Comm. Conflict</div><div class="dr-pct hi">65%</div></div><div class="dr-bar"><div class="dr-fill db-fill" style="background:var(--blue-light)" data-w="65"></div></div></div>
+            <div class="dr"><div class="dr-top"><div class="dr-name"><span class="dr-dot"></span>Communication Complexity</div><div class="dr-pct hi">65%</div></div><div class="dr-bar"><div class="dr-fill db-fill" style="background:var(--blue-light)" data-w="65"></div></div></div>
           </div>
         </div>
-        <div class="dash-foot">PreForma · Sava Pivnički, Licensed Psychologist · sava@preforma.io</div>
+        <div class="dash-foot">PreForma · Sava Pivnički, Licensed Psychologist · psihotrot@gmail.com</div>
       </div>
     </div>
   </div>
@@ -613,10 +613,10 @@ strong { color: var(--sub); font-weight: 600; }
     <div class="founder-inner">
       <div class="founder-line"></div>
       <div>
-        <div class="founder-kicker">Why this works</div>
+        <div class="founder-kicker">About the methodology</div>
         <div class="founder-name">Sava Pivnički</div>
         <div class="founder-title">Licensed Psychologist · Decision Research · 15+ years decision behavior research</div>
-        <p class="founder-body">After years of applied behavioral assessment work — studying how people make decisions in high-stakes, deadline-driven environments — the same patterns kept appearing in architecture and design contexts.<br><br>The revision spiral. The approval delay. The client who loves every presentation but cannot commit. The stakeholder who appears in week six. These are not difficult personalities. They are recognizable decision behaviors — and they are present before the contract is signed.<br><br>PreForma was built to make that signal visible. Not as a psychological evaluation. Not as a personality test. As project due diligence — the information you need before you commit your fee.</p>
+        <p class="founder-body">The work that led to PreForma began with a consistent observation: the decision-making patterns that make a client relationship difficult tend to appear early — often before the contract is signed.<br><br>The client who struggles to commit to a direction. The engagement that expands incrementally past its original scope. The new stakeholder who arrives mid-project. These are rarely isolated events. They are often associated with recognizable patterns in how people approach decisions, uncertainty, and creative collaboration under deadline.<br><br>PreForma was built to make those early indicators visible in a format that is immediately useful to architects and designers — not as a psychological evaluation, not as a personality test, but as a structured due diligence step before you commit your time and fee.</p>
       </div>
     </div>
   </div>
@@ -632,7 +632,7 @@ strong { color: var(--sub); font-weight: 600; }
       </div>
       <div class="trust-item">
         <div class="trust-val" data-target="6" data-suffix="">6</div>
-        <div class="trust-label">Validated client risk profiles</div>
+        <div class="trust-label">Structured client risk categories</div>
       </div>
       <div class="trust-item">
         <div class="trust-val" data-target="10" data-suffix="">10</div>
@@ -649,14 +649,14 @@ strong { color: var(--sub); font-weight: 600; }
 <!-- PRICING -->
 <section class="pricing sec" id="pricing">
   <div class="wrap reveal">
-    <div class="sec-kicker">Pricing</div>
-    <h2>One difficult project costs<br>more than a year of <em>PreForma.</em></h2>
-    <p class="sec-lead">Both plans include a free first assessment. No credit card required to start.</p>
+    <div class="sec-kicker">Plans</div>
+    <h2>One difficult engagement<br>can cost more than a year of <em>PreForma.</em></h2>
+    <p class="sec-lead">Both plans include a complimentary first assessment. No credit card required to get started.</p>
     <div class="pricing-grid">
       <div class="plan">
         <div class="plan-tier">Studio</div>
         <div class="plan-price">$39<span>/mo</span></div>
-        <p class="plan-desc">For independent architects and small studios. Up to 10 client risk assessments per month.</p>
+        <p class="plan-desc">For independent architects and smaller studios. Up to 10 client assessments per month.</p>
         <div class="plan-feats">
           <div class="pf">10 assessments per month</div>
           <div class="pf">All 6 documents per assessment</div>
@@ -670,7 +670,7 @@ strong { color: var(--sub); font-weight: 600; }
         <div class="plan-badge">Recommended</div>
         <div class="plan-tier">Practice</div>
         <div class="plan-price">$79<span>/mo</span></div>
-        <p class="plan-desc">For studios with consistent project flow and multiple active client relationships.</p>
+        <p class="plan-desc">For studios managing consistent project volume and multiple active client engagements.</p>
         <div class="plan-feats">
           <div class="pf">Unlimited assessments</div>
           <div class="pf">All 6 documents per assessment</div>
@@ -682,7 +682,7 @@ strong { color: var(--sub); font-weight: 600; }
         <a href="https://preforma.lemonsqueezy.com/checkout/buy/e1654f3e-85c4-4687-b580-847d34a903ab" class="plan-btn">Get Practice →</a>
       </div>
     </div>
-    <p class="pricing-sub">Secure checkout via Lemon Squeezy · Card, PayPal, Apple Pay, Google Pay · Cancel anytime</p>
+    <p class="pricing-sub">Secure payment processing · Card, PayPal, Apple Pay, Google Pay · Cancel anytime · No long-term commitment</p>
   </div>
 </section>
 
@@ -690,35 +690,35 @@ strong { color: var(--sub); font-weight: 600; }
 <section class="faq sec reveal">
   <div class="wrap">
     <div class="sec-kicker">Questions</div>
-    <h2>What firms typically ask.</h2>
+    <h2>Common questions.</h2>
     <div class="faq-list">
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Does my client know they're being assessed?<span class="faq-icon">+</span></div>
+        <div class="faq-q" onclick="toggleFaq(this)">Does my client know they're completing a risk intake?<span class="faq-icon">+</span></div>
         <div class="faq-a">The intake is framed as a standard project onboarding questionnaire. It asks about project preferences, communication style, and decision-making approach — appropriate for any professional intake process. There is no psychological language visible to your client. The risk analysis happens on the backend.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">How reliable are the risk scores?<span class="faq-icon">+</span></div>
-        <div class="faq-a">Every report includes a confidence indicator. When intake responses produce a clear behavioral pattern, confidence is high. When responses are mixed, the report flags it and recommends validation in conversation. PreForma improves the quality of information you have before signing — it does not eliminate judgment.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">How accurate are the risk indicators?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Every report includes a confidence indicator. When intake responses produce a consistent pattern, the output reflects that clearly. When responses are mixed or ambiguous, the report flags it and recommends additional validation through direct conversation. PreForma is designed to supplement — not replace — your professional judgment.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Can I use this for commercial, hospitality, and developer projects?<span class="faq-icon">+</span></div>
-        <div class="faq-a">Yes. PreForma supports 10 project types: residential interior, architectural projects, design & build, renovation, new construction, commercial, hospitality, developer/investment, luxury, and fast-track. The scope document, risk weights, and contract clauses are calibrated to the project type selected in the intake.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">Does PreForma support commercial, hospitality, and developer projects?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes. PreForma supports 10 project types: residential interior design, architectural projects, design-build, renovation, new construction, commercial space, hospitality, developer and investment projects, luxury residential, and fast-track delivery. The scope guidance, risk indicators, and contract language are calibrated to the project type selected during intake.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Are the contract clauses legally binding?<span class="faq-icon">+</span></div>
-        <div class="faq-a">The contract clauses are targeted templates — they are not legal advice and PreForma is not a law firm. They are designed to be incorporated into your existing contracts with review by your attorney. They are more targeted than generic templates because they address the specific risk patterns PreForma identified in your client's profile.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">Is the contract language legally enforceable?<span class="faq-icon">+</span></div>
+        <div class="faq-a">The contract language provided by PreForma is draft guidance — not legal advice, and PreForma is not a law firm. All contract language should be reviewed by your attorney before use in any binding agreement. The clauses are calibrated to your client's specific risk indicators, which makes them more targeted than generic templates, but they require independent legal review.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">What happens after my client submits the intake?<span class="faq-icon">+</span></div>
-        <div class="faq-a">All 6 documents are generated automatically and delivered to your email within minutes. No dashboard login required. The mobile risk dashboard is included as an HTML file that works on any device — open it in your browser before the first meeting.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">What happens after my client submits the questionnaire?<span class="faq-icon">+</span></div>
+        <div class="faq-a">All six documents are generated automatically and delivered to your email, typically within a few minutes. No platform login is required. The mobile risk dashboard is included as an HTML file that works on any device — open it before the first meeting.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">My clients would never complete a questionnaire before a meeting.<span class="faq-icon">+</span></div>
-        <div class="faq-a">The intake is framed as a standard project onboarding form — not a test, not a survey, not a psychological assessment. It asks about project preferences and communication approach. 10 statements, 3 minutes. Most clients complete it before the first meeting without comment.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">Will my clients actually complete the intake before the first meeting?<span class="faq-icon">+</span></div>
+        <div class="faq-a">The intake is structured as a standard project onboarding form — not a test, not a survey, and not a psychological assessment. It asks about project preferences, communication style, and decision-making approach. Most clients complete it before the first meeting without any issues.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">I already know which clients are going to be difficult.<span class="faq-icon">+</span></div>
-        <div class="faq-a">Most architects do — after the project starts. PreForma gives you that read before you sign. It also gives you the contract language and management guidance to act on it, which is the harder part.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">I can usually tell which clients will be difficult without a tool.<span class="faq-icon">+</span></div>
+        <div class="faq-a">Many experienced architects can identify difficult client relationships in retrospect. PreForma is designed to surface those early indicators before the engagement begins — and to provide the scope documentation and contract language to act on that information, which is often the harder step.</div>
       </div>
     </div>
   </div>
@@ -728,20 +728,20 @@ strong { color: var(--sub); font-weight: 600; }
 <section class="cta-section" id="cta">
   <div class="cta-glow"></div>
   <div class="cta-inner reveal">
-    <div class="cta-kicker">// First assessment free · No credit card</div>
-    <h2>Your next client is already<br><em>sending signals.</em></h2>
+    <div class="cta-kicker">// First assessment complimentary · No credit card required</div>
+    <h2>Early signals are already<br><em>present in your next engagement.</em></h2>
     <p class="cta-sub">Enter your email and receive your intake link. Send it to your next client before the first meeting. Anticipate what you're walking into before you sign.</p>
     <div id="ctaForm">
       <div class="cta-form">
         <input type="email" class="cta-input" id="ctaEmail" placeholder="your@studio.com">
-        <button class="cta-btn" id="ctaBtn">Get Free Assessment →</button>
+        <button class="cta-btn" id="ctaBtn">Request Free Assessment →</button>
       </div>
-      <p class="cta-note">No credit card · No obligations · Unsubscribe anytime</p>
+      <p class="cta-note">No credit card required · Cancel anytime · Unsubscribe at any time</p>
     </div>
     <div id="ctaSuccess">
       <div class="ck">✓</div>
       <h3>Check your inbox.</h3>
-      <p>Your intake link is on its way. Send it to your next client before the first meeting.</p>
+      <p>Your intake link is on its way. Send it to your next client before the first meeting. Your first assessment is complimentary.</p>
     </div>
   </div>
 </section>
@@ -753,9 +753,13 @@ strong { color: var(--sub); font-weight: 600; }
     <div class="footer-links">
       <a href="#" class="footer-link">Privacy Policy</a>
       <a href="#" class="footer-link">Terms of Service</a>
-      <a href="mailto:sava@preforma.io" class="footer-link">sava@preforma.io</a>
+      <a href="mailto:psihotrot@gmail.com" class="footer-link">psihotrot@gmail.com</a>
     </div>
-    <div class="footer-copy">© 2026 PreForma<br>Sava Pivnički, Licensed Psychologist</div>
+    <div class="footer-copy">© 2026 PreForma · Sava Pivnički, Licensed Psychologist</div>
+  </div>
+  <div style="max-width:1080px;margin:0 auto;padding:16px 48px 0;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--rule);margin-top:20px;">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.3px;">© 2026 PreForma · All rights reserved</span>
+    <a href="https://psihotrot-tech.github.io/Adversa" style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);text-decoration:none;letter-spacing:0.3px;transition:color 0.2s;" target="_blank" rel="noopener" onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color='var(--muted)'">Powered by Adversa</a>
   </div>
 </footer>
 
@@ -856,5 +860,6 @@ function toggleFaq(el) {
   document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
 })();
 </script>
+
 </body>
 </html>
