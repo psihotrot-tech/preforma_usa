@@ -3,797 +3,857 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
-<title>PreForma — Stop Bleeding Margins on Difficult Clients</title>
-<meta name="description" content="PreForma is a psychological screening platform built exclusively for Architects. Turn a 3-minute client intake into a tactical dossier with 6 automated files that eliminate scope creep before your first meeting.">
+<title>PreForma — Client Risk Intelligence for Architecture Firms</title>
+<meta name="description" content="PreForma helps architecture and interior design firms identify fee erosion, scope creep, and revision risk before the contract is signed. Know which clients will cost you money before you commit.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://psihotrot-tech.github.io/preforma_usa/preforma_architect_eng.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="PreForma — Stop Bleeding Margins on Difficult Clients">
-<meta property="og:description" content="Psychological client screening for architects. Turn a 3-minute intake into a tactical dossier with 6 automated files. Eliminate scope creep before your first meeting.">
+<meta property="og:title" content="PreForma — Client Risk Intelligence for Architecture Firms">
+<meta property="og:description" content="Identify fee erosion, scope creep risk, and revision cycles before the contract is signed. PreForma gives architecture firms a complete client risk picture before the first meeting.">
 <meta property="og:url" content="https://psihotrot-tech.github.io/preforma_usa/preforma_architect_eng.html">
 <meta property="og:site_name" content="PreForma">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="PreForma — Stop Bleeding Margins on Difficult Clients">
-<meta name="twitter:description" content="Psychological client screening for architects. 6 automated files. Eliminate scope creep before your first meeting.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "PreForma",
-  "description": "Psychological client screening platform for architects. Analyzes client behavioral profile and auto-generates 5 operational documents.",
+  "description": "Client risk intelligence platform for architecture and interior design firms.",
   "url": "https://psihotrot-tech.github.io/preforma_usa/preforma_architect_eng.html",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Web",
-  "audience": { "@type": "Audience", "audienceType": "Architects and Interior Designers" },
-  "offers": { "@type": "Offer", "price": "39", "priceCurrency": "USD" },
-  "author": { "@type": "Person", "name": "Sava Pivnički", "email": "psihotrot@gmail.com" }
+  "offers": [
+    {"@type": "Offer", "price": "39", "priceCurrency": "USD", "name": "Studio"},
+    {"@type": "Offer", "price": "79", "priceCurrency": "USD", "name": "Practice"}
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Sava Pivnički",
+    "jobTitle": "Licensed Psychologist · Decision Research",
+    "email": "sava@preforma.io"
+  }
 }
 </script>
-
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
-  --black: #0A0A0A;
-  --off-black: #141414;
-  --dark: #1C1C1C;
-  --mid: #2E2E2E;
-  --rule: #2A2A2A;
-  --soft: #666666;
-  --muted: #444444;
-  --white: #F2F0EB;
-  --pure: #FFFFFF;
-  --gold: #5B6EF5;
-  --gold-dim: rgba(91,110,245,0.15);
-  --gold-line: rgba(91,110,245,0.3);
-  --red: #C84B4B;
-  --red-dim: rgba(200,75,75,0.1);
-  --green: #4B8A5A;
-  --green-dim: rgba(75,138,90,0.1);
+  --black: #0A0A0A; --off: #111111; --dark: #181818; --card: #1C1C1C;
+  --rule: #252525; --muted: #444444; --soft: #777777; --body: #AAAAAA;
+  --sub: #CCCCCC; --head: #F0EEE9; --pure: #FFFFFF;
+  --blue: #4F6BED; --blue-dim: rgba(79,107,237,0.1); --blue-line: rgba(79,107,237,0.25);
+  --blue-light: #6B84F0; --red: #C84B4B; --green: #3A7A52;
 }
-
 html { scroll-behavior: smooth; background: var(--black); }
-body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--white); min-height: 100vh; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--body); min-height: 100vh; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+html, body { width: 100%; max-width: 100vw; }
 
-/* ── HEADER ── */
-.hdr { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; background: rgba(10,10,10,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--rule); }
-.hdr-logo { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; color: var(--white); letter-spacing: -0.5px; text-decoration: none; }
-.hdr-logo em { color: var(--gold); font-style: normal; }
-.hdr-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 400; color: var(--soft); letter-spacing: 1px; text-transform: uppercase; }
-.hdr-cta { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--black); background: var(--gold); text-decoration: none; padding: 9px 20px; transition: background 0.2s; }
-.hdr-cta:hover { background: #7B8EF7; }
+h1, h2, h3 { font-family: 'Syne', sans-serif; color: var(--head); font-weight: 800; }
+h1 { font-size: clamp(36px, 4.8vw, 64px); letter-spacing: -3px; line-height: 1.03; }
+h2 { font-size: clamp(26px, 3.2vw, 44px); letter-spacing: -2px; line-height: 1.1; }
+h3 { font-size: 17px; letter-spacing: -0.5px; line-height: 1.3; color: var(--head); }
+p { line-height: 1.78; }
+em { font-style: normal; color: var(--blue); }
+strong { color: var(--sub); font-weight: 600; }
 
-/* ── HERO ── */
-.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 120px 48px 80px; max-width: 1100px; margin: 0 auto; position: relative; }
-.hero-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 32px; display: flex; align-items: center; gap: 12px; opacity: 0; animation: fadeUp 0.7s ease 0.1s forwards; }
-.hero-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
-.hero-h1 { font-family: 'Syne', sans-serif; font-size: clamp(36px, 5vw, 72px); font-weight: 800; color: var(--pure); line-height: 1.0; letter-spacing: -3px; max-width: 900px; margin-bottom: 32px; opacity: 0; animation: fadeUp 0.7s ease 0.25s forwards; }
-.hero-h1 em { font-style: normal; color: var(--gold); }
-.hero-sub { font-size: 18px; font-weight: 300; color: #999; line-height: 1.7; max-width: 620px; margin-bottom: 52px; opacity: 0; animation: fadeUp 0.7s ease 0.4s forwards; }
-.hero-sub strong { color: var(--white); font-weight: 500; }
-.hero-actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.7s ease 0.55s forwards; }
-.btn-main { display: inline-flex; align-items: center; gap: 10px; background: var(--gold); color: var(--black); font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; padding: 16px 36px; transition: all 0.2s; }
-.btn-main:hover { background: #7B8EF7; transform: translateY(-1px); }
-.btn-ghost { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; color: var(--soft); text-decoration: none; border-bottom: 1px solid var(--muted); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
-.btn-ghost:hover { color: var(--white); border-color: var(--white); }
-.hero-proof { margin-top: 72px; padding-top: 40px; border-top: 1px solid var(--rule); display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; opacity: 0; animation: fadeUp 0.7s ease 0.7s forwards; }
-.hero-stat { padding-right: 40px; border-right: 1px solid var(--rule); }
-.hero-stat:last-child { border-right: none; padding-right: 0; padding-left: 40px; }
-.hero-stat:nth-child(2) { padding: 0 40px; }
-.stat-val { font-family: 'Syne', sans-serif; font-size: 40px; font-weight: 800; color: var(--gold); letter-spacing: -2px; line-height: 1; margin-bottom: 8px; }
-.stat-desc { font-size: 13px; font-weight: 300; color: var(--soft); line-height: 1.5; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 48px; }
 
-/* ── PAIN ── */
-.pain { background: var(--off-black); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 80px 48px; }
-.pain-inner { max-width: 1100px; margin: 0 auto; }
-.pain-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--red); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 40px; display: flex; align-items: center; gap: 10px; }
-.pain-label::before { content: ''; width: 24px; height: 1px; background: var(--red); }
-.pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
-.pain-item { background: var(--dark); padding: 36px 28px; border-top: 2px solid var(--red); }
-.pain-quote { font-size: 15px; font-style: italic; color: #aaa; line-height: 1.7; margin-bottom: 20px; padding-left: 14px; border-left: 1px solid var(--muted); }
-.pain-cost { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; color: var(--red); letter-spacing: 0.5px; }
+/* HEADER */
+.hdr { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 58px; display: flex; align-items: center; background: rgba(10,10,10,0.97); backdrop-filter: blur(24px); border-bottom: 1px solid var(--rule); }
+.hdr-inner { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 48px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; color: var(--head); letter-spacing: -0.5px; text-decoration: none; }
+.logo em { color: var(--blue); }
+.hdr-right { display: flex; align-items: center; gap: 28px; }
+.hdr-link { font-size: 13px; font-weight: 500; color: var(--soft); text-decoration: none; transition: color 0.2s; }
+.hdr-link:hover { color: var(--head); }
+.hdr-btn { font-size: 13px; font-weight: 600; color: var(--pure); background: var(--blue); text-decoration: none; padding: 9px 22px; transition: background 0.2s; border: none; cursor: pointer; }
+.hdr-btn:hover { background: var(--blue-light); }
 
-/* ── WHAT ── */
-.what { padding: 100px 48px; max-width: 1100px; margin: 0 auto; }
-.section-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
-.section-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
-.section-h2 { font-family: 'Syne', sans-serif; font-size: clamp(28px, 3.5vw, 48px); font-weight: 800; color: var(--pure); letter-spacing: -2px; line-height: 1.1; margin-bottom: 16px; }
-.section-h2 em { font-style: normal; color: var(--gold); }
-.section-lead { font-size: 17px; font-weight: 300; color: #888; line-height: 1.75; max-width: 560px; margin-bottom: 64px; }
-.output-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
-.output-item { background: var(--off-black); border: 1px solid var(--rule); padding: 36px 32px; transition: border-color 0.2s; position: relative; }
-.output-item:hover { border-color: var(--gold-line); }
-.output-item.flag { border-color: var(--gold-line); background: linear-gradient(135deg, rgba(91,110,245,0.04) 0%, var(--off-black) 100%); }
-.output-item.flag::before { content: 'Most used'; position: absolute; top: 16px; right: 16px; font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--gold); border: 1px solid var(--gold-line); padding: 3px 8px; letter-spacing: 1px; }
-.output-n { font-family: 'Syne', sans-serif; font-size: 52px; font-weight: 800; color: rgba(255,255,255,0.04); line-height: 1; letter-spacing: -3px; margin-bottom: 16px; transition: color 0.2s; }
-.output-item:hover .output-n, .output-item.flag .output-n { color: rgba(91,110,245,0.1); }
-.output-title { font-size: 17px; font-weight: 600; color: var(--pure); margin-bottom: 8px; letter-spacing: -0.3px; }
-.output-desc { font-size: 13px; font-weight: 300; color: var(--soft); line-height: 1.75; margin-bottom: 20px; }
-.output-list { display: flex; flex-direction: column; gap: 7px; }
-.output-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: #666; line-height: 1.5; list-style: none; }
-.output-list li::before { content: '→'; color: var(--gold); flex-shrink: 0; margin-top: 1px; font-size: 12px; }
+/* HERO */
+.hero { min-height: 100vh; display: flex; align-items: center; padding: 100px 48px 80px; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--blue-line), transparent); }
+.hero-glow { position: absolute; top: -150px; right: -50px; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(79,107,237,0.07) 0%, transparent 65%); pointer-events: none; }
+.hero-inner { max-width: 1080px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.hero-left { }
+.hero-kicker { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; color: var(--blue); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+.hero-kicker::before { content: ''; width: 24px; height: 1px; background: var(--blue); }
+.hero h1 { margin-bottom: 24px; }
+.hero-sub { font-size: 17px; font-weight: 300; color: var(--sub); line-height: 1.75; margin-bottom: 40px; max-width: 480px; }
+.hero-cta-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 48px; }
+.btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--blue); color: var(--pure); font-size: 14px; font-weight: 600; letter-spacing: 0.3px; text-decoration: none; padding: 14px 28px; transition: all 0.2s; border: none; cursor: pointer; }
+.btn-primary:hover { background: var(--blue-light); transform: translateY(-1px); box-shadow: 0 6px 24px rgba(79,107,237,0.25); }
+.btn-text { font-size: 13px; font-weight: 500; color: var(--soft); text-decoration: none; border-bottom: 1px solid var(--muted); padding-bottom: 1px; transition: color 0.2s; }
+.btn-text:hover { color: var(--head); }
+.hero-founder { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; background: var(--dark); border: 1px solid var(--rule); border-left: 2px solid var(--blue); }
+.hf-avatar { width: 40px; height: 40px; background: var(--blue-dim); border: 1px solid var(--blue-line); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 800; color: var(--blue); }
+.hf-name { font-size: 13px; font-weight: 600; color: var(--sub); margin-bottom: 2px; }
+.hf-title { font-size: 11px; color: var(--muted); line-height: 1.5; }
 
-/* ── DEMO SECTION ── */
-.demo-wrap { background: var(--off-black); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 80px 48px; }
-.demo-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 480px; gap: 80px; align-items: start; }
-.demo-copy { padding-top: 8px; }
-.demo-h2 { font-family: 'Syne', sans-serif; font-size: clamp(26px, 3vw, 40px); font-weight: 800; color: var(--pure); letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 24px; }
-.demo-h2 em { font-style: normal; color: var(--gold); }
-.demo-lead { font-size: 15px; font-weight: 300; color: #888; line-height: 1.75; margin-bottom: 40px; }
-.demo-checklist { display: flex; flex-direction: column; gap: 14px; }
-.demo-check { display: flex; align-items: flex-start; gap: 14px; }
-.check-icon { width: 20px; height: 20px; border: 1px solid var(--gold-line); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; font-size: 10px; color: var(--gold); }
-.check-text { font-size: 14px; font-weight: 400; color: #aaa; line-height: 1.55; }
-.check-text strong { color: var(--white); font-weight: 500; }
+/* HERO RIGHT — METRICS */
+.hero-right { display: flex; flex-direction: column; gap: 2px; }
+.hm-card { background: var(--dark); border: 1px solid var(--rule); padding: 24px 24px; }
+.hm-card.accent { border-color: var(--blue-line); background: rgba(79,107,237,0.05); }
+.hm-val { font-family: 'Syne', sans-serif; font-size: 38px; font-weight: 800; color: var(--blue); letter-spacing: -2px; line-height: 1; margin-bottom: 6px; }
+.hm-label { font-size: 13px; color: var(--soft); line-height: 1.5; }
+.hm-label strong { color: var(--sub); font-weight: 500; }
+.hm-outcome { font-size: 15px; font-weight: 400; color: var(--sub); line-height: 1.65; }
+.hm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
 
-/* ── DASHBOARD PREVIEW ── */
-.dash { background: #F8F7F4; border: 1px solid #E0DDD6; font-family: 'Inter', sans-serif; }
-.dash-hdr { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid #E0DDD6; background: #111; }
-.dash-logo { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 800; color: #F2F0EB; letter-spacing: -0.3px; }
-.dash-logo em { color: #5B6EF5; font-style: normal; }
-.dash-badge { font-size: 9px; font-weight: 600; color: #888; background: #1C1C1C; border: 1px solid #2A2A2A; padding: 3px 8px; letter-spacing: 0.5px; }
-.dash-body { padding: 16px; }
-.dash-lbl { font-size: 8px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: #999; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
-.dash-lbl::after { content: ''; flex: 1; height: 1px; background: #E0DDD6; }
-.dash-profile-n { font-family: 'Syne', sans-serif; font-size: 48px; font-weight: 800; color: #E8E5E0; letter-spacing: -3px; line-height: 1; margin-bottom: 2px; }
-.dash-profile-t { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800; color: #111; letter-spacing: -0.3px; line-height: 1.1; margin-bottom: 4px; }
-.dash-profile-s { font-size: 9px; font-weight: 500; color: #999; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px; }
-.semafor { display: grid; grid-template-columns: 1fr 1fr 1fr; border: 1px solid #E0DDD6; border-radius: 100px; overflow: hidden; height: 34px; margin-bottom: 16px; }
-.sem-s { display: flex; align-items: center; justify-content: center; font-size: 8px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C8C8C8; background: #F8F7F4; }
-.sem-s:not(:last-child) { border-right: 1px solid #E0DDD6; }
-.sem-s.on { color: #fff; background: #7C1F1F; font-weight: 800; }
-.dash-meta { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid #E0DDD6; margin-bottom: 12px; }
-.dm-c { padding: 9px 11px; border-right: 1px solid #E0DDD6; border-bottom: 1px solid #E0DDD6; }
-.dm-c:nth-child(2n) { border-right: none; }
-.dm-c:nth-child(3), .dm-c:nth-child(4) { border-bottom: none; }
-.dm-l { font-size: 7px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #999; margin-bottom: 4px; }
-.dm-v { font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700; color: #111; }
-.dm-v.g { color: #5B6EF5; }
-.dash-score { display: flex; align-items: center; justify-content: space-between; padding: 9px 11px; border: 1px solid #E0DDD6; border-top: 2px solid #7C1F1F; margin-bottom: 12px; }
-.ds-l { font-size: 7px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #999; }
-.ds-v { font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #7C1F1F; }
-.risk-row { display: flex; flex-direction: column; gap: 6px; padding: 9px 0; border-bottom: 1px solid #E0DDD6; }
-.risk-row:last-child { border-bottom: none; }
-.risk-top { display: flex; align-items: center; justify-content: space-between; }
-.risk-name { font-size: 10px; font-weight: 500; color: #333; display: flex; align-items: center; gap: 5px; }
-.risk-dot { width: 4px; height: 4px; border-radius: 50%; background: #7C1F1F; flex-shrink: 0; }
-.risk-pct { font-size: 9px; font-weight: 700; color: #999; font-variant-numeric: tabular-nums; }
-.risk-pct.hi { color: #333; font-weight: 800; }
-.rbar { height: 2px; background: #E0DDD6; }
-.rfill { height: 2px; transition: width 1.4s cubic-bezier(0.25,1,0.5,1); }
-.dash-foot { padding: 8px 16px; background: #111; font-size: 8px; color: #555; letter-spacing: 0.5px; text-align: center; }
+/* SECTION COMMON */
+.sec { padding: 90px 0; }
+.sec-kicker { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--soft); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+.sec-kicker::before { content: ''; width: 18px; height: 1px; background: var(--muted); }
+.sec h2 { margin-bottom: 14px; }
+.sec-lead { font-size: 16px; font-weight: 300; color: var(--sub); line-height: 1.78; max-width: 540px; margin-bottom: 52px; }
 
-/* ── HOW ── */
-.how { padding: 100px 48px; max-width: 1100px; margin: 0 auto; }
-.step-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 56px; }
-.step-item { background: var(--off-black); border: 1px solid var(--rule); border-top: 2px solid var(--rule); padding: 40px 32px; transition: border-top-color 0.2s; }
-.step-item:hover { border-top-color: var(--gold); }
-.step-n { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; color: var(--gold); letter-spacing: 2px; margin-bottom: 20px; }
-.step-title { font-size: 17px; font-weight: 600; color: var(--pure); margin-bottom: 10px; letter-spacing: -0.3px; }
-.step-desc { font-size: 13px; font-weight: 300; color: var(--soft); line-height: 1.8; }
+/* PROBLEM */
+.problem { background: var(--off); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.problem-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); }
+.p-item { background: var(--dark); padding: 32px 26px; }
+.p-n { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: 2px; margin-bottom: 18px; }
+.p-quote { font-size: 14px; color: var(--sub); line-height: 1.78; margin-bottom: 18px; font-style: italic; padding-left: 14px; border-left: 2px solid var(--rule); }
+.p-outcome { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--red); letter-spacing: 0.3px; line-height: 1.5; }
 
-/* ── DEMO CTA ── */
-.demo-cta { background: var(--black); border-top: 1px solid var(--rule); padding: 100px 48px; text-align: center; position: relative; overflow: hidden; }
-.demo-cta::before { content: 'PREFORMA'; position: absolute; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 220px; color: rgba(255,255,255,0.015); top: 50%; left: 50%; transform: translate(-50%,-50%); white-space: nowrap; pointer-events: none; letter-spacing: -10px; }
-.cta-inner { max-width: 640px; margin: 0 auto; position: relative; }
-.cta-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
-.cta-h2 { font-family: 'Syne', sans-serif; font-size: clamp(32px, 4vw, 56px); font-weight: 800; color: var(--pure); letter-spacing: -2.5px; line-height: 1.05; margin-bottom: 48px; }
-.cta-h2 em { font-style: normal; color: var(--gold); }
+/* WHY TRUST */
+.case { background: var(--black); }
+.case-inner { background: var(--dark); border: 1px solid var(--rule); border-left: 3px solid var(--blue); padding: 48px; max-width: 860px; }
+.case-badge { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 500; color: var(--black); background: var(--blue); padding: 3px 10px; letter-spacing: 1px; text-transform: uppercase; display: inline-block; margin-bottom: 24px; }
+.case-title { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; color: var(--head); letter-spacing: -1px; margin-bottom: 20px; line-height: 1.2; }
+.case-body { font-size: 15px; font-weight: 300; color: var(--sub); line-height: 1.85; margin-bottom: 28px; }
+.case-results { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); margin-top: 32px; }
+.cr-item { background: var(--card); padding: 20px 20px; }
+.cr-val { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; color: var(--blue); letter-spacing: -1.5px; line-height: 1; margin-bottom: 6px; }
+.cr-label { font-size: 12px; color: var(--muted); line-height: 1.4; }
+.case-note { font-size: 11px; color: var(--muted); margin-top: 20px; font-style: italic; }
 
+/* HOW IT WORKS */
+.how { background: var(--off); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); margin-top: 52px; }
+.how-item { background: var(--dark); padding: 36px 28px; border-top: 2px solid var(--rule); transition: border-top-color 0.2s; }
+.how-item:hover { border-top-color: var(--blue); }
+.how-n { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--blue); letter-spacing: 2px; margin-bottom: 18px; }
+.how-item h3 { margin-bottom: 10px; font-size: 16px; }
+.how-item p { font-size: 13px; color: var(--soft); line-height: 1.8; }
 
+/* WHAT YOU GET */
+.output { background: var(--black); }
+.output-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); }
+.out-item { background: var(--dark); padding: 28px 28px; }
+.out-item.accent { background: rgba(79,107,237,0.05); border: 1px solid var(--blue-line); }
+.out-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--blue); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+.out-item h3 { font-size: 15px; margin-bottom: 6px; }
+.out-item p { font-size: 13px; color: var(--soft); line-height: 1.7; }
 
-/* ── COPYRIGHT BAR ── */
-.copyright-bar { background: #050505; padding: 12px 48px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.04); }
-.copyright-text { font-size: 10px; color: rgba(255,255,255,0.2); letter-spacing: 0.3px; }
-.powered-by { font-size: 10px; color: rgba(255,255,255,0.2); text-decoration: none; letter-spacing: 0.3px; transition: color 0.2s; }
-.powered-by:hover { color: var(--gold); }
+/* DASHBOARD PREVIEW */
+.preview { background: var(--off); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.preview-inner { display: grid; grid-template-columns: 1fr 400px; gap: 72px; align-items: start; }
+.preview-copy h2 { margin-bottom: 14px; }
+.preview-copy .lead { font-size: 15px; font-weight: 300; color: var(--sub); line-height: 1.78; margin-bottom: 32px; }
+.preview-points { display: flex; flex-direction: column; gap: 14px; }
+.pp { display: flex; gap: 12px; align-items: flex-start; }
+.pp-dot { width: 20px; height: 20px; background: var(--blue-dim); border: 1px solid var(--blue-line); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--blue); margin-top: 1px; }
+.pp p { font-size: 13px; color: var(--body); line-height: 1.65; }
 
+/* DASHBOARD */
+.dash { background: #0D0D0D; border: 1px solid var(--rule); }
+.dash-top { padding: 11px 14px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; }
+.dash-brand { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 800; color: var(--head); }
+.dash-brand em { color: var(--blue); }
+.dash-tag { font-family: 'JetBrains Mono', monospace; font-size: 8px; color: var(--muted); letter-spacing: 1px; background: var(--dark); border: 1px solid var(--rule); padding: 2px 7px; }
+.dash-body { padding: 14px; }
+.d-lbl { font-family: 'JetBrains Mono', monospace; font-size: 7px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+.d-lbl::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+.d-profile-n { font-family: 'Syne', sans-serif; font-size: 44px; font-weight: 800; color: #1C1C1C; letter-spacing: -3px; line-height: 1; }
+.d-profile-t { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 800; color: var(--head); letter-spacing: -0.3px; margin: 3px 0; }
+.d-profile-s { font-family: 'JetBrains Mono', monospace; font-size: 7px; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; }
+.d-meta { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule); margin-bottom: 10px; }
+.dm { padding: 8px 9px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.dm:nth-child(2n) { border-right: none; }
+.dm:nth-child(3), .dm:nth-child(4) { border-bottom: none; }
+.dm-l { font-family: 'JetBrains Mono', monospace; font-size: 6px; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 3px; }
+.dm-v { font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700; color: var(--head); }
+.dm-v.a { color: var(--blue); }
+.d-score { display: flex; align-items: center; justify-content: space-between; padding: 8px 9px; border: 1px solid var(--rule); border-top: 2px solid var(--blue); margin-bottom: 12px; }
+.ds-l { font-family: 'JetBrains Mono', monospace; font-size: 7px; color: var(--muted); letter-spacing: 1.5px; text-transform: uppercase; }
+.ds-v { font-family: 'Syne', sans-serif; font-size: 9px; font-weight: 800; color: var(--blue); letter-spacing: 2px; text-transform: uppercase; }
+.d-risks { }
+.dr { padding: 6px 0; border-bottom: 1px solid var(--rule); }
+.dr:last-child { border-bottom: none; }
+.dr-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px; }
+.dr-name { font-size: 9px; font-weight: 500; color: var(--sub); display: flex; align-items: center; gap: 4px; }
+.dr-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
+.dr-pct { font-family: 'JetBrains Mono', monospace; font-size: 8px; color: var(--soft); }
+.dr-pct.hi { color: var(--head); }
+.dr-bar { height: 1px; background: var(--rule); }
+.dr-fill { height: 1px; transition: width 1.4s cubic-bezier(0.25,1,0.5,1); }
+.dash-foot { padding: 7px 14px; background: #080808; border-top: 1px solid var(--rule); font-family: 'JetBrains Mono', monospace; font-size: 7px; color: #2A2A2A; text-align: center; letter-spacing: 0.5px; }
 
-/* ── WHY ── */
-.why { padding: 100px 48px; max-width: 1100px; margin: 0 auto; }
-.why-inner { width: 100%; }
-.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 56px; }
-.why-item { background: var(--off-black); border: 1px solid var(--rule); border-top: 2px solid var(--rule); padding: 36px 28px; transition: border-top-color 0.2s; }
-.why-item:hover { border-top-color: var(--gold); }
-.why-icon { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; color: var(--gold); letter-spacing: 2px; margin-bottom: 16px; }
-.why-title { font-size: 15px; font-weight: 600; color: var(--pure); margin-bottom: 10px; letter-spacing: -0.3px; line-height: 1.3; }
-.why-desc { font-size: 13px; font-weight: 300; color: var(--soft); line-height: 1.8; }
+/* FOUNDER */
+.founder { background: var(--black); }
+.founder-inner { display: grid; grid-template-columns: 2px 1fr; gap: 40px; align-items: start; max-width: 700px; }
+.founder-line { background: var(--blue); align-self: stretch; min-height: 80px; }
+.founder-kicker { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--blue); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+.founder-name { font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 800; color: var(--head); letter-spacing: -1px; margin-bottom: 4px; }
+.founder-title { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+.founder-body { font-size: 15px; font-weight: 300; color: var(--sub); line-height: 1.85; }
 
-/* ── SOCIAL PROOF ── */
-.proof { background: var(--off-black); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 100px 48px; }
-.proof-inner { max-width: 1100px; margin: 0 auto; }
-.proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 56px; margin-bottom: 56px; }
-.proof-item { background: var(--dark); border: 1px solid var(--rule); padding: 36px 32px; position: relative; }
-.proof-item.featured-proof { border-color: var(--gold-line); background: linear-gradient(135deg, rgba(91,110,245,0.06) 0%, var(--dark) 100%); }
-.proof-badge { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 500; color: var(--black); background: var(--gold); padding: 3px 10px; letter-spacing: 1px; text-transform: uppercase; display: inline-block; margin-bottom: 16px; }
-.proof-quote { font-size: 14px; font-weight: 300; color: #aaa; line-height: 1.8; font-style: italic; margin-bottom: 24px; padding-left: 14px; border-left: 2px solid var(--rule); }
-.proof-item.featured-proof .proof-quote { border-left-color: var(--gold-line); }
-.proof-name { font-size: 13px; font-weight: 600; color: var(--pure); }
-.proof-loc { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--soft); letter-spacing: 1px; margin-top: 4px; }
-.proof-cred { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--rule); }
-.cred-item { padding: 28px 24px; border-right: 1px solid var(--rule); text-align: center; }
-.cred-item:last-child { border-right: none; }
-.cred-num { font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 800; color: var(--gold); letter-spacing: -2px; line-height: 1; margin-bottom: 8px; }
-.cred-label { font-size: 12px; font-weight: 300; color: var(--soft); line-height: 1.5; }
+/* TRUST */
+.trust { background: var(--off); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 60px 0; }
+.trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); }
+.trust-item { background: var(--dark); padding: 28px 24px; text-align: center; }
+.trust-val { font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 800; color: var(--blue); letter-spacing: -2px; line-height: 1; margin-bottom: 8px; }
+.trust-label { font-size: 12px; color: var(--muted); line-height: 1.5; }
 
-/* ── PRICING ── */
-.pricing { background: var(--off-black); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 100px 48px; }
-.pricing-inner { max-width: 1100px; margin: 0 auto; }
-.pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-top: 56px; }
-.plan { background: var(--dark); border: 1px solid var(--rule); padding: 44px 40px; position: relative; transition: border-color 0.2s; }
-.plan:hover { border-color: var(--gold-line); }
-.plan.featured { border-color: var(--gold-line); background: linear-gradient(135deg, rgba(91,110,245,0.06) 0%, var(--dark) 100%); }
-.plan.featured::before { content: 'Most Popular'; position: absolute; top: -1px; left: 40px; font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 500; color: var(--black); background: var(--gold); padding: 4px 12px; letter-spacing: 1px; text-transform: uppercase; }
-.plan-name { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; }
-.plan-price { font-family: 'Syne', sans-serif; font-size: 52px; font-weight: 800; color: var(--pure); letter-spacing: -3px; line-height: 1; margin-bottom: 6px; }
-.plan-price span { font-size: 18px; font-weight: 400; color: var(--soft); letter-spacing: 0; }
-.plan-desc { font-size: 13px; font-weight: 300; color: var(--soft); line-height: 1.7; margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--rule); }
-.plan-features { display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px; }
-.plan-feat { display: flex; align-items: flex-start; gap: 12px; font-size: 13px; color: #aaa; line-height: 1.5; }
-.plan-feat::before { content: '✓'; color: var(--gold); flex-shrink: 0; font-size: 12px; margin-top: 1px; }
-.plan-btn { display: block; width: 100%; padding: 16px 20px; background: var(--gold); color: var(--black); font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; text-align: center; transition: background 0.2s; }
-.plan-btn:hover { background: #7B8EF7; }
-.plan-btn.ghost { background: transparent; color: var(--gold); border: 1px solid var(--gold-line); }
-.plan-btn.ghost:hover { background: var(--gold-dim); }
-.pricing-note { text-align: center; margin-top: 28px; font-size: 12px; color: var(--muted); letter-spacing: 0.3px; }
+/* PRICING */
+.pricing { background: var(--black); }
+.pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); max-width: 720px; margin-top: 52px; }
+.plan { background: var(--dark); padding: 36px 32px; }
+.plan.featured { background: rgba(79,107,237,0.05); border: 1px solid var(--blue-line); }
+.plan-badge { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--black); background: var(--blue); padding: 3px 10px; letter-spacing: 1px; text-transform: uppercase; display: inline-block; margin-bottom: 16px; }
+.plan-tier { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--blue); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+.plan-price { font-family: 'Syne', sans-serif; font-size: 40px; font-weight: 800; color: var(--head); letter-spacing: -2px; line-height: 1; margin-bottom: 4px; }
+.plan-price span { font-size: 15px; font-weight: 400; color: var(--muted); letter-spacing: 0; }
+.plan-desc { font-size: 13px; color: var(--soft); line-height: 1.65; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
+.plan-feats { display: flex; flex-direction: column; gap: 9px; margin-bottom: 28px; }
+.pf { display: flex; align-items: flex-start; gap: 9px; font-size: 13px; color: var(--body); line-height: 1.5; }
+.pf::before { content: '✓'; color: var(--blue); flex-shrink: 0; font-size: 11px; margin-top: 1px; }
+.plan-btn { display: block; width: 100%; padding: 13px 20px; background: var(--blue); color: var(--pure); font-size: 13px; font-weight: 600; text-decoration: none; text-align: center; transition: background 0.2s; border: none; cursor: pointer; }
+.plan-btn:hover { background: var(--blue-light); }
+.plan-btn.out { background: transparent; color: var(--blue); border: 1px solid var(--blue-line); }
+.plan-btn.out:hover { background: var(--blue-dim); }
+.pricing-sub { font-size: 12px; color: var(--muted); margin-top: 18px; max-width: 720px; }
 
-/* ── FOOTER ── */
-.footer { background: var(--off-black); border-top: 1px solid var(--rule); padding: 28px 48px; display: flex; align-items: center; justify-content: space-between; }
-.footer-logo { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 800; color: var(--white); text-decoration: none; letter-spacing: -0.3px; }
-.footer-logo em { color: var(--gold); font-style: normal; }
-.footer-copy { font-size: 11px; color: var(--muted); letter-spacing: 0.3px; }
-.footer-auth { font-size: 11px; color: var(--muted); text-align: right; line-height: 1.5; }
+/* FAQ */
+.faq { background: var(--off); border-top: 1px solid var(--rule); }
+.faq-list { max-width: 640px; margin-top: 44px; }
+.faq-item { border-bottom: 1px solid var(--rule); }
+.faq-q { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 0; cursor: pointer; font-size: 14px; font-weight: 500; color: var(--sub); line-height: 1.4; user-select: none; transition: color 0.2s; }
+.faq-q:hover { color: var(--head); }
+.faq-icon { font-size: 16px; color: var(--blue); flex-shrink: 0; transition: transform 0.25s; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a { font-size: 13px; font-weight: 300; color: var(--soft); line-height: 1.8; padding-bottom: 20px; display: none; }
+.faq-item.open .faq-a { display: block; }
 
-.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+/* CTA */
+.cta-section { background: var(--black); border-top: 1px solid var(--rule); padding: 100px 48px; text-align: center; position: relative; overflow: hidden; }
+.cta-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--blue-line), transparent); }
+.cta-glow { position: absolute; bottom: -200px; left: 50%; transform: translateX(-50%); width: 600px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(79,107,237,0.06) 0%, transparent 65%); pointer-events: none; }
+.cta-inner { max-width: 520px; margin: 0 auto; position: relative; }
+.cta-kicker { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--blue); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 18px; }
+.cta-inner h2 { margin-bottom: 14px; }
+.cta-sub { font-size: 15px; font-weight: 300; color: var(--soft); line-height: 1.75; margin-bottom: 36px; }
+.cta-form { display: flex; gap: 0; max-width: 460px; margin: 0 auto 12px; }
+.cta-input { flex: 1; padding: 14px 16px; font-size: 14px; font-family: 'Inter', sans-serif; color: var(--head); background: var(--dark); border: 1px solid var(--rule); border-right: none; outline: none; min-width: 0; transition: border-color 0.2s; }
+.cta-input:focus { border-color: var(--blue); }
+.cta-input::placeholder { color: var(--muted); }
+.cta-btn { padding: 14px 24px; background: var(--blue); color: var(--pure); font-size: 13px; font-weight: 600; letter-spacing: 0.3px; border: none; cursor: pointer; white-space: nowrap; flex-shrink: 0; transition: background 0.2s; }
+.cta-btn:hover { background: var(--blue-light); }
+.cta-note { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.5px; }
+#ctaSuccess { display: none; padding: 28px; border: 1px solid var(--blue-line); background: var(--blue-dim); }
+#ctaSuccess .ck { font-size: 24px; color: var(--blue); margin-bottom: 10px; }
+#ctaSuccess h3 { font-size: 20px; letter-spacing: -0.5px; margin-bottom: 6px; }
+#ctaSuccess p { font-size: 13px; color: var(--soft); line-height: 1.7; }
+
+/* FOOTER */
+.footer { background: var(--off); border-top: 1px solid var(--rule); padding: 24px 0; }
+.footer-inner { max-width: 1080px; margin: 0 auto; padding: 0 48px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.footer-logo { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800; color: var(--sub); text-decoration: none; }
+.footer-logo em { color: var(--blue); }
+.footer-links { display: flex; gap: 24px; }
+.footer-link { font-size: 12px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-link:hover { color: var(--sub); }
+.footer-copy { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-align: right; line-height: 1.6; }
+
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
 
-@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-
-@media (max-width: 900px) {
-  .why { padding: 72px 20px; }
-  .why-grid { grid-template-columns: 1fr; }
-  .proof { padding: 72px 20px; }
-  .proof-grid { grid-template-columns: 1fr; }
-  .proof-cred { grid-template-columns: repeat(2, 1fr); }
-  .cred-item:nth-child(2) { border-right: none; }
-  .cred-item:nth-child(3) { border-right: 1px solid var(--rule); }
-  .hdr { padding: 0 20px; }
-  .hdr-tag { display: none; }
-  .hdr-cta { padding: 8px 14px; font-size: 11px; }
-  .hero { padding: 90px 20px 56px; }
-  .hero-h1 { letter-spacing: -2px; }
-  .hero-proof { grid-template-columns: 1fr; gap: 0; margin-top: 48px; }
-  .hero-stat { border-right: none !important; padding: 0 !important; border-bottom: 1px solid var(--rule); padding-bottom: 20px !important; margin-bottom: 20px; }
-  .hero-stat:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0 !important; }
-  .pain { padding: 60px 20px; }
-  .pain-grid { grid-template-columns: 1fr; }
-  .what { padding: 72px 20px; }
-  .output-grid { grid-template-columns: 1fr; }
-  .demo-wrap { padding: 60px 20px; }
-  .demo-inner { grid-template-columns: 1fr; gap: 40px; }
-  .how { padding: 72px 20px; }
-  .step-grid { grid-template-columns: 1fr; }
-  .pricing { padding: 72px 20px; }
-  .pricing-grid { grid-template-columns: 1fr; }
-  .plan.featured::before { left: 20px; }
-  .demo-cta { padding: 72px 20px; }
-  .footer { padding: 24px 20px; flex-direction: column; gap: 12px; text-align: center; }
-  .footer-auth { text-align: center; }
+@media (max-width: 960px) {
+  .wrap { padding: 0 24px; }
+  .hdr-inner, .footer-inner { padding: 0 24px; }
+  .hdr-link { display: none; }
+  .hero { padding: 90px 24px 60px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+  .hero-right { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .hm-grid { grid-template-columns: 1fr 1fr; }
+  .problem-grid, .how-grid { grid-template-columns: 1fr; }
+  .output-row { grid-template-columns: 1fr; }
+  .preview-inner { grid-template-columns: 1fr; gap: 40px; }
+  .trust-grid { grid-template-columns: 1fr 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
+  .case-results { grid-template-columns: 1fr; }
+  .sec { padding: 72px 0; }
+  .trust { padding: 48px 0; }
+  .cta-section { padding: 72px 24px; }
+  .footer-inner { flex-direction: column; text-align: center; gap: 14px; }
+  .footer-links { justify-content: center; }
+  .footer-copy { text-align: center; }
 }
-
-@media (max-width: 900px) {
-  .copyright-bar { padding: 12px 20px; flex-direction: column; gap: 6px; text-align: center; }
-}
-
-@media (max-width: 480px) {
-  .hero-h1 { letter-spacing: -1.5px; }
-  .hero-eyebrow { font-size: 9px; }
-  .hero-actions { flex-direction: column; align-items: stretch; }
-  .btn-main { justify-content: center; }
-  .btn-ghost { justify-content: center; }
-  .hero-sub { font-size: 16px; }
-  .pain-item { padding: 24px 20px; }
-  .output-item { padding: 28px 24px; }
-  .step-item { padding: 28px 24px; }
-  .plan { padding: 32px 24px; }
-  .plan-price { font-size: 44px; }
-  #regForm > div { flex-direction: column; }
-  #regBtn { padding: 16px 20px; }
-  .demo-inner { gap: 32px; }
-  .section-h2 { letter-spacing: -1.5px; }
-  .cta-h2 { letter-spacing: -1.5px; }
+@media (max-width: 640px) {
+  h1 { letter-spacing: -2px; }
+  h2 { letter-spacing: -1.5px; }
+  .hero-right { grid-template-columns: 1fr; }
+  .hero-cta-row { flex-direction: column; align-items: flex-start; }
+  .trust-grid { grid-template-columns: 1fr 1fr; }
+  .cta-form { flex-direction: column; }
+  .cta-btn { padding: 13px 18px; }
+  .hdr-btn { padding: 8px 14px; font-size: 12px; }
 }
 </style>
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="hdr">
-  <a href="#" class="hdr-logo"><em>Pre</em>Forma</a>
-  <div class="hdr-tag">// for architects</div>
-  <a href="#" class="hdr-cta" id="headerCta">Get Free Risk Report →</a>
+  <div class="hdr-inner">
+    <a href="#" class="logo"><em>Pre</em>Forma</a>
+    <div class="hdr-right">
+      <a href="#how" class="hdr-link">How it works</a>
+      <a href="#pricing" class="hdr-link">Pricing</a>
+      <a href="#sample" class="hdr-btn" id="headerCta">See Sample Report →</a>
+    </div>
+  </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-eyebrow">For Architects &amp; Designers &mdash; Scope Risk &middot; Client Screening</div>
-  <p style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#666;margin-bottom:24px;opacity:0;animation:fadeUp 0.7s ease 0.15s forwards;font-style:italic;">The project isn't exhausting you. The client is.</p>
-  <h1 class="hero-h1">
-    Stop Bleeding Margins on<br>
-    <em>Difficult Clients</em><br>
-    Before You Even Open Revit.
-  </h1>
-  <p class="hero-sub">
-    <strong>PreForma is a client risk intelligence platform built exclusively for architects.</strong> It reveals how your clients are likely to behave — before the contract is signed. A 3-minute client intake gives you a complete risk picture: where friction will occur, which clauses to add, and exactly what to say in the first meeting.
-  </p>
-  <div class="hero-actions">
-    <a href="#" class="btn-main" id="mainCta">
-      Get Your First Client Risk Report Free →
-    </a>
-    <a href="#section-how" class="btn-ghost">See how it works ↓</a>
-  </div>
-  <div class="hero-proof">
-    <div class="hero-stat">
-      <div class="stat-val" data-target="68" data-suffix="%">68%</div>
-      <div class="stat-desc">of architects report at least one project derailed by difficult client behavior — AIA survey</div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-kicker">Client Risk Intelligence · Architecture &amp; Interior Design Firms</div>
+      <h1>Some clients will cost you<br>more than they pay you.<br><em>Anticipate before you sign.</em></h1>
+      <p class="hero-sub">PreForma converts a 3-minute client intake into a complete project risk picture — scope protections, contract guidance, and a management brief — delivered before your first meeting.<br><br>Not a personality test. Project due diligence.</p>
+      <div class="hero-cta-row">
+        <a href="#sample" class="btn-primary">See a Sample Report →</a>
+        <button class="btn-text" id="heroCta" style="background:none;border:none;cursor:pointer;font-size:13px;font-weight:500;color:var(--soft);border-bottom:1px solid var(--muted);padding-bottom:1px;">Get Free Assessment ↓</button>
+      </div>
+      <div class="hero-founder">
+        <div class="hf-avatar">SP</div>
+        <div>
+          <div class="hf-name">Sava Pivnički — Licensed Psychologist</div>
+          <div class="hf-title">15+ years decision research · Developed with architecture practices · Not a personality test</div>
+        </div>
+      </div>
     </div>
-    <div class="hero-stat">
-      <div class="stat-val" data-target="3" data-suffix="×">3×</div>
-      <div class="stat-desc">more revision rounds than originally scoped — on average</div>
-    </div>
-    <div class="hero-stat">
-      <div class="stat-val" data-target="40" data-suffix="%">40%</div>
-      <div class="stat-desc">of architects say scope creep is their #1 business problem — HOK/AIA Practice Report</div>
+    <div class="hero-right">
+      <div class="hm-card accent">
+        <div class="hm-outcome">Detect scope creep risk<br>before the first meeting.</div>
+      </div>
+      <div class="hm-card">
+        <div class="hm-outcome">Identify stakeholder complexity<br>before contracts are signed.</div>
+      </div>
+      <div class="hm-card">
+        <div class="hm-outcome">Adapt your scope and contract<br>to each client's risk profile.</div>
+      </div>
+      <div class="hm-card">
+        <div class="hm-outcome">Surface revision cycle risk<br>before you commit your fee.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PAIN -->
-<div class="pain">
-  <div class="pain-inner reveal">
-    <div class="pain-label">Recognize any of these?</div>
-    <div class="pain-grid">
-      <div class="pain-item">
-        <div class="pain-quote">"Can we revisit the concept phase? I have some new ideas I saw on Pinterest."</div>
-        <div class="pain-cost">→ Project at month 7. Fee locked at month 3.</div>
-      </div>
-      <div class="pain-item">
-        <div class="pain-quote">"I love it — but let's see one more option before we decide. Just one."</div>
-        <div class="pain-cost">→ Presentation #11. You invoiced for 3.</div>
-      </div>
-      <div class="pain-item">
-        <div class="pain-quote">"My wife has a few questions. She couldn't make the last four meetings."</div>
-        <div class="pain-cost">→ Project restarts. New stakeholder, no budget.</div>
-      </div>
+<!-- METHODOLOGY BAR -->
+<div style="background:var(--dark);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:20px 0;">
+  <div style="max-width:1080px;margin:0 auto;padding:0 48px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap;flex-shrink:0;">How it works</div>
+    <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;">
+      <div style="font-size:13px;color:var(--soft);"><strong style="color:var(--sub);">Decision patterns</strong> — not personality traits — determine how projects fail</div>
+      <div style="color:var(--rule);">·</div>
+      <div style="font-size:13px;color:var(--soft);">Those patterns are <strong style="color:var(--sub);">observable before the contract</strong> is signed</div>
+      <div style="color:var(--rule);">·</div>
+      <div style="font-size:13px;color:var(--soft);">PreForma surfaces them from a <strong style="color:var(--sub);">standard 3-minute intake</strong></div>
     </div>
   </div>
 </div>
 
-<!-- WHAT YOU GET -->
-<section class="what reveal">
-  <div class="section-eyebrow">What PreForma delivers</div>
-  <h2 class="section-h2">6 files. <em>Zero guesswork.</em></h2>
-  <p class="section-lead">After your client completes the 3-minute intake, you receive a complete tactical package — automatically, in minutes, directly to your inbox.</p>
-  <div class="output-grid">
-    <div class="output-item flag">
-      <div class="output-n">01</div>
-      <div class="output-title">Executive Brief</div>
-      <div class="output-desc">One page. Read it before the first meeting. Profile in a sentence, top 3 risk signals with percentages, three things you never do with this client, and a conflict protocol.</div>
-      <ul class="output-list">
-        <li>Client profile in one sentence</li>
-        <li>Top 3 risk signals with % scores</li>
-        <li>Three mistakes to avoid with this client type</li>
-        <li>Escalation script if things go wrong</li>
-      </ul>
-    </div>
-    <div class="output-item">
-      <div class="output-n">02</div>
-      <div class="output-title">Behavioral Profile</div>
-      <div class="output-desc">Operational map of how this client actually functions in a project — decision speed, control needs, tolerance for ambiguity, and risk triggers across every phase.</div>
-      <ul class="output-list">
-        <li>Decision-making style and velocity</li>
-        <li>Control and micromanagement index</li>
-        <li>Change tolerance and delay risk</li>
-        <li>Phase-by-phase risk map</li>
-      </ul>
-    </div>
-    <div class="output-item">
-      <div class="output-n">03</div>
-      <div class="output-title">Tactical Interpretation</div>
-      <div class="output-desc">Concrete scripts for managing this client through every project phase — how to present options, when to lock phases, and how to set boundaries without conflict.</div>
-      <ul class="output-list">
-        <li>How to frame decisions for this profile</li>
-        <li>When and how to introduce hard boundaries</li>
-        <li>Critical moments to watch across phases</li>
-        <li>Aesthetic language this client responds to</li>
-      </ul>
-    </div>
-    <div class="output-item flag">
-      <div class="output-n">04</div>
-      <div class="output-title">Adaptive Scope of Work</div>
-      <div class="output-desc">A scope document calibrated to the project type and client risk profile — with phases, deadlines, and clauses that protect against the specific failure modes of this client type.</div>
-      <ul class="output-list">
-        <li>Phases and timelines by project type</li>
-        <li>Explicit inclusions and exclusions</li>
-        <li>Revision limits matched to risk profile</li>
-        <li>Client obligations and response deadlines</li>
-      </ul>
-    </div>
-    <div class="output-item">
-      <div class="output-n">05</div>
-      <div class="output-title">Profile-Matched Contract Clauses</div>
-      <div class="output-desc">Not a generic template. A clause set engineered for the specific risks this client type generates — with scripts for introducing each clause without triggering resistance.</div>
-      <ul class="output-list">
-        <li>Clauses targeting this client's failure modes</li>
-        <li>Phase-lock language matched to profile</li>
-        <li>Communication protocol and accountability</li>
-        <li>Milestone payment triggers by phase</li>
-      </ul>
-    </div>
-      <div class="output-item flag">
-        <div class="output-n">06</div>
-        <div class="output-title">Mobile Risk Dashboard</div>
-        <div class="output-desc">An interactive HTML dashboard delivered to your phone. Animated risk bars, three golden rules, and contract clause scripts — tap any clause to expand why it protects you, when to introduce it, and exactly what to say.</div>
-        <ul class="output-list">
-          <li>Animated risk signal visualization</li>
-          <li>Three golden rules for this client type</li>
-          <li>4 contract clauses with WHY / WHEN / WHAT TO SAY</li>
-          <li>One-tap copy of legal clause text to clipboard</li>
-        </ul>
+<!-- PROBLEM -->
+<section class="problem sec">
+  <div class="wrap reveal">
+    <div class="sec-kicker">The pattern</div>
+    <h2>You've seen this before.<br><em>More than once.</em></h2>
+    <p class="sec-lead">You already know which projects felt wrong from the start. The clients who couldn't commit. The briefs that kept expanding. The stakeholders who appeared in week six. These aren't bad luck. They are patterns — and they were present before you signed.</p>
+    <div class="problem-grid">
+      <div class="p-item">
+        <div class="p-n">// FEE EROSION</div>
+        <div class="p-quote">"Can we revisit the concept? I've been looking at some references and I think we should explore a completely different direction."</div>
+        <div class="p-outcome">Project month 8. Fee locked at month 3. Unbilled hours: 40+.</div>
       </div>
+      <div class="p-item">
+        <div class="p-n">// REVISION SPIRAL</div>
+        <div class="p-quote">"I love where this is going. Before we finalize, let's just see one more option. I want to make sure we've explored everything."</div>
+        <div class="p-outcome">Design sign-off: month 5. Contracted for: month 2. You absorb the difference.</div>
+      </div>
+      <div class="p-item">
+        <div class="p-n">// STAKEHOLDER RISK</div>
+        <div class="p-quote">"My wife would like to be more involved going forward. She has some thoughts on the concept that I think are worth discussing."</div>
+        <div class="p-outcome">New decision-maker. Week 6. No contract amendment. Project restarts.</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- DEMO PREVIEW -->
-<div class="demo-wrap">
-  <div class="demo-inner reveal">
-    <div class="demo-copy">
-      <div class="section-eyebrow">Live output sample</div>
-      <h2 class="demo-h2">This is what lands<br>in your inbox.<br><em>Every time.</em></h2>
-      <p class="demo-lead">The mobile dashboard gives you the full risk picture on any device — before you walk into the room. Tap any clause to see why it protects you, when to introduce it, and exactly what to say.</p>
-      <div class="demo-checklist">
-        <div class="demo-check">
-          <div class="check-icon">✓</div>
-          <div class="check-text"><strong>Animated risk bars</strong> — scope creep, revision risk, handover risk, communication conflict — all scored and visualized.</div>
+<!-- WHY TRUST -->
+<section class="case sec">
+  <div class="wrap reveal">
+    <div class="case-inner">
+      <div class="case-badge">Why trust the methodology</div>
+      <div class="case-title">Built by a licensed psychologist. Designed for architecture workflows. Not a test.</div>
+      <p class="case-body">PreForma is based on decision-behavior patterns — the observable ways people make choices, handle uncertainty, and respond to constraints in high-stakes creative projects. These patterns are consistent, measurable, and relevant to how architecture and design projects succeed or fail.<br><br>The system was designed specifically for the context of architecture and interior design practice: the revision cycles, the approval dependencies, the scope negotiations, the handover risks. It is not a personality test, not a hiring assessment, and not a psychological diagnosis. It is a project risk tool that uses behavioral inputs to surface the signals most relevant to your engagement.</p>
+      <div class="case-results">
+        <div class="cr-item">
+          <div class="cr-val" style="font-size:18px;letter-spacing:-0.5px;">Licensed</div>
+          <div class="cr-label">Psychologist with 15+ years decision behavior research</div>
         </div>
-        <div class="demo-check">
-          <div class="check-icon">✓</div>
-          <div class="check-text"><strong>Three golden rules</strong> — the three things you must never do with this specific client type.</div>
+        <div class="cr-item">
+          <div class="cr-val" style="font-size:18px;letter-spacing:-0.5px;">Designed</div>
+          <div class="cr-label">Specifically for architecture and interior design workflows</div>
         </div>
-        <div class="demo-check">
-          <div class="check-icon">✓</div>
-          <div class="check-text"><strong>Contract clause scripts</strong> — tap to expand. WHY it protects you. WHEN to introduce it. WHAT to say word-for-word.</div>
-        </div>
-        <div class="demo-check">
-          <div class="check-icon">✓</div>
-          <div class="check-text"><strong>One-tap copy</strong> — copies the legal clause text directly to clipboard, ready to paste into your contract.</div>
+        <div class="cr-item">
+          <div class="cr-val" style="font-size:18px;letter-spacing:-0.5px;">Operational</div>
+          <div class="cr-label">Output is project guidance, not diagnosis or evaluation</div>
         </div>
       </div>
-    </div>
-    <!-- DASHBOARD DARK -->
-    <div style="background:#0F0F0F;border:1px solid #2A2A2A;max-width:390px;font-family:'Inter',sans-serif;">
-      <div style="display:flex;align-items:center;justify-content:space-between;padding:13px 16px 11px;border-bottom:1px solid #2A2A2A;background:rgba(15,15,15,0.97);">
-        <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:800;color:#F2F0EB;letter-spacing:-0.3px;"><span style="color:#5B6EF5;">Pre</span>Forma</div>
-        <div style="font-size:9px;font-weight:600;color:#888;background:#1A1A1A;border:1px solid #2A2A2A;padding:3px 8px;border-radius:100px;letter-spacing:0.5px;">Alex Morrison</div>
-      </div>
-      <div style="padding:16px 16px 8px;">
-        <div style="font-size:8px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#666;margin-bottom:12px;display:flex;align-items:center;gap:6px;">01 Risk Forecast<span style="flex:1;height:1px;background:#2A2A2A;display:block;"></span></div>
-        <div style="font-family:'Syne',sans-serif;font-size:52px;font-weight:800;color:#2A2A2A;letter-spacing:-3px;line-height:1;margin-bottom:2px;">01</div>
-        <div style="font-family:'Syne',sans-serif;font-size:15px;font-weight:800;color:#F0EEE9;letter-spacing:-0.3px;line-height:1.1;margin-bottom:4px;">Dominant /<br>Controller</div>
-        <div style="font-size:9px;font-weight:500;color:#888;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;">Client Profile · Jun 2026</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border:1px solid #2A2A2A;border-radius:100px;overflow:hidden;height:34px;margin-bottom:14px;">
-          <div style="display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#444;background:#1A1A1A;border-right:1px solid #2A2A2A;">Safe</div>
-          <div style="display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#444;background:#1A1A1A;border-right:1px solid #2A2A2A;">Caution</div>
-          <div style="display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:#7C1F1F;">Risk</div>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;border:1px solid #2A2A2A;margin-bottom:12px;">
-          <div style="padding:9px 11px;border-right:1px solid #2A2A2A;border-bottom:1px solid #2A2A2A;"><div style="font-size:7px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#666;margin-bottom:4px;">Timeline Buffer</div><div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:#5B6EF5;">+15% overhead</div></div>
-          <div style="padding:9px 11px;border-bottom:1px solid #2A2A2A;"><div style="font-size:7px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#666;margin-bottom:4px;">Decision Speed</div><div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:#F0EEE9;">Fast &amp; decisive</div></div>
-          <div style="padding:9px 11px;border-right:1px solid #2A2A2A;"><div style="font-size:7px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#666;margin-bottom:4px;">Emotional Factor</div><div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:#F0EEE9;">Rational</div></div>
-          <div style="padding:9px 11px;"><div style="font-size:7px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#666;margin-bottom:4px;">Confidence</div><div style="font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:#F0EEE9;">High</div></div>
-        </div>
-        <div style="display:flex;align-items:center;justify-content:space-between;padding:9px 11px;border:1px solid #2A2A2A;border-top:2px solid #5B6EF5;margin-bottom:12px;">
-          <span style="font-size:7px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#666;">Overall Risk Score</span>
-          <span style="font-family:'Syne',sans-serif;font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#5B6EF5;">HIGH</span>
-        </div>
-        <div style="font-size:8px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#666;margin-bottom:10px;display:flex;align-items:center;gap:6px;">02 Risk Signals<span style="flex:1;height:1px;background:#2A2A2A;display:block;"></span></div>
-        <div style="display:flex;flex-direction:column;gap:0;">
-          <div style="padding:8px 0;border-bottom:1px solid #2A2A2A;"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><div style="font-size:10px;font-weight:600;color:#E8E6E1;display:flex;align-items:center;gap:5px;"><span style="width:4px;height:4px;border-radius:50%;background:#5B6EF5;display:inline-block;flex-shrink:0;"></span>Scope Creep Risk</div><div style="font-size:9px;font-weight:800;color:#F0EEE9;">55%</div></div><div style="height:2px;background:#2A2A2A;"><div class="db-fill" style="background:#5B6EF5;height:2px;width:0" data-w="55"></div></div></div>
-          <div style="padding:8px 0;border-bottom:1px solid #2A2A2A;"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><div style="font-size:10px;font-weight:600;color:#E8E6E1;">Frequent Change Risk</div><div style="font-size:9px;font-weight:700;color:#888;">30%</div></div><div style="height:2px;background:#2A2A2A;"><div class="db-fill" style="background:#444;height:2px;width:0" data-w="30"></div></div></div>
-          <div style="padding:8px 0;border-bottom:1px solid #2A2A2A;"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><div style="font-size:10px;font-weight:600;color:#E8E6E1;">Decision Delays</div><div style="font-size:9px;font-weight:700;color:#888;">15%</div></div><div style="height:2px;background:#2A2A2A;"><div class="db-fill" style="background:#444;height:2px;width:0" data-w="15"></div></div></div>
-          <div style="padding:8px 0;border-bottom:1px solid #2A2A2A;"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><div style="font-size:10px;font-weight:600;color:#E8E6E1;display:flex;align-items:center;gap:5px;"><span style="width:4px;height:4px;border-radius:50%;background:#5B6EF5;display:inline-block;flex-shrink:0;"></span>Handover Risk</div><div style="font-size:9px;font-weight:800;color:#F0EEE9;">70%</div></div><div style="height:2px;background:#2A2A2A;"><div class="db-fill" style="background:#5B6EF5;height:2px;width:0" data-w="70"></div></div></div>
-          <div style="padding:8px 0;"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><div style="font-size:10px;font-weight:600;color:#E8E6E1;display:flex;align-items:center;gap:5px;"><span style="width:4px;height:4px;border-radius:50%;background:#7B8EF7;display:inline-block;flex-shrink:0;"></span>Communication Conflict</div><div style="font-size:9px;font-weight:800;color:#F0EEE9;">65%</div></div><div style="height:2px;background:#2A2A2A;"><div class="db-fill" style="background:#7B8EF7;height:2px;width:0" data-w="65"></div></div></div>
-        </div>
-      </div>
-      <div style="padding:8px 16px;background:#0A0A0A;border-top:1px solid #2A2A2A;font-size:8px;color:#555;text-align:center;letter-spacing:0.5px;">Generated by PreForma · Sava Pivnički, Licensed Psychologist</div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- HOW IT WORKS -->
-<section id="section-how" class="how reveal">
-  <div class="section-eyebrow">The process</div>
-  <h2 class="section-h2">Three steps.<br><em>Fully automated.</em></h2>
-  <p class="section-lead">Send the link. Get the dossier. Walk into the meeting prepared.</p>
-  <div class="step-grid">
-    <div class="step-item">
-      <div class="step-n">STEP 01</div>
-      <div class="step-title">Send the intake link</div>
-      <div class="step-desc">You get a personalized link to send your client before the first meeting. The questionnaire takes 3–4 minutes and reads exactly like a standard project intake — no psychological jargon, no red flags for the client.</div>
-    </div>
-    <div class="step-item">
-      <div class="step-n">STEP 02</div>
-      <div class="step-title">The system maps the client's behavioral profile</div>
-      <div class="step-desc">10 responses are mapped across 8 behavioral dimensions — micromanagement index, decision velocity, perfectionism, trust baseline, and more — and matched to one of 6 client archetypes.</div>
-    </div>
-    <div class="step-item">
-      <div class="step-n">STEP 03</div>
-      <div class="step-title">Receive your tactical dossier</div>
-      <div class="step-desc">Within minutes, you know where the project is most likely to break down — and exactly how to prevent it. You enter the first meeting with a complete tactical picture: who you're dealing with, what to put in the contract, and word-for-word scripts for the hard conversations.</div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY ARCHITECTS USE PREFORMA -->
-<section class="why reveal">
-  <div class="why-inner">
-    <div class="section-eyebrow">Why architects use it</div>
-    <h2 class="section-h2">You already know<br>which clients cost you. <em>Now act on it.</em></h2>
-    <div class="why-grid">
-      <div class="why-item">
-        <div class="why-icon">01</div>
-        <div class="why-title">Detect micromanagement risk before contracts</div>
-        <div class="why-desc">Know whether your next client will want to approve every tile before you've even opened the project file.</div>
+<section class="how sec" id="how">
+  <div class="wrap reveal">
+    <div class="sec-kicker">The process</div>
+    <h2>Three steps.<br><em>Before the first meeting.</em></h2>
+    <p class="sec-lead">Your client takes 3 minutes. You receive a complete risk picture before you shake hands.</p>
+    <div class="how-grid">
+      <div class="how-item">
+        <div class="how-n">STEP 01</div>
+        <h3>Send the intake link</h3>
+        <p>Your client completes a 10-statement project intake — framed as a standard onboarding questionnaire, not a test. No psychological language. Takes 3 minutes. Works on any device.</p>
       </div>
-      <div class="why-item">
-        <div class="why-icon">02</div>
-        <div class="why-title">Set revision limits based on actual behavior</div>
-        <div class="why-desc">Stop guessing how many rounds a client will need. Set limits in the contract that match their behavioral profile.</div>
+      <div class="how-item">
+        <div class="how-n">STEP 02</div>
+        <h3>Risk profile is generated</h3>
+        <p>PreForma maps the responses to a client risk profile — scoring scope creep likelihood, revision cycle risk, decision velocity, stakeholder complexity, and handover risk. Calibrated to your project type.</p>
       </div>
-      <div class="why-item">
-        <div class="why-icon">03</div>
-        <div class="why-title">Reduce scope creep before it starts</div>
-        <div class="why-desc">Identify clients who expand scope mid-project — and add the right clauses before they have the chance.</div>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">04</div>
-        <div class="why-title">Prepare difficult conversations in advance</div>
-        <div class="why-desc">Get word-for-word scripts for introducing hard boundaries — tailored to how this specific client communicates.</div>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">05</div>
-        <div class="why-title">Protect profit margins without damaging relationships</div>
-        <div class="why-desc">The right clause introduced the right way doesn't damage trust — it builds it. PreForma tells you both.</div>
-      </div>
-      <div class="why-item">
-        <div class="why-icon">06</div>
-        <div class="why-title">Walk into every first meeting prepared</div>
-        <div class="why-desc">Stop reading the room. Know the room — before you walk in.</div>
+      <div class="how-item">
+        <div class="how-n">STEP 03</div>
+        <h3>Dossier arrives in minutes</h3>
+        <p>Six documents delivered to your inbox: an executive brief, risk profile, management guide, adaptive scope of work, contract clause set, and a mobile risk dashboard. Everything you need before the first meeting.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- METHODOLOGY -->
-<section class="proof reveal">
-  <div class="proof-inner">
-    <div class="section-eyebrow">The methodology</div>
-    <h2 class="section-h2">Built on behavioral science.<br><em>Tested on real projects.</em></h2>
-    <p style="font-size:16px;font-weight:300;color:var(--soft);line-height:1.75;max-width:600px;margin-bottom:56px;">PreForma is not a personality test. It is a behavioral risk assessment system developed at the intersection of decision psychology and architectural practice — designed to predict how a specific client will behave under the specific pressures of a design project.</p>
-    <div class="proof-grid" style="grid-template-columns:repeat(2,1fr)">
-      <div class="proof-item">
-        <div class="proof-badge">Foundation</div>
-        <div class="proof-quote" style="font-style:normal;font-size:14px;">The system is built on cognitive style analysis, emotional regulation patterns, and communication behavior mapping — three dimensions that directly determine how many revisions a project generates, how decisions get made, and where conflicts typically emerge.</div>
-      </div>
-      <div class="proof-item">
-        <div class="proof-badge">Application</div>
-        <div class="proof-quote" style="font-style:normal;font-size:14px;">Each of the 6 client archetypes was developed through direct collaboration with architects and interior designers — calibrated against real project outcomes, not theoretical models. The risk scores and contract clauses reflect patterns observed across hundreds of real client relationships.</div>
-      </div>
-      <div class="proof-item featured-proof" style="grid-column:span 2">
-        <div class="proof-badge">Author</div>
-        <div class="proof-quote" style="font-style:normal;font-size:14px;">PreForma was created by Sava Pivnički — a licensed psychologist with 15+ years of experience in behavioral assessment and decision research. The system was developed specifically for the architecture and interior design context, where the quality of the client relationship directly determines the profitability of the project.</div>
-        <div class="proof-author" style="margin-top:20px">
-          <div class="proof-name">Sava Pivnički</div>
-          <div class="proof-loc">Licensed Psychologist · Decision Research · psihotrot@gmail.com</div>
+<!-- CASE STUDIES -->
+<section style="background:var(--off);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);" class="sec">
+  <div class="wrap reveal">
+    <div class="sec-kicker">In practice</div>
+    <h2>What the risk picture<br><em>looks like in use.</em></h2>
+    <p class="sec-lead">Three situations architects encounter. Three cases where knowing the risk profile before signing changed the outcome.</p>
+    <div style="display:flex;flex-direction:column;gap:2px;">
+
+      <div style="display:grid;grid-template-columns:2px 1fr;background:var(--rule);gap:1px;">
+        <div style="background:var(--blue);"></div>
+        <div style="background:var(--dark);padding:32px 36px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">Case 01 · Revision Spiral</div>
+          <h3 style="margin-bottom:10px;font-size:16px;">High-end residential renovation · 8-person interior design studio</h3>
+          <p style="font-size:14px;color:var(--soft);line-height:1.8;margin-bottom:20px;">PreForma flagged high visual inspiration dependency and low decision confidence. The risk picture showed a strong likelihood of concept-phase reopening and revision accumulation beyond the contracted scope.</p>
+          <p style="font-size:14px;color:var(--soft);line-height:1.8;margin-bottom:20px;"><strong>Guidance generated:</strong> Two-revision limit per phase, written sign-off required before concept advancement, stakeholder identification clause.</p>
+          <p style="font-size:14px;color:var(--sub);line-height:1.8;font-style:italic;">Client requested a third concept direction in week four. The studio referenced the phase-lock clause. Client signed off. Project proceeded on schedule.</p>
         </div>
       </div>
+
+      <div style="display:grid;grid-template-columns:2px 1fr;background:var(--rule);gap:1px;">
+        <div style="background:var(--blue);"></div>
+        <div style="background:var(--dark);padding:32px 36px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">Case 02 · Scope Expansion</div>
+          <h3 style="margin-bottom:10px;font-size:16px;">Commercial office fit-out · 12-person architecture firm</h3>
+          <p style="font-size:14px;color:var(--soft);line-height:1.8;margin-bottom:20px;">The risk profile flagged high autonomy need and low tolerance for process constraints. Pattern consistent with clients who expand scope incrementally and resist change-of-scope billing.</p>
+          <p style="font-size:14px;color:var(--soft);line-height:1.8;margin-bottom:20px;"><strong>Guidance generated:</strong> Explicit scope boundary language, change-of-scope billing clause, single point of contact requirement.</p>
+          <p style="font-size:14px;color:var(--sub);line-height:1.8;font-style:italic;">Client requested structural modifications in week seven. The change-of-scope clause was triggered. Additional work billed and accepted without dispute.</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:2px 1fr;background:var(--rule);gap:1px;">
+        <div style="background:var(--blue);"></div>
+        <div style="background:var(--dark);padding:32px 36px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">Case 03 · Hidden Stakeholder</div>
+          <h3 style="margin-bottom:10px;font-size:16px;">Luxury new build · Solo architect</h3>
+          <p style="font-size:14px;color:var(--soft);line-height:1.8;margin-bottom:20px;">The intake flagged a decision-by-committee pattern and elevated partner involvement probability. Risk score indicated significant chance of new decision-maker introduction after concept phase.</p>
+          <p style="font-size:14px;color:var(--soft);line-height:1.8;margin-bottom:20px;"><strong>Guidance generated:</strong> Stakeholder identification requirement before concept phase, joint sign-off protocol for all phase completions.</p>
+          <p style="font-size:14px;color:var(--sub);line-height:1.8;font-style:italic;">Client's partner requested involvement at concept review. The joint sign-off protocol was already in the contract. No restart. No renegotiation.</p>
+        </div>
+      </div>
+
     </div>
-    <div class="proof-cred">
-      <div class="cred-item">
-        <div class="cred-num" data-target="15" data-suffix="+">15+</div>
-        <div class="cred-label">Years of behavioral assessment practice</div>
+    <p style="font-size:11px;color:var(--muted);margin-top:20px;font-style:italic;">These cases are illustrative examples based on the types of risk patterns PreForma identifies. They represent realistic scenarios, not documented client records.</p>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="output sec">
+  <div class="wrap reveal">
+    <div class="sec-kicker">What you receive</div>
+    <h2>The information you need<br>to <em>protect your fee.</em></h2>
+    <p class="sec-lead">Six documents. Every client. Automatically. Each one serves a specific operational purpose — scope protection, revision control, or contract defense.</p>
+    <div class="output-row" style="margin-bottom:2px;">
+      <div class="out-item accent">
+        <div class="out-label">Document 01</div>
+        <h3>Executive Brief</h3>
+        <p>One page. Scope creep risk, revision cycle index, three things you never do with this client, and a script for the moment things go sideways. Read it before you walk in.</p>
       </div>
-      <div class="cred-item">
-        <div class="cred-num" data-target="6" data-suffix="">6</div>
-        <div class="cred-label">Validated client behavioral archetypes</div>
+      <div class="out-item">
+        <div class="out-label">Document 02</div>
+        <h3>Client Risk Profile</h3>
+        <p>Full risk breakdown across 8 dimensions — including micromanagement index, change tolerance, approval delay risk, and stakeholder complexity score.</p>
       </div>
-      <div class="cred-item">
-        <div class="cred-num" data-target="10" data-suffix="">10</div>
-        <div class="cred-label">Project types supported</div>
+    </div>
+    <div class="output-row" style="margin-bottom:2px;">
+      <div class="out-item">
+        <div class="out-label">Document 03</div>
+        <h3>Project Management Guide</h3>
+        <p>Phase-by-phase instructions for managing this specific client — when to lock decisions, how to present options, and when to escalate. Written for how this client actually behaves.</p>
       </div>
-      <div class="cred-item">
-        <div class="cred-num" data-target="6" data-suffix="">6</div>
-        <div class="cred-label">Automated deliverables per client</div>
+      <div class="out-item accent">
+        <div class="out-label">Document 04</div>
+        <h3>Adaptive Scope of Work</h3>
+        <p>A scope document built for this client's risk profile — revision limits, phase-lock clauses, client obligations, and response deadlines calibrated to the risks PreForma identified.</p>
+      </div>
+    </div>
+    <div class="output-row">
+      <div class="out-item">
+        <div class="out-label">Document 05</div>
+        <h3>Contract Clause Set</h3>
+        <p>Four contract clauses targeting the specific risks of this client type — with word-for-word scripts for introducing each one without triggering pushback. Legal text ready to paste into your draft.</p>
+      </div>
+      <div class="out-item">
+        <div class="out-label">Document 06</div>
+        <h3>Mobile Risk Dashboard</h3>
+        <p>Interactive dashboard for your phone. Animated risk visualization, behavioral rules, and accordion clause scripts — tap any clause to expand the full context and copy the legal text.</p>
       </div>
     </div>
   </div>
 </section>
+
+<!-- MID-PAGE CTA -->
+<div style="background:var(--dark);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:40px 0;">
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+    <div>
+      <div style="font-size:17px;font-weight:600;color:var(--head);margin-bottom:6px;">See what your report looks like.</div>
+      <div style="font-size:14px;color:var(--soft);">Sample output for a Dominant/Controller profile — the most common high-risk archetype.</div>
+    </div>
+    <a href="#sample" class="btn-primary" style="white-space:nowrap;">View Sample Report →</a>
+  </div>
+</div>
+
+<!-- SAMPLE REPORT -->
+<section class="preview sec" id="sample">
+  <div class="wrap">
+    <div class="preview-inner reveal">
+      <div class="preview-copy">
+        <div class="sec-kicker">Sample output</div>
+        <h2>What lands in<br>your inbox. <em>Every time.</em></h2>
+        <p class="lead">The mobile dashboard gives you the full risk picture before you walk into the room. Every score reflects your specific client's intake — not a generic template.</p>
+        <div class="preview-points">
+          <div class="pp">
+            <div class="pp-dot">01</div>
+            <p><strong>Risk signals by category</strong> — scope creep, revision frequency, decision delay, handover risk, and communication conflict. Each scored from behavioral inputs.</p>
+          </div>
+          <div class="pp">
+            <div class="pp-dot">02</div>
+            <p><strong>Three behavioral rules</strong> — the three things you must never do with this client type. Derived from the risk profile pattern.</p>
+          </div>
+          <div class="pp">
+            <div class="pp-dot">03</div>
+            <p><strong>Contract scripts on demand</strong> — tap any clause for the full context: why it protects you, when to raise it, and exactly what to say.</p>
+          </div>
+          <div class="pp">
+            <div class="pp-dot">04</div>
+            <p><strong>One-tap legal text</strong> — copies the clause directly to clipboard, ready to paste into your contract.</p>
+          </div>
+        </div>
+      </div>
+      <div class="dash">
+        <div class="dash-top">
+          <div class="dash-brand"><em>Pre</em>Forma</div>
+          <div class="dash-tag">// Sample · Dominant/Controller</div>
+        </div>
+        <div class="dash-body">
+          <div class="d-lbl">01 Risk Forecast</div>
+          <div class="d-profile-n">01</div>
+          <div class="d-profile-t">Dominant / Controller</div>
+          <div class="d-profile-s">Client Profile · Jun 2026</div>
+          <div class="d-meta">
+            <div class="dm"><div class="dm-l">Timeline Buffer</div><div class="dm-v a">+15% overhead</div></div>
+            <div class="dm"><div class="dm-l">Decision Speed</div><div class="dm-v">Fast &amp; decisive</div></div>
+            <div class="dm"><div class="dm-l">Revision Index</div><div class="dm-v">Moderate</div></div>
+            <div class="dm"><div class="dm-l">Confidence</div><div class="dm-v">High</div></div>
+          </div>
+          <div class="d-score">
+            <span class="ds-l">Overall Risk Score</span>
+            <span class="ds-v">HIGH</span>
+          </div>
+          <div class="d-lbl">02 Risk Signals</div>
+          <div class="d-risks">
+            <div class="dr"><div class="dr-top"><div class="dr-name"><span class="dr-dot"></span>Scope Creep Risk</div><div class="dr-pct hi">55%</div></div><div class="dr-bar"><div class="dr-fill db-fill" style="background:var(--blue)" data-w="55"></div></div></div>
+            <div class="dr"><div class="dr-top"><div class="dr-name">Revision Cycle Risk</div><div class="dr-pct">30%</div></div><div class="dr-bar"><div class="dr-fill db-fill" style="background:#2A2A2A" data-w="30"></div></div></div>
+            <div class="dr"><div class="dr-top"><div class="dr-name">Approval Delay Risk</div><div class="dr-pct">15%</div></div><div class="dr-bar"><div class="dr-fill db-fill" style="background:#2A2A2A" data-w="15"></div></div></div>
+            <div class="dr"><div class="dr-top"><div class="dr-name"><span class="dr-dot"></span>Handover Risk</div><div class="dr-pct hi">70%</div></div><div class="dr-bar"><div class="dr-fill db-fill" style="background:var(--blue)" data-w="70"></div></div></div>
+            <div class="dr"><div class="dr-top"><div class="dr-name"><span class="dr-dot"></span>Comm. Conflict</div><div class="dr-pct hi">65%</div></div><div class="dr-bar"><div class="dr-fill db-fill" style="background:var(--blue-light)" data-w="65"></div></div></div>
+          </div>
+        </div>
+        <div class="dash-foot">PreForma · Sava Pivnički, Licensed Psychologist · sava@preforma.io</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder sec">
+  <div class="wrap reveal">
+    <div class="founder-inner">
+      <div class="founder-line"></div>
+      <div>
+        <div class="founder-kicker">Why this works</div>
+        <div class="founder-name">Sava Pivnički</div>
+        <div class="founder-title">Licensed Psychologist · Decision Research · 15+ years decision behavior research</div>
+        <p class="founder-body">After years of applied behavioral assessment work — studying how people make decisions in high-stakes, deadline-driven environments — the same patterns kept appearing in architecture and design contexts.<br><br>The revision spiral. The approval delay. The client who loves every presentation but cannot commit. The stakeholder who appears in week six. These are not difficult personalities. They are recognizable decision behaviors — and they are present before the contract is signed.<br><br>PreForma was built to make that signal visible. Not as a psychological evaluation. Not as a personality test. As project due diligence — the information you need before you commit your fee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust reveal">
+  <div class="wrap">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-val" data-target="15" data-suffix="+">15+</div>
+        <div class="trust-label">Years decision behavior research</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-val" data-target="6" data-suffix="">6</div>
+        <div class="trust-label">Validated client risk profiles</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-val" data-target="10" data-suffix="">10</div>
+        <div class="trust-label">Project types supported</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-val" data-target="8" data-suffix="">8</div>
+        <div class="trust-label">Risk dimensions per assessment</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- PRICING -->
-<section class="pricing">
-  <div class="pricing-inner reveal">
-    <div class="section-eyebrow">Pricing</div>
-    <h2 class="section-h2">One bad client costs more than a year of <em>PreForma.</em></h2>
-    <p class="section-lead">Start free. Upgrade when you're ready. Cancel anytime.</p>
+<section class="pricing sec" id="pricing">
+  <div class="wrap reveal">
+    <div class="sec-kicker">Pricing</div>
+    <h2>One difficult project costs<br>more than a year of <em>PreForma.</em></h2>
+    <p class="sec-lead">Both plans include a free first assessment. No credit card required to start.</p>
     <div class="pricing-grid">
       <div class="plan">
-        <div class="plan-name">The Blueprint</div>
+        <div class="plan-tier">Studio</div>
         <div class="plan-price">$39<span>/mo</span></div>
-        <p class="plan-desc">Everything you need to screen clients and protect your margins on every project.</p>
-        <div class="plan-features">
-          <div class="plan-feat">10 client screenings per month</div>
-          <div class="plan-feat">All 5 automated documents per client</div>
-          <div class="plan-feat">Mobile risk dashboard with contract scripts</div>
-          <div class="plan-feat">10 project types supported</div>
-          <div class="plan-feat">Email delivery within minutes</div>
+        <p class="plan-desc">For independent architects and small studios. Up to 10 client risk assessments per month.</p>
+        <div class="plan-feats">
+          <div class="pf">10 assessments per month</div>
+          <div class="pf">All 6 documents per assessment</div>
+          <div class="pf">Mobile risk dashboard</div>
+          <div class="pf">10 project types</div>
+          <div class="pf">Delivery within minutes</div>
         </div>
-        <a href="https://preforma.lemonsqueezy.com/checkout/buy/bee50df0-9d27-4aad-bcad-2b5af08f3da2" class="plan-btn ghost">Get Blueprint →</a>
+        <a href="https://preforma.lemonsqueezy.com/checkout/buy/bee50df0-9d27-4aad-bcad-2b5af08f3da2" class="plan-btn out">Get Studio →</a>
       </div>
       <div class="plan featured">
-        <div class="plan-name">The Foundation</div>
+        <div class="plan-badge">Recommended</div>
+        <div class="plan-tier">Practice</div>
         <div class="plan-price">$79<span>/mo</span></div>
-        <p class="plan-desc">For studios running multiple projects simultaneously. Unlimited screening, priority support.</p>
-        <div class="plan-features">
-          <div class="plan-feat">Unlimited client screenings</div>
-          <div class="plan-feat">All 5 automated documents per client</div>
-          <div class="plan-feat">Mobile risk dashboard with contract scripts</div>
-          <div class="plan-feat">10 project types supported</div>
-          <div class="plan-feat">Priority email delivery</div>
-          <div class="plan-feat">Early access to new features</div>
+        <p class="plan-desc">For studios with consistent project flow and multiple active client relationships.</p>
+        <div class="plan-feats">
+          <div class="pf">Unlimited assessments</div>
+          <div class="pf">All 6 documents per assessment</div>
+          <div class="pf">Mobile risk dashboard</div>
+          <div class="pf">10 project types</div>
+          <div class="pf">Priority delivery</div>
+          <div class="pf">Early access to new features</div>
         </div>
-        <a href="https://preforma.lemonsqueezy.com/checkout/buy/e1654f3e-85c4-4687-b580-847d34a903ab" class="plan-btn">Get Foundation →</a>
+        <a href="https://preforma.lemonsqueezy.com/checkout/buy/e1654f3e-85c4-4687-b580-847d34a903ab" class="plan-btn">Get Practice →</a>
       </div>
     </div>
-    <p class="pricing-note">Secure checkout via Lemon Squeezy &middot; Card, PayPal, Apple Pay, Google Pay &middot; Cancel anytime</p>
+    <p class="pricing-sub">Secure checkout via Lemon Squeezy · Card, PayPal, Apple Pay, Google Pay · Cancel anytime</p>
   </div>
 </section>
 
-<!-- REGISTRACIJA -->
-<section class="demo-cta" id="registracija">
-  <div class="cta-inner reveal">
-    <div class="cta-eyebrow">// Free access &middot; No credit card</div>
-    <h2 class="cta-h2">Screen your next client.<br><em>Free. Right now.</em></h2>
-    <p style="font-size:16px;font-weight:300;color:#888;margin-bottom:40px;line-height:1.7;max-width:480px;margin-left:auto;margin-right:auto;">Enter your email and get your intake link instantly. Send it to your next client before the first meeting. First report is free.</p>
-    <div id="regForm">
-      <div style="display:flex;gap:0;max-width:520px;margin:0 auto 16px;">
-        <input type="email" id="regEmail" placeholder="your@email.com" style="flex:1;padding:18px 20px;font-size:16px;font-family:'Inter',sans-serif;color:#111;background:#F2F0EB;border:none;outline:none;min-width:0;transition:box-shadow 0.2s;">
-        <button id="regBtn" style="padding:18px 32px;background:var(--gold);color:#000;font-family:'Inter',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:background 0.2s;">Get My Link &rarr;</button>
+<!-- FAQ -->
+<section class="faq sec reveal">
+  <div class="wrap">
+    <div class="sec-kicker">Questions</div>
+    <h2>What firms typically ask.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Does my client know they're being assessed?<span class="faq-icon">+</span></div>
+        <div class="faq-a">The intake is framed as a standard project onboarding questionnaire. It asks about project preferences, communication style, and decision-making approach — appropriate for any professional intake process. There is no psychological language visible to your client. The risk analysis happens on the backend.</div>
       </div>
-      <p style="font-size:12px;color:#555;letter-spacing:0.3px;">No credit card &middot; No obligations &middot; Unsubscribe anytime</p>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How reliable are the risk scores?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Every report includes a confidence indicator. When intake responses produce a clear behavioral pattern, confidence is high. When responses are mixed, the report flags it and recommends validation in conversation. PreForma improves the quality of information you have before signing — it does not eliminate judgment.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Can I use this for commercial, hospitality, and developer projects?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes. PreForma supports 10 project types: residential interior, architectural projects, design & build, renovation, new construction, commercial, hospitality, developer/investment, luxury, and fast-track. The scope document, risk weights, and contract clauses are calibrated to the project type selected in the intake.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Are the contract clauses legally binding?<span class="faq-icon">+</span></div>
+        <div class="faq-a">The contract clauses are targeted templates — they are not legal advice and PreForma is not a law firm. They are designed to be incorporated into your existing contracts with review by your attorney. They are more targeted than generic templates because they address the specific risk patterns PreForma identified in your client's profile.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What happens after my client submits the intake?<span class="faq-icon">+</span></div>
+        <div class="faq-a">All 6 documents are generated automatically and delivered to your email within minutes. No dashboard login required. The mobile risk dashboard is included as an HTML file that works on any device — open it in your browser before the first meeting.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">My clients would never complete a questionnaire before a meeting.<span class="faq-icon">+</span></div>
+        <div class="faq-a">The intake is framed as a standard project onboarding form — not a test, not a survey, not a psychological assessment. It asks about project preferences and communication approach. 10 statements, 3 minutes. Most clients complete it before the first meeting without comment.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">I already know which clients are going to be difficult.<span class="faq-icon">+</span></div>
+        <div class="faq-a">Most architects do — after the project starts. PreForma gives you that read before you sign. It also gives you the contract language and management guidance to act on it, which is the harder part.</div>
+      </div>
     </div>
-    <div id="regSuccess" style="display:none;padding:40px;border:1px solid var(--gold-line);background:var(--gold-dim);max-width:520px;margin:0 auto;text-align:center;">
-      <div style="font-size:36px;color:var(--gold);margin-bottom:16px;">&#10003;</div>
-      <div style="font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:var(--pure);letter-spacing:-1px;margin-bottom:10px;">Check your inbox.</div>
-      <div style="font-size:15px;font-weight:300;color:#888;line-height:1.7;">Your personalized intake link is on its way.<br>Arrives within seconds.</div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section" id="cta">
+  <div class="cta-glow"></div>
+  <div class="cta-inner reveal">
+    <div class="cta-kicker">// First assessment free · No credit card</div>
+    <h2>Your next client is already<br><em>sending signals.</em></h2>
+    <p class="cta-sub">Enter your email and receive your intake link. Send it to your next client before the first meeting. Anticipate what you're walking into before you sign.</p>
+    <div id="ctaForm">
+      <div class="cta-form">
+        <input type="email" class="cta-input" id="ctaEmail" placeholder="your@studio.com">
+        <button class="cta-btn" id="ctaBtn">Get Free Assessment →</button>
+      </div>
+      <p class="cta-note">No credit card · No obligations · Unsubscribe anytime</p>
+    </div>
+    <div id="ctaSuccess">
+      <div class="ck">✓</div>
+      <h3>Check your inbox.</h3>
+      <p>Your intake link is on its way. Send it to your next client before the first meeting.</p>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <a href="#" class="footer-logo"><em>Pre</em>Forma</a>
-  <div class="footer-copy">Developed by a licensed psychologist &middot; Built for architects and designers</div>
-  <div class="footer-auth">Sava Pivnički<br>psihotrot@gmail.com</div>
+  <div class="footer-inner">
+    <a href="#" class="footer-logo"><em>Pre</em>Forma</a>
+    <div class="footer-links">
+      <a href="#" class="footer-link">Privacy Policy</a>
+      <a href="#" class="footer-link">Terms of Service</a>
+      <a href="mailto:sava@preforma.io" class="footer-link">sava@preforma.io</a>
+    </div>
+    <div class="footer-copy">© 2026 PreForma<br>Sava Pivnički, Licensed Psychologist</div>
+  </div>
 </footer>
 
-<div class="copyright-bar">
-  <span class="copyright-text">&copy; 2026 PreForma &middot; All rights reserved</span>
-  <a href="https://psihotrot-tech.github.io/Adversa" class="powered-by" target="_blank" rel="noopener">Powered by Adversa</a>
-</div>
-
 <script>
-function getArchitectEmail() {
-  try {
-    var params = new URLSearchParams(window.location.search);
-    return params.get('a') || params.get('email') || '';
-  } catch(e) { return ''; }
-}
-
-function buildFormLink() {
-  var email = getArchitectEmail();
-  return 'https://psihotrot-tech.github.io/preforma_usa/preforma_form_eng.html?a=' + encodeURIComponent(email);
-}
-
 var ENG_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbzch17Jfh2OQaIxp2VqHsd0lvcpr8FneOyx59HVD-P0g2gbzbtSXTgeNRMlBUpfvcTfPA/exec';
 
-function init() {
-  ['mainCta','headerCta'].forEach(function(id) {
-    var el = document.getElementById(id);
-    if (el) el.href = '#registracija';
-  });
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', init);
-} else { init(); }
-
-document.addEventListener('DOMContentLoaded', function() {
-  var btn = document.getElementById('regBtn');
-  if (!btn) return;
-  btn.addEventListener('click', function() {
-    var email = document.getElementById('regEmail').value.trim();
-    if (!email || email.indexOf('@') === -1) {
-      document.getElementById('regEmail').style.boxShadow = 'inset 0 -2px 0 #C84B4B';
-      return;
-    }
-    document.getElementById('regEmail').style.boxShadow = '';
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-    fetch(ENG_WEBAPP_URL, {
-      method: 'POST', mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify({ tip: 'registracija', email: email })
-    }).then(function() {
-      document.getElementById('regForm').style.display = 'none';
-      document.getElementById('regSuccess').style.display = 'block';
-    }).catch(function() {
-      document.getElementById('regForm').style.display = 'none';
-      document.getElementById('regSuccess').style.display = 'block';
-    });
-  });
-  document.getElementById('regEmail').addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') btn.click();
+// Scroll to CTA
+['heroCta','headerCta'].forEach(function(id) {
+  var el = document.getElementById(id);
+  if (el) el.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('cta').scrollIntoView({ behavior: 'smooth' });
   });
 });
 
-// Dashboard bar animations
+// CTA form submit
+document.getElementById('ctaBtn').addEventListener('click', function() {
+  var email = document.getElementById('ctaEmail').value.trim();
+  if (!email || email.indexOf('@') === -1) {
+    document.getElementById('ctaEmail').style.borderColor = 'var(--red)';
+    return;
+  }
+  document.getElementById('ctaEmail').style.borderColor = '';
+  this.textContent = 'Sending...';
+  this.disabled = true;
+  fetch(ENG_WEBAPP_URL, {
+    method: 'POST', mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain' },
+    body: JSON.stringify({ tip: 'registracija', email: email })
+  }).then(function() {
+    document.getElementById('ctaForm').style.display = 'none';
+    document.getElementById('ctaSuccess').style.display = 'block';
+  }).catch(function() {
+    document.getElementById('ctaForm').style.display = 'none';
+    document.getElementById('ctaSuccess').style.display = 'block';
+  });
+});
+document.getElementById('ctaEmail').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') document.getElementById('ctaBtn').click();
+});
+
+// FAQ
+function toggleFaq(el) {
+  var item = el.parentElement;
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+  if (!isOpen) item.classList.add('open');
+}
+
+// Risk bars
 (function() {
-  var animated = false;
-  var target = document.querySelector('.db-fill');
-  if (!target) return;
+  var done = false;
+  var first = document.querySelector('.db-fill');
+  if (!first) return;
   var obs = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
-      if (e.isIntersecting && !animated) {
-        animated = true;
+      if (e.isIntersecting && !done) {
+        done = true;
         document.querySelectorAll('.db-fill[data-w]').forEach(function(el, i) {
-          setTimeout(function() { el.style.width = el.getAttribute('data-w') + '%'; }, 400 + i * 140);
+          setTimeout(function() { el.style.width = el.getAttribute('data-w') + '%'; }, 350 + i * 130);
         });
         obs.disconnect();
       }
     });
   }, { threshold: 0.3 });
-  obs.observe(target);
+  obs.observe(first);
 })();
 
-// Reveal on scroll
-var obs = new IntersectionObserver(function(entries) {
-  entries.forEach(function(entry) {
-    if (entry.isIntersecting) { entry.target.classList.add('visible'); obs.unobserve(entry.target); }
-  });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
-
-// CountUp animacija
+// CountUp
 (function() {
-  function countUp(el) {
+  function run(el) {
     var target = parseFloat(el.dataset.target);
     var suffix = el.dataset.suffix || '';
-    var start = null;
-    function step(ts) {
-      if (!start) start = ts;
-      var p = Math.min((ts - start) / 1400, 1);
-      var ease = 1 - Math.pow(1 - p, 4);
-      el.textContent = Math.round(ease * target) + suffix;
+    var t0 = null;
+    (function step(ts) {
+      if (!t0) t0 = ts;
+      var p = Math.min((ts - t0) / 1200, 1);
+      var ease = 1 - Math.pow(1 - p, 3);
+      el.textContent = (target % 1 === 0 ? Math.round(ease * target) : (ease * target).toFixed(0)) + suffix;
       if (p < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
+    })(performance.now());
   }
   var obs = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
-      if (e.isIntersecting) { countUp(e.target); obs.unobserve(e.target); }
+      if (e.isIntersecting) { run(e.target); obs.unobserve(e.target); }
     });
   }, { threshold: 0.5 });
-  document.querySelectorAll('.stat-val[data-target], .cred-num[data-target]').forEach(function(el) { obs.observe(el); });
+  document.querySelectorAll('[data-target]').forEach(function(el) { obs.observe(el); });
+})();
+
+// Reveal
+(function() {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.06 });
+  document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
 })();
 </script>
 </body>
