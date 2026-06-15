@@ -152,6 +152,14 @@ p, li, .sec-lead, .how-item p, .out-item p, .plan-desc, .faq-a,
 .cta-tab-inline { display: inline-flex; align-items: center; gap: 10px; background: var(--blue); color: var(--pure); font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.5px; text-decoration: none; padding: 16px 32px; margin-top: 24px; transition: background 0.2s; }
 .cta-tab-inline:hover { background: var(--blue-light); }
 
+
+.dashboard-howto { margin-top: 24px; border-top: 1px solid var(--rule); padding-top: 20px; }
+.howto-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+.howto-row { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 10px; }
+.howto-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--blue); width: 20px; flex-shrink: 0; padding-top: 1px; }
+.howto-text { font-size: 13px; color: var(--soft); line-height: 1.6; }
+.howto-text strong { color: var(--sub); font-weight: 600; }
+
 </style>
 </head>
 <body>
@@ -216,6 +224,25 @@ p, li, .sec-lead, .how-item p, .out-item p, .plan-desc, .faq-a,
         <div class="dc-tag">Contract clause scripts</div>
         <div class="dc-tag">One-tap copy to clipboard</div>
         <div class="dc-tag">Works on any device</div>
+      </div>
+      <div class="dashboard-howto">
+        <div class="howto-label">How to use it</div>
+        <div class="howto-row">
+          <span class="howto-num">01</span>
+          <span class="howto-text"><strong>Risk Forecast</strong> — overall risk level, traffic-light indicator, and four behavioral metrics. Read this first.</span>
+        </div>
+        <div class="howto-row">
+          <span class="howto-num">02</span>
+          <span class="howto-text"><strong>Critical Risk Signals</strong> — five animated bars showing the probability of scope creep, revision cycles, decision delays, handover risk, and communication conflict.</span>
+        </div>
+        <div class="howto-row">
+          <span class="howto-num">03</span>
+          <span class="howto-text"><strong>Three Golden Filters</strong> — the three things you must never do with this client type. Read before you walk into the room.</span>
+        </div>
+        <div class="howto-row">
+          <span class="howto-num">04</span>
+          <span class="howto-text"><strong>Contract Clauses & Scripts</strong> — tap any clause to expand. Each one shows why it protects you, when to introduce it, and exactly what to say. Copy button sends the legal text to your clipboard.</span>
+        </div>
       </div>
     </div>
     <a href="dashboard_sim.html" target="_blank" class="btn-dashboard">
