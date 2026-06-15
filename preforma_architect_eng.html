@@ -767,13 +767,13 @@ strong { color: var(--sub); font-weight: 600; }
 var ENG_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbzch17Jfh2OQaIxp2VqHsd0lvcpr8FneOyx59HVD-P0g2gbzbtSXTgeNRMlBUpfvcTfPA/exec';
 
 // Scroll to CTA
-['heroCta','headerCta'].forEach(function(id) {
-  var el = document.getElementById(id);
-  if (el) el.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.getElementById('cta').scrollIntoView({ behavior: 'smooth' });
-  });
+// heroCta scrolls to CTA section
+var heroCta = document.getElementById('heroCta');
+if (heroCta) heroCta.addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('cta').scrollIntoView({ behavior: 'smooth' });
 });
+// headerCta links to sample page — keep default href behavior
 
 // CTA form submit
 document.getElementById('ctaBtn').addEventListener('click', function() {
