@@ -133,6 +133,16 @@ p, li, .sec-lead, .how-item p, .out-item p, .plan-desc, .faq-a,
 .hero-sub { font-size: 20px !important; }
 .risk-name { font-size: 14px !important; }
 
+
+.hero-statement { margin-bottom: 32px; }
+.hero-statement-line { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
+.hero-statement-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--blue); letter-spacing: 2px; flex-shrink: 0; padding-top: 3px; }
+.hero-statement-text { font-size: 16px; font-weight: 400; color: var(--sub); line-height: 1.7; }
+.hero-statement-text strong { color: var(--head); font-weight: 600; }
+.hero-divider { display: flex; align-items: center; gap: 16px; margin: 32px 0 28px; }
+.hero-divider-line { flex: 1; height: 1px; background: var(--rule); }
+.hero-divider-text { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; white-space: nowrap; }
+
 </style>
 </head>
 <body>
@@ -150,8 +160,29 @@ p, li, .sec-lead, .how-item p, .out-item p, .plan-desc, .faq-a,
   <div class="hero" style="padding-left:0;padding-right:0;">
     <div class="hero-glow"></div>
     <div class="eyebrow">Sample Intelligence Dossier · No Registration Required</div>
-    <h1>Inside the<br><em>PreForma</em> Dossier.</h1>
-    <p class="hero-sub">Explore a live interactive dashboard and download all six defensive operational assets — the same documents we generate for every client assessment.</p>
+    <h1>The client who texts<br>on weekends costs you<br><em>more than they pay.</em></h1>
+
+    <div class="hero-statement">
+      <div class="hero-statement-line">
+        <span class="hero-statement-num">01 //</span>
+        <span class="hero-statement-text"><strong>Most architecture principals start for the love of design.</strong> They end up spending half their energy managing the emotional weight of clients who drain the team's spirit, ignore boundaries, and keep requesting "just one more tweak" in week six.</span>
+      </div>
+      <div class="hero-statement-line">
+        <span class="hero-statement-num">02 //</span>
+        <span class="hero-statement-text"><strong>This behavior isn't random — it's a pattern.</strong> And it can be predicted before you sign. Silent scope creep from high-risk clients accounts for 15–20% of fee erosion that never shows up on an invoice.</span>
+      </div>
+      <div class="hero-statement-line">
+        <span class="hero-statement-num">03 //</span>
+        <span class="hero-statement-text"><strong>PreForma maps the psychological risk profile of your client</strong> before the first meeting — so you walk in knowing exactly what to protect, what to put in writing, and what to never say.</span>
+      </div>
+    </div>
+
+    <div class="hero-divider">
+      <div class="hero-divider-line"></div>
+      <div class="hero-divider-text">Below: live sample for a high-risk client profile</div>
+      <div class="hero-divider-line"></div>
+    </div>
+
     <p class="hero-note">// Dominant / Controller Profile · High-Risk Sample · No login required</p>
   </div>
 
