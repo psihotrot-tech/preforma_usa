@@ -189,6 +189,35 @@ p, li, .sec-lead, .how-item p, .out-item p, .plan-desc, .faq-a,
 .sp-note { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); margin-top: 48px; text-align: center; letter-spacing: 0.3px; }
 @media (max-width: 640px) { .sample-pricing { grid-template-columns: 1fr; } }
 
+
+.questionnaire-wrap { margin-bottom: 0; }
+.q-intro { font-size: 14px; color: var(--soft); line-height: 1.75; margin-bottom: 24px; padding: 16px 20px; border-left: 2px solid var(--rule); }
+.q-item { background: var(--dark); border: 1px solid var(--rule); margin-bottom: 2px; padding: 20px 24px; }
+.q-header { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 16px; }
+.q-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--blue); letter-spacing: 1px; flex-shrink: 0; padding-top: 2px; width: 24px; }
+.q-text { font-size: 14px; font-weight: 500; color: var(--head); line-height: 1.6; }
+.q-scale { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin-left: 40px; }
+.q-opt { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.q-dot { width: 18px; height: 18px; border-radius: 50%; border: 1px solid var(--rule); background: var(--off); flex-shrink: 0; }
+.q-opt-label { font-family: 'JetBrains Mono', monospace; font-size: 8px; color: var(--muted); letter-spacing: 0.3px; text-align: center; line-height: 1.4; }
+.q-scale-labels { display: grid; grid-template-columns: 1fr 1fr; margin-left: 40px; margin-top: 8px; }
+.q-scale-left { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--muted); }
+.q-scale-right { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--muted); text-align: right; }
+.q-note { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); margin-top: 16px; text-align: center; letter-spacing: 0.3px; }
+@media (max-width: 640px) { 
+  .q-scale { grid-template-columns: repeat(5, 1fr); gap: 2px; margin-left: 0; }
+  .q-opt-label { font-size: 7px; }
+  .q-scale-labels { margin-left: 0; }
+  .q-dot { width: 14px; height: 14px; }
+}
+
+
+.form-preview-wrap { border: 1px solid var(--rule); background: var(--dark); overflow: hidden; }
+.form-preview-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; }
+.form-preview-label span { color: var(--blue); }
+.form-preview-wrap iframe { width: 100%; height: 600px; border: none; display: block; }
+@media (max-width: 640px) { .form-preview-wrap iframe { height: 500px; } }
+
 </style>
 </head>
 <body>
@@ -281,9 +310,28 @@ p, li, .sec-lead, .how-item p, .out-item p, .plan-desc, .faq-a,
   </div>
 
   <!-- PDF DOWNLOADS -->
-  <div id="documents" class="section-divider reveal pdf-anchor">
+  <div
+  <div class="section-divider reveal">
     <div class="sd-line"></div>
-    <div class="sd-label">02 · Operational Assets — All 6 Documents</div>
+    <div class="sd-label">02 · Client Intake Questionnaire</div>
+    <div class="sd-line"></div>
+  </div>
+
+  <div class="questionnaire-wrap reveal">
+    <p class="q-intro">This is the exact questionnaire your client receives — 10 statements, answered on a 5-point scale. Takes approximately 3 minutes to complete.</p>
+    <div class="form-preview-wrap">
+      <div class="form-preview-label">
+        Live Preview — Client Intake Form
+        <span>// Read-only sample</span>
+      </div>
+      <iframe src="preforma_form_eng.html" scrolling="yes" title="PreForma Client Intake Questionnaire"></iframe>
+    </div>
+    <p class="q-note">// 10 statements · 5-point agreement scale · No personal data collected</p>
+  </div>
+
+  d="documents" class="section-divider reveal pdf-anchor">
+    <div class="sd-line"></div>
+    <div class="sd-label">03 · Operational Assets — All 6 Documents</div>
     <div class="sd-line"></div>
   </div>
 
@@ -351,7 +399,7 @@ p, li, .sec-lead, .how-item p, .out-item p, .plan-desc, .faq-a,
 
     
 
-  <a href="preforma_architect_eng.html#cta" class="cta-tab-inline reveal">Get Free Assessment →</a>
+  <a href="preforma_architect_eng.html#cta" class="cta-tab-inline reveal" style="background:transparent;border:1px solid var(--blue-line);color:var(--blue);font-size:13px;padding:12px 24px;width:fit-content;margin-top:24px;">Get Free Assessment →</a>
 
   <!-- PROTECTION STRIP -->
   <div class="protection-strip">
