@@ -27,7 +27,7 @@ body { font-family: 'Inter', sans-serif; background: var(--black); color: var(--
 .hdr-link:hover { color: var(--head); }
 
 /* HERO */
-.hero { padding: 120px 48px 80px; max-width: 1080px; margin: 0 auto; position: relative; }
+.hero { padding: 120px 48px 80px; max-width: 1080px; margin: 0 auto; position: relative; overflow: hidden; }
 .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--blue-line), transparent); }
 .hero-glow { position: absolute; top: -100px; right: -100px; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(79,107,237,0.06) 0%, transparent 65%); pointer-events: none; }
 .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--blue); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
@@ -160,6 +160,35 @@ p, li, .sec-lead, .how-item p, .out-item p, .plan-desc, .faq-a,
 .howto-text { font-size: 13px; color: var(--soft); line-height: 1.6; }
 .howto-text strong { color: var(--sub); font-weight: 600; }
 
+
+.sample-pricing { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--rule); margin-top: 48px; margin-bottom: 0; }
+.sample-plan { background: var(--dark); padding: 28px; display: flex; flex-direction: column; gap: 6px; }
+.sample-plan-tier { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--blue); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+.sample-plan-price { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; color: var(--head); letter-spacing: -1px; line-height: 1; margin-bottom: 4px; }
+.sample-plan-price span { font-size: 13px; font-weight: 400; color: var(--soft); letter-spacing: 0; }
+.sample-plan-desc { font-size: 13px; color: var(--soft); line-height: 1.6; margin-bottom: 16px; flex: 1; }
+.sample-plan-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: transparent; color: var(--blue); font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; text-decoration: none; border: 1px solid var(--blue-line); padding: 13px 20px; transition: all 0.2s; }
+.sample-plan-btn:hover { background: var(--blue-dim); border-color: var(--blue); }
+.sample-plan-btn.primary { background: var(--blue); color: var(--pure); border-color: var(--blue); }
+.sample-plan-btn.primary:hover { background: var(--blue-light); }
+.sample-pricing-note { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); text-align: center; padding: 16px; letter-spacing: 0.5px; }
+@media (max-width: 640px) { .sample-pricing { grid-template-columns: 1fr; } }
+
+
+.sample-pricing { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--rule); margin-top: 48px; margin-bottom: 0; }
+.sp-card { background: var(--dark); padding: 28px 32px; }
+.sp-card.accent { border-top: 2px solid var(--blue); }
+.sp-tier { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--blue); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+.sp-price { font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 800; color: var(--head); letter-spacing: -1px; margin-bottom: 4px; }
+.sp-price span { font-size: 14px; font-weight: 400; color: var(--soft); }
+.sp-desc { font-size: 13px; color: var(--soft); line-height: 1.65; margin-bottom: 20px; }
+.sp-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--blue); color: var(--pure); font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; text-decoration: none; padding: 12px 24px; transition: background 0.2s; }
+.sp-btn:hover { background: var(--blue-light); }
+.sp-btn.out { background: transparent; border: 1px solid var(--blue-line); color: var(--blue); }
+.sp-btn.out:hover { background: var(--blue-dim); }
+.sp-note { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); margin-top: 48px; text-align: center; letter-spacing: 0.3px; }
+@media (max-width: 640px) { .sample-pricing { grid-template-columns: 1fr; } }
+
 </style>
 </head>
 <body>
@@ -171,7 +200,7 @@ p, li, .sec-lead, .how-item p, .out-item p, .plan-desc, .faq-a,
   </div>
 </header>
 
-<div style="max-width:1080px;margin:0 auto;padding:0 48px;">
+<div style="max-width:1080px;margin:0 auto;padding:0 48px;overflow-x:hidden;">
 
   <!-- HERO -->
   <div class="hero" style="padding-left:0;padding-right:0;">
@@ -377,6 +406,30 @@ p, li, .sec-lead, .how-item p, .out-item p, .plan-desc, .faq-a,
     <div class="footer-copy">© 2026 PreForma · Sava Pivnički, Licensed Psychologist · psihotrot@gmail.com</div>
   </div>
 </footer>
+
+
+<!-- SAMPLE PRICING -->
+<div style="max-width:1080px;margin:0 auto;padding:0 48px 0;overflow-x:hidden;">
+
+</div>
+
+
+  <!-- PRICING STRIP -->
+  <div class="sample-pricing">
+    <div class="sp-card">
+      <div class="sp-tier">The Blueprint</div>
+      <div class="sp-price">$39<span>/mo</span></div>
+      <p class="sp-desc">3 client assessments per month. All 6 documents per assessment. For independent architects and smaller studios.</p>
+      <a href="https://preforma.lemonsqueezy.com/checkout/buy/bee50df0-9d27-4aad-bcad-2b5af08f3da2" class="sp-btn out" target="_blank" rel="noopener">Get The Blueprint →</a>
+    </div>
+    <div class="sp-card accent">
+      <div class="sp-tier">The Foundation</div>
+      <div class="sp-price">$79<span>/mo</span></div>
+      <p class="sp-desc">10 client assessments per month. All 6 documents per assessment. For studios with consistent project volume.</p>
+      <a href="https://preforma.lemonsqueezy.com/checkout/buy/e1654f3e-85c4-4687-b580-847d34a903ab" class="sp-btn" target="_blank" rel="noopener">Get The Foundation →</a>
+    </div>
+  </div>
+  <p class="sp-note">First assessment is free · No credit card required · Pay only when you need more</p>
 
 <div class="footer-legal">
   <div class="footer-legal-inner">
