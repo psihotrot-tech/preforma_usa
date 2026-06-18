@@ -212,11 +212,13 @@ p, li, .sec-lead, .how-item p, .out-item p, .plan-desc, .faq-a,
 }
 
 
-.form-preview-wrap { border: 1px solid var(--rule); background: var(--dark); overflow: hidden; }
+.questionnaire-wrap { max-width: 780px; margin: 0 auto 0; }
+.form-preview-wrap { border: 1px solid var(--rule); background: var(--dark); overflow: hidden; width: 100%; }
 .form-preview-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; }
 .form-preview-label span { color: var(--blue); }
-.form-preview-wrap iframe { width: 100%; height: 600px; border: none; display: block; }
-@media (max-width: 640px) { .form-preview-wrap iframe { height: 500px; } }
+.form-preview-wrap iframe { width: 100%; height: 700px; border: none; display: block; background: var(--dark); }
+@media (max-width: 900px) { .form-preview-wrap iframe { height: 600px; } }
+@media (max-width: 640px) { .form-preview-wrap iframe { height: 520px; } .questionnaire-wrap { max-width: 100%; } }
 
 </style>
 </head>
