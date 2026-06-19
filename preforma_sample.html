@@ -212,13 +212,11 @@ p, li, .sec-lead, .how-item p, .out-item p, .plan-desc, .faq-a,
 }
 
 
-.questionnaire-wrap { max-width: 780px; margin: 0 auto 0; }
-.form-preview-wrap { border: 1px solid var(--rule); background: var(--dark); overflow: hidden; width: 100%; }
+.form-preview-wrap { border: 1px solid var(--rule); background: var(--dark); overflow: hidden; }
 .form-preview-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; padding: 12px 20px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; }
 .form-preview-label span { color: var(--blue); }
-.form-preview-wrap iframe { width: 100%; height: 700px; border: none; display: block; background: var(--dark); }
-@media (max-width: 900px) { .form-preview-wrap iframe { height: 600px; } }
-@media (max-width: 640px) { .form-preview-wrap iframe { height: 520px; } .questionnaire-wrap { max-width: 100%; } }
+.form-preview-wrap iframe { width: 100%; height: 600px; border: none; display: block; }
+@media (max-width: 640px) { .form-preview-wrap iframe { height: 500px; } }
 
 </style>
 </head>
@@ -312,9 +310,28 @@ p, li, .sec-lead, .how-item p, .out-item p, .plan-desc, .faq-a,
   </div>
 
   <!-- PDF DOWNLOADS -->
-  <div id="documents" class="section-divider reveal pdf-anchor">
+  <div
+  <div class="section-divider reveal">
     <div class="sd-line"></div>
-    <div class="sd-label">02 · Operational Assets — All 6 Documents</div>
+    <div class="sd-label">02 · Client Intake Questionnaire</div>
+    <div class="sd-line"></div>
+  </div>
+
+  <div class="questionnaire-wrap reveal">
+    <p class="q-intro">This is the exact questionnaire your client receives — 10 statements, answered on a 5-point scale. Takes approximately 3 minutes to complete.</p>
+    <div class="form-preview-wrap">
+      <div class="form-preview-label">
+        Live Preview — Client Intake Form
+        <span>// Read-only sample</span>
+      </div>
+      <iframe src="preforma_form_eng.html" scrolling="yes" title="PreForma Client Intake Questionnaire"></iframe>
+    </div>
+    <p class="q-note">// 10 statements · 5-point agreement scale · No personal data collected</p>
+  </div>
+
+  d="documents" class="section-divider reveal pdf-anchor">
+    <div class="sd-line"></div>
+    <div class="sd-label">03 · Operational Assets — All 6 Documents</div>
     <div class="sd-line"></div>
   </div>
 
@@ -383,24 +400,6 @@ p, li, .sec-lead, .how-item p, .out-item p, .plan-desc, .faq-a,
     
 
   <a href="preforma_architect_eng.html#cta" class="cta-tab-inline reveal" style="background:transparent;border:1px solid var(--blue-line);color:var(--blue);font-size:13px;padding:12px 24px;width:fit-content;margin-top:24px;">Get Free Assessment →</a>
-
-  <div class="section-divider reveal">
-    <div class="sd-line"></div>
-    <div class="sd-label">03 · Client Intake Questionnaire</div>
-    <div class="sd-line"></div>
-  </div>
-
-  <div class="questionnaire-wrap reveal">
-    <p class="q-intro">This is the exact questionnaire your client receives — 10 statements, answered on a 5-point scale. Takes approximately 3 minutes to complete.</p>
-    <div class="form-preview-wrap">
-      <div class="form-preview-label">
-        Live Preview — Client Intake Form
-        <span>// Read-only sample</span>
-      </div>
-      <iframe src="preforma_form_eng.html" scrolling="yes" title="PreForma Client Intake Questionnaire"></iframe>
-    </div>
-    <p class="q-note">// 10 statements · 5-point agreement scale · No personal data collected</p>
-  </div>
 
   <!-- PROTECTION STRIP -->
   <div class="protection-strip">
